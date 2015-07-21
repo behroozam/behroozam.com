@@ -1,6 +1,4 @@
-vcard
-=====
-behroozam vcard edited by behroozam
-Personal presentation
+behroozam blog
+========
 
-Inspired by [Victoria simple vCard theme](http://www.blacktie.co/2013/10/victoria-simple-vcard/)
+behroozam blog write by behrooz hasanbeygi 
