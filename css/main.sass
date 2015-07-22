@@ -4,6 +4,8 @@
 @import 'syntax-highlighting'
 
 @import 'bourbon/bourbon'
+@import 'naskh/naskh'
+
 
 .cf
   @include clearfix
@@ -12,7 +14,7 @@ $rs: 16px
 
 $font-serif: Linux Libertine
 $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
-
+$Droid: "Droid Arabic Naskh", serif
 
 @mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
@@ -28,7 +30,7 @@ main
 
 
 body
-  font-family: $font-sans
+  font-family: $Droid
   margin: 0
   padding: 0
   text-rendering: optimizeLegibility
