@@ -5,9 +5,56 @@
     <description></description>
     <link>http://behroozam.github.io/</link>
     <atom:link href="http://behroozam.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 25 Jul 2015 05:24:23 +0430</pubDate>
-    <lastBuildDate>Sat, 25 Jul 2015 05:24:23 +0430</lastBuildDate>
+    <pubDate>Mon, 27 Jul 2015 18:43:49 +0430</pubDate>
+    <lastBuildDate>Mon, 27 Jul 2015 18:43:49 +0430</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>یکم امنیت </title>
+        <description>&lt;p&gt;اون روز یه یهو به سرم زد ببینم چه تعدادی از کاربرایی که تو رنج ip من هستن از رمز پیشفرض مودمشون که من admin در نظر گرفتم استفاده میکنند .
+برای شروع آخرین بویلد برنامه angry ip scanner رو از &lt;a href=&quot;http://angryip.org/download/#linux&quot; title=&quot;angry ip scanner&quot;&gt;اینجا&lt;/a&gt; دانلود کردم .&lt;/p&gt;
+
+&lt;p&gt;خب کامند ip addr ای پی که سویچ/روتر شما بهتون داده رو نشون میده برای پیدا کردن public ip میتونین از کامند&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;//i&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pecho&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;استفاده کنید یا از سایت هایی که public ip استفاده کنید .&lt;/p&gt;
+
+&lt;p&gt;تو قدم بعدی رنج ای پی که میخواین اسکن کنید رو مشخص کنید میتونین از  &lt;a href=&quot;%22http://www.subnet-calculator.com%22&quot;&gt;این&lt;/a&gt; ابزار استفاده کنید .&lt;/p&gt;
+
+&lt;p&gt;بعد از اینکه اسکن تمام شد کافیه از قسمت &lt;code&gt; tools &amp;gt;selection&amp;gt;alive host &lt;/code&gt; ای پی ها رو انتخاب کنید و از قسمت &lt;code&gt;scan&amp;gt;export selection &lt;/code&gt; تو یه فایل متنی ذخیرشون کنید
+در قدم بعدی نیاز هستش که رمز admin رو روی تمامی live ip ها تست کنیم .&lt;/p&gt;
+
+&lt;p&gt;برای این کار از ابزار قدرتمند thc hydra استفاده میکنیم . که تو مخازن دبیان و ابونتو به راحتی
+&lt;code&gt; sudo apt-get install hydra &lt;/code&gt;
+در دسترسه .&lt;/p&gt;
+
+&lt;p&gt;البته میتونین به وسیله nmap قبلش یه چکی از ای پی ها بکنید .&lt;/p&gt;
+
+&lt;p&gt;بعد از نصب hydra کافیه یه نگاهی به صفحه منوالش بندازیم حالا خیلی راحت  &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hydra -l admin -p admin -v -M /home/yourname/hosts.txt http-head&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;بعد از به دست اومدن نتیجه هم میتونید با spss یه امار درست حسابی تحویل بدین .&lt;/p&gt;
+
+&lt;p&gt;نمیتونم آماری رو که به دست اوردم رو به دلایلی  منتشر کنم ولی وضعیت خوبی نبود . امیدوارم بقیه سرویس دهنده وضع بهتر باشه&lt;/p&gt;
+
+&lt;p&gt;راستی&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;قبل از هر کاری فکر کنید . حتی کد زدن&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Wed, 29 Jul 2015 00:00:00 +0430</pubDate>
+        <link>http://behroozam.github.io/featured/2015/07/29/how-many-users-use-default-password.html</link>
+        <guid isPermaLink="true">http://behroozam.github.io/featured/2015/07/29/how-many-users-use-default-password.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
     
       <item>
         <title>مرد جوانی که در افق قرار داشت </title>
