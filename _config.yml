@@ -3,6 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 gems:
   - jemoji
+  - jalalidate
 
 # Site settings
 title: "بهروزم"
@@ -45,9 +46,9 @@ social:
     share_title:
     share_link:
 
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+  - icon:	instagram
+    url:	https://instagram.com/behroozam
+    desc:	Follow me
+    share_url:
+    share_title:
+    share_link:
