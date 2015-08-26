@@ -339,7 +339,7 @@ body {
   letter-spacing: -0.02em;
   font-weight: 400;
   font-style: normal;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Droid Arabic Naskh", serif;
   z-index: 999; }
 
 .tag-articleimage .post-reading {
@@ -385,7 +385,7 @@ body {
     left: 30%;
     right: 30%;
     z-index: 9;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Droid Arabic Naskh", serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -423,7 +423,7 @@ body {
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 0px 0px 1px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     overflow: hidden;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Droid Arabic Naskh", serif;
     white-space: nowrap;
     text-overflow: ellipsis; }
     .post .article-image .post-meta-text a {
@@ -439,7 +439,7 @@ body {
   .post .article-image .topofpage {
     text-decoration: underline; }
 .post .noarticleimage .post-meta {
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Droid Arabic Naskh", serif;
   padding-top: 60px; }
 .post .noarticleimage .post-title {
   font-weight: 700;
@@ -469,15 +469,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Droid Arabic Naskh", serif;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Linux Libertine;
+  font-family: "Droid Arabic Naskh", serif;
   color: #333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+    font-family: "Droid Arabic Naskh", serif; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -485,7 +485,7 @@ body {
     font-size: 24px;
     line-height: 1.3;
     margin: 0;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Droid Arabic Naskh", serif;
     margin-bottom: 4px; }
   .post .post-content h2, .post .post-content h1 {
     letter-spacing: -0.02em;
@@ -563,7 +563,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font-family: "Droid Arabic Naskh", serif; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
