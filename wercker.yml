@@ -14,9 +14,4 @@ build:
         name: generate site
         code: bundle exec jekyll build --trace --destination ./_site
 
-deploy:
-  steps:
-    - lvivier/step-gh-pages:
-        token: $GITHUB_TOKEN
-        basedir: _site
-        domain: behroozam.com
+
