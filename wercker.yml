@@ -1,0 +1,22 @@
+box: ruby
+build:
+  steps:
+    # Install dependencies
+    - bundle-install
+
+    # Execute jeykyll doctor command to validate the
+    # site against a list of known issues.
+    - script:
+        name: jekyll doctor
+        code: bundle exec jekyll doctor
+
+    - script:
+        name: generate site
+        code: bundle exec jekyll build --trace --destination ./_site
+
+deploy:
+  steps:
+    - lukevivier/gh-pages:
+        token: $GITHUB_TOKEN
+        basedir: _site
+        domain: mehdix.ir
