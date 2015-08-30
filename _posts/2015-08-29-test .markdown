@@ -1,0 +1,11 @@
+---
+layout: post
+title: "تست "
+date: 2015-08-28
+categories: development
+image: /assets/article_images/cordova/cordova-logo.png
+
+---
+
+
+این یه تسته 
