@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>بهروزم</title>
+    <description></description>
+    <link>http://behroozam.com/</link>
+    <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 30 Aug 2015 18:57:29 +0000</pubDate>
+    <lastBuildDate>Sun, 30 Aug 2015 18:57:29 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>اپاچی کوردوا </title>
+        <description>&lt;p&gt;من برنامه نویس خوبی نیستم ( راستش بخوام بگم اصلاً برنامه نویس نیستم )  بخاطر همین معمولاً سعی میکنم با اسکریپت و کد ور برم تا با استرینگ و و متغیر و کانکارنسی و این حرفا . همون طور که میدونید زبان پیشفرض برنامه نویسی اندروید جاوا هستش البته به لطف NDK هم میشه از زبان‌های c و ++c تو پروژه استفاده کرد ولی کیه که همچین زحمتی به خودش بده . به هر حال گوگل داره روی جایگزین کردن این زبان با golang فکر میکنه که البته فکر خوبی هم هستش البته من ترجیح میدادم ruby باشه ولی خب همیشه همه چیز اونجوری پیش نمیره که ما میخوایم .
+داشتم میگفتم که با توجه به علاقه بی حد و حصر  به توسعه وب من بیشتر با پلتفرم های مختلف این قضیه کار میکنم یعنی وقتی پایتان کار میکنم معمولاً دور ور flask میچرخم چون ساده است . و اصلاً سمت django نمیرم . بخاطر همین تو توسعه اندروید هم ترجیح میدم بیشتر با خط فرمان و اسکریپت ور برم تا اینکه پشت Android Studio وقت طلف کنم .&lt;/p&gt;
+
+&lt;p&gt;یه مشکلی که اکثر زبان‌های برنامه نویسی دارن این هستش که نمیشه بدون دستکاری کد منبع برنامه رو بین پلتفرم های مختلف جا به جا کرد . خب ابزار هایی به وجود اومدن که این کارو انجام بدن ولی تا حال حاضر به جز ++c استاندارد و golang من همچین قابلیت تو زبان‌های دیگه ندیدم .
+خب راه حل چیه . یه برنامه ننویس مثل من ترجیح میده از cordova استفاده کنه که یه برنامه توسعه یافته توسط آپاچی هستش تا وب اپلیکیشن های مارو که با html و جاوا اسکریپت نوشتیم بویلد کنه . البته پروژه های جانبی مثل phonegap و ionic هم در کنارش توسعه پیدا میکنه که اون ها هم جالب هستن ولی باز از هسته cordova استفاده میکنن .&lt;/p&gt;
+
+&lt;p&gt;خب برای نصب cordova ما به چند چیز احتیاج داریم من فرض میزارم اینکه سیستم عامل شما لینوکس دبیان بیس هستش البته که میتونید همه این مراحل در توزیع‌های دیگه هم اجرا کنید&lt;/p&gt;
+
+&lt;p&gt;در ابتدا کافیه nodejs و npm رو دریافت کنید&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install nodejs npm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;سپس بر اساس مستندات کوردوا کافیه در ترمینال این دستور رو وارد کنیم تا اخرین نسخه دانلود بشه&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g cordova&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;خب تا اینجای کار همه چیز به خوبی و خوشی انجام شده . قسمت بد ماجرا تحریم های ظالمانه گوگل علیه دولوپر های عزیزمون هستش . پس با یه تغییر ip که انجام میدین google sdk manager رو دریافت میکنید فقط به دلیل جلوگیری از ارور های بعدی لطفا اخرین نسخه android sdk platform tools و android sdk build tools بعلاوه android 22 و 23 رو دریافت کنید . به دلیل اینکه راه های زیادی برای دریافت sdk manager هست در این مورد زیاد توضیح نمیدم . فقط یادتون باشه همه چیز باید آپدیت باشه . بخاطر همین به یه اینترنت خوب نیاز دارید
+بعد از نصب sdk manager و مشتقاتش حالا نیاز که اون رو به PATH سیستم بشناسونیم . برای من که از zsh استفاده میکنم کافیه در قسمت  &lt;code&gt;/home/&lt;user&gt;/.zshrc&lt;/code&gt; قرار بدین و برای bash که اکثر کاربرا استفاده میکنن کافیه در همین مسیر &lt;code&gt;.bashrc&lt;/code&gt; این رو قرار بدین کافیه تایپ کنید&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano /home/username shoma/.bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;و سپس این هارو به اخرش اضافه میکنیم&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/home/&amp;lt;user&amp;gt;/Android/Sdk/tools
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/home/&amp;lt;user&amp;gt;Android/Sdk/platform-tools&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;سپس کد &lt;code&gt;source /home/&lt;user&gt;/.bashrc&lt;/code&gt; رو وارد کنید تا پروفایل شما ری استارت بشه
+البته توجه کنید که sdk manager من در دایرکتوری Android/sdk قرار داره که احتمالا با شما متفاوت هستش پس ادرس خودتون باهاش عوض کنید
+سپس اقدام به نصب jdk میکنیم&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install openjdk-8-jdk&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;لازم هستش که java رو هم به سیستم شناسونده بشه پس با دستور&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo gedit /etc/environment&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;و  قرار دادن این کد&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;که البته بازم بنا به معماری سیستم شما این ادرس میتونه متفاوت باشه . سپس کافیه کد &lt;code&gt;source /etc/environment&lt;/code&gt; رو وارد کنید تا شناسونده بشه
+حالا اگه همه چیز خوب پیش رفته باشه باید با زدن همچین کد هایی برنامه سمپل hello کوردوا بویلد بشه&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova create hello com.example.hello HelloWorld
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;hello
+cordova platform add android
+cordova build android&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;اگر که بویلد شد خوب و اگر نشد ارور ها شامل دوتا ارور عمده میشه ارور اول exit code 2 هست که به خاطر اپدیت و نصب نبودن sdk manager و android target 22 هستش . ارور exit code 8 زمانی به وجود میاد که در سیستم 64 بیتی مفسر سیستم 32 نباشه که با وارد کردن دستور زیر در ترمینال حل میشه&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install lib32stdc++6
+sudo apt-get install lib32z1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;به دلیل کند بودن امولاتور اندروید من استفاده از genymotion رو به شدت توصیه میکنم . 
+من عادت به نوشتن همچین متن های بلند نصب و توسعه ندارم . اگه سوالی داشتید میتونید از تویتر یا گیتهابم یا ایمیلم که توی قایل کانفیگ بلاگ هست اقدام کنید&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/development/2015/08/27/cordova-installation.html</link>
+        <guid isPermaLink="true">http://behroozam.com/development/2015/08/27/cordova-installation.html</guid>
+        
+        
+        <category>development</category>
+        
+      </item>
+    
+      <item>
+        <title>یکم امنیت </title>
+        <description>&lt;p&gt;اون روز یه یهو به سرم زد ببینم چه تعدادی از کاربرایی که تو رنج ip من هستن از رمز پیشفرض مودمشون که من admin در نظر گرفتم استفاده میکنند .
+برای شروع آخرین بویلد برنامه angry ip scanner رو از &lt;a href=&quot;http://angryip.org/download/#linux&quot; title=&quot;angry ip scanner&quot;&gt;اینجا&lt;/a&gt; دانلود کردم .&lt;/p&gt;
+
+&lt;p&gt;خب کامند ip addr ای پی که سویچ/روتر شما بهتون داده رو نشون میده برای پیدا کردن public ip میتونین از کامند&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;//i&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pecho&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;استفاده کنید یا از سایت هایی که public ip استفاده کنید .&lt;/p&gt;
+
+&lt;p&gt;تو قدم بعدی رنج ای پی که میخواین اسکن کنید رو مشخص کنید میتونین از  &lt;a href=&quot;%22http://www.subnet-calculator.com%22&quot;&gt;این&lt;/a&gt; ابزار استفاده کنید .&lt;/p&gt;
+
+&lt;p&gt;بعد از اینکه اسکن تمام شد کافیه از قسمت &lt;code&gt; tools &amp;gt;selection&amp;gt;alive host &lt;/code&gt; ای پی ها رو انتخاب کنید و از قسمت &lt;code&gt;scan&amp;gt;export selection &lt;/code&gt; تو یه فایل متنی ذخیرشون کنید
+در قدم بعدی نیاز هستش که رمز admin رو روی تمامی live ip ها تست کنیم .&lt;/p&gt;
+
+&lt;p&gt;برای این کار از ابزار قدرتمند thc hydra استفاده میکنیم . که تو مخازن دبیان و ابونتو به راحتی
+&lt;code&gt; sudo apt-get install hydra &lt;/code&gt;
+در دسترسه .&lt;/p&gt;
+
+&lt;p&gt;البته میتونین به وسیله nmap قبلش یه چکی از ای پی ها بکنید .&lt;/p&gt;
+
+&lt;p&gt;بعد از نصب hydra کافیه یه نگاهی به صفحه منوالش بندازیم حالا خیلی راحت  &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hydra -l admin -p admin -v -M /home/yourname/hosts.txt http-head&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;بعد از به دست اومدن نتیجه هم میتونید با spss یه امار درست حسابی تحویل بدین .&lt;/p&gt;
+
+&lt;p&gt;نمیتونم آماری رو که به دست اوردم رو به دلایلی  منتشر کنم ولی وضعیت خوبی نبود . امیدوارم بقیه سرویس دهنده وضع بهتر باشه&lt;/p&gt;
+
+&lt;p&gt;راستی&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;قبل از هر کاری فکر کنید . حتی کد زدن&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2015/07/29/how-many-users-use-default-password.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2015/07/29/how-many-users-use-default-password.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
+    
+      <item>
+        <title>مرد جوانی که در افق قرار داشت </title>
+        <description>&lt;p&gt;۱۶ سالم بود همه چیز تلخ بود . همه چیز نا امید کننده . نه امیدی برای تغییر وجود داشت نه خودم رو مرد تغییر اوضاع میدیدم . حتی یه وصیت نامه هم نوشته بودم که بعدتر ها پیدا شد و دستمایه خنده خانواده قرار گرفت .
+به یاد اوردن این ها  از کجا شروع شد  خب یه خاطره ای از سوسن شریعتی دیدم که میگفتن پدر بزرگوارشون دکتر علی شریعتی یک بار در ۱۵ سالگی و یکبار در جوانی قصد خودکشی داشتن .
+راستش اندیشه هم یه موهبت هستش هم یه عذاب که باعث میشه هیچوقت از زندگی همون طوری که بقیه لذت میبرند لذت نبری .
+راستش تا حدودی دوگانگی شریعتی رو درک میکنم . تو اون آشفته بازار اندیشه ها سعی میکرد مسیری رو پیدا کنه برای رسیدن به اتوپیا خودش اگرچه فرمول یکسانی برای همه وجود نداشت ولی با تمام وجودم مطمعا هستم برای رسیدن به حقیقت تلاش کرد.
+و اما دکتر شفیع کدکنی چه خوب میگه :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;گه ملحد و گه دهری و کافر باشد،
+گه دشمن خلق و فتنه پرور باشد،
+باید بچشد عذاب تنهایی را،
+مردی که ز عصر خود فراتر باشد،&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2015/07/27/young-man-stand-on-horizon.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2015/07/27/young-man-stand-on-horizon.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
+    
+      <item>
+        <title>ما را چه شده است ؟</title>
+        <description>&lt;p&gt;همه چیز از اونجایی شروع شد که یکی از کاربران تویتر برای &lt;a href=&quot;http://www.irna.ir/fa/News/81692430/&quot;&gt;قتل پزشک اردبیلی دکتر پیرزاده &lt;/a&gt;  نوشت&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;fa&quot;&gt;&lt;p lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;7سال عمومی خونده&amp;#10;4سال تخصص&amp;#10;4سال فوق تخصص&amp;#10;=15 سال!&amp;#10;بعد شده فوق تخصص سرطان شناسی،&amp;#10;اونوخت یه عده میخوان حقوقش با یه کارگر مساوی باشه!!&amp;#10;&lt;a href=&quot;https://twitter.com/hashtag/%D9%BE%DB%8C%D8%B1%D8%B2%D8%A7%D8%AF%D9%87?src=hash&quot;&gt;#پیرزاده&lt;/a&gt;&lt;/p&gt;&amp;mdash; سالار گوهر آگین (@inlovewithiran) &lt;a href=&quot;https://twitter.com/inlovewithiran/status/624513076008718336&quot;&gt;جولای 24, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;که خب برای من به عنوان یه انسان سخت بود شنیدن که خب چون کسی سال های بیشتری تحصیل کرده حقش هست که پول بیشتری دریافت کنه و البته کارگر ها به عنوان یکی از تاثیر گذار ترین مهره های اقتصادی جامعه که چرخ سازندگی رو میچرخونن با این دیدگاه هم کارشون از نظر اجتماعی و اقتصادی کم اهمیت نشون داده میشه .
+منظور من چیزی نیست که در جامعه اتفاق میفته خب همه ما میدونیم جامعه به شدت طبقاتی پول پرست و مصرف گرایی داریم  منظور من این هستش که چرا یک فرایند غلط برای ارزش گذاری ها توسط   جامعه مقبول قشری میشه که خودشون رو تحصیل کرده میدونند . یعنی علم به کنار فرهنگ هم به کناری . آیا باید با واقعیتی مثل فساد کنار بیایم و در کنارش زندگی کنیم ؟
+در هیچکدام از ادیان و مذاهب و در هیچ اخلاقی معیار برتری انسان هارو پول و مدرک دانشگاهی قرار ندادند چرا جامعه ما و مخصوصا قشر متخصص و البته جاوانانی که تازه وارد دانشگاه میشن معیار رو اشتباه میگیرن . بله اشتباه حتی در نسبیت گرا ترین ایده هم صرف پول پرستی و مادیات طلبی اشتباه .
+به یاد بیاریم که در وحله اول ما  انسان هستیم  و  چه خوب میگه سعدی خوش کلام که :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;تو کز محنت دیگران بی غمی چه شاید که نامت نهند آدمی&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://goo.gl/GhmX4V&quot;&gt;پیرمرد کپس خول فروش / عکاس عباس عزیز پور &lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2015/07/27/what-happen-to-us.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2015/07/27/what-happen-to-us.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
+    
+      <item>
+        <title>فناوری اطلاعات سلامت چیست</title>
+        <description>&lt;p&gt;راستش  همیشه اولین سوالی که در مورد رشته ام ازم پرسیده میشه اینه که رشته شما چی هستش برای اینکه کار خودم راحت کنم مختصری تو این پادکست در مورد اینکه رشته فناوری اطلاعات سلامت چی هستش توضیح میدم&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215822080&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;اهنگ : the trooper - iron maden&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/r9u3uz24jtss5hv/hit-podcast.mp3?dl=0&quot;&gt; دریافت پادکست از دراپ باکس&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2015/07/22/what-is-hit.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2015/07/22/what-is-hit.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
+    
+      <item>
+        <title>من از نسل دیگری هستم</title>
+        <description>&lt;p&gt;من از نسل دیگری هستم&lt;/p&gt;
+
+&lt;p&gt;دکتر شریعتی در سخنرانی معروف خود  پدر و مادر ما متهم هستیم از نسلی میگوید که دغدغه های آن چیزی ورای جامعه سنتی آن زمان است و رسالت هم نسلان خود را  احیای ان چیزی که خود رفرمیست مذهبی نام میگذارد میداند . اگر به متولدین دهه ۳۰ و ۴۰ برگردیم اغلب آرمان های اینان را انقلاب رفع ظلم و نابرابری از بین بردن فاصله طبقاتی و کمک به فرودستان و قطع کردن دست استعمار از منابع و ثروت های این سروزمین است . متولدین دهه ۵۰ اما درگیر دار جنگ و مشکلات آن پدران و مادرانی آرمان خواه داشتند و در فضایی که تفکرات در جامعه هنوز بایکوت نشده بود سیر میکردند . نشریاتی مثل دانستنیها و کتاب های ارتور سی کلارک و ایزاک اسیموف در زمان خود بین این نسل طرفدار زیادی داشت  شاید از این نسل و نسل دهه ۴۰ بتوان به عنوان مدیران اجرایی کشور اسم برد . اما  اثرات جنگ و سرخوردگی های آن و کمبود ها در متولدین دهه ۶۰ ظهور میکند . نسلی عصیانگر که تحت تاثیر مطبوعات آن زمان که  دست به ایجاد جنبش های دانشجویی میزند اما به سرعت سرخورده مایوس میشود . مشکلات اجتماعی و بیکاری . مواد مخدر و الگو های اشتباه این نسل باعث میشود که از آن ها به عنوان نسل سوخته نام برده شود.&lt;/p&gt;
+
+&lt;p&gt;و اما نسل من . ما از نسلی هستیم که نه دغدغه سیاسی دارد و نه آرمانی دارد . شعار های نسل های قبلی را شنیده و عمل نکرده  و بزرگ شده دست پدران و مادرانی است که میگویند سرت به کار خودت باشد . نسل من نسلی است که اندیشه را خوار و خفیف میداند به معمولی بودن خود افتخار میکند و الگو ها و آرمان های آن خواننده ها و شومن هایی هستند که یک شبه ره صد ساله پیموده اند. اگر در گذشته فخر فروشی و کشیدن رخ مال و پول زشت ناپسند بود اما هم نسلان من محبوب بودن را در ماشین شاسی بلند و حساب های بانکی آن چنانی میبینند .
+علم و دانش و فرهنگ برای نسل من حکم کالای بی ارزشی را دارد که فقط برای بعضی ها خریدار دارد . اگر در نسل های گذشته علم آموزی روشی برای رسیدن به شغل مناسب بود و دانشگاه محلی برای آن بود امروز ولی با رشد قارچی شکل دانشگاه های خصوصی آزاد و پیام نور و کیفیت پایین دانشگاه های سراسری مدرک تنها گزینه مثبتی است برای ازدواج   به جز اندک رشته های علوم پزشکی مانند دندان پزشکی و داروسازی و پزشکی که باز هم علت محبوب بودن آن ها شغل تضمین شده ان میباشد .&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2015/05/25/iam-from-diffrent-generation.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2015/05/25/iam-from-diffrent-generation.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
+    
+  </channel>
+</rss>
