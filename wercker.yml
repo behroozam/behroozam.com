@@ -17,6 +17,6 @@ build:
 deploy:
   steps:
     - lukevivier/gh-pages:
-        token: $git_token
+        token: $GITHUB_TOKEN
         basedir: _site
         domain: behroozam.com
