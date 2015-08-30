@@ -19,4 +19,4 @@ deploy:
     - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         basedir: _site
-        domain: mehdix.ir
+        domain: behroozam.com
