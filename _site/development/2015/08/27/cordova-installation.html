@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>اپاچی کوردوا </title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://behroozam.com/development/2015/08/27/cordova-installation.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://behroozam.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/cordova/cordova-logo.png)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">اپاچی کوردوا </h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
+              on
+              <span class="date">پنج‌شنبه 05 شهریور 1394</span>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section dir="rtl" class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>من برنامه نویس خوبی نیستم ( راستش بخوام بگم اصلاً برنامه نویس نیستم )  بخاطر همین معمولاً سعی میکنم با اسکریپت و کد ور برم تا با استرینگ و و متغیر و کانکارنسی و این حرفا . همون طور که میدونید زبان پیشفرض برنامه نویسی اندروید جاوا هستش البته به لطف NDK هم میشه از زبان‌های c و ++c تو پروژه استفاده کرد ولی کیه که همچین زحمتی به خودش بده . به هر حال گوگل داره روی جایگزین کردن این زبان با golang فکر میکنه که البته فکر خوبی هم هستش البته من ترجیح میدادم ruby باشه ولی خب همیشه همه چیز اونجوری پیش نمیره که ما میخوایم .
+داشتم میگفتم که با توجه به علاقه بی حد و حصر  به توسعه وب من بیشتر با پلتفرم های مختلف این قضیه کار میکنم یعنی وقتی پایتان کار میکنم معمولاً دور ور flask میچرخم چون ساده است . و اصلاً سمت django نمیرم . بخاطر همین تو توسعه اندروید هم ترجیح میدم بیشتر با خط فرمان و اسکریپت ور برم تا اینکه پشت Android Studio وقت طلف کنم .</p>
+
+<p>یه مشکلی که اکثر زبان‌های برنامه نویسی دارن این هستش که نمیشه بدون دستکاری کد منبع برنامه رو بین پلتفرم های مختلف جا به جا کرد . خب ابزار هایی به وجود اومدن که این کارو انجام بدن ولی تا حال حاضر به جز ++c استاندارد و golang من همچین قابلیت تو زبان‌های دیگه ندیدم .
+خب راه حل چیه . یه برنامه ننویس مثل من ترجیح میده از cordova استفاده کنه که یه برنامه توسعه یافته توسط آپاچی هستش تا وب اپلیکیشن های مارو که با html و جاوا اسکریپت نوشتیم بویلد کنه . البته پروژه های جانبی مثل phonegap و ionic هم در کنارش توسعه پیدا میکنه که اون ها هم جالب هستن ولی باز از هسته cordova استفاده میکنن .</p>
+
+<p>خب برای نصب cordova ما به چند چیز احتیاج داریم من فرض میزارم اینکه سیستم عامل شما لینوکس دبیان بیس هستش البته که میتونید همه این مراحل در توزیع‌های دیگه هم اجرا کنید</p>
+
+<p>در ابتدا کافیه nodejs و npm رو دریافت کنید</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install nodejs npm</code></pre></div>
+
+<p>سپس بر اساس مستندات کوردوا کافیه در ترمینال این دستور رو وارد کنیم تا اخرین نسخه دانلود بشه</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g cordova</code></pre></div>
+
+<p>خب تا اینجای کار همه چیز به خوبی و خوشی انجام شده . قسمت بد ماجرا تحریم های ظالمانه گوگل علیه دولوپر های عزیزمون هستش . پس با یه تغییر ip که انجام میدین google sdk manager رو دریافت میکنید فقط به دلیل جلوگیری از ارور های بعدی لطفا اخرین نسخه android sdk platform tools و android sdk build tools بعلاوه android 22 و 23 رو دریافت کنید . به دلیل اینکه راه های زیادی برای دریافت sdk manager هست در این مورد زیاد توضیح نمیدم . فقط یادتون باشه همه چیز باید آپدیت باشه . بخاطر همین به یه اینترنت خوب نیاز دارید
+بعد از نصب sdk manager و مشتقاتش حالا نیاز که اون رو به PATH سیستم بشناسونیم . برای من که از zsh استفاده میکنم کافیه در قسمت  <code>/home/<user>/.zshrc</code> قرار بدین و برای bash که اکثر کاربرا استفاده میکنن کافیه در همین مسیر <code>.bashrc</code> این رو قرار بدین کافیه تایپ کنید</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">nano /home/username shoma/.bashrc</code></pre></div>
+
+<p>و سپس این هارو به اخرش اضافه میکنیم</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;/Android/Sdk/tools
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;Android/Sdk/platform-tools</code></pre></div>
+
+<p>سپس کد <code>source /home/<user>/.bashrc</code> رو وارد کنید تا پروفایل شما ری استارت بشه
+البته توجه کنید که sdk manager من در دایرکتوری Android/sdk قرار داره که احتمالا با شما متفاوت هستش پس ادرس خودتون باهاش عوض کنید
+سپس اقدام به نصب jdk میکنیم</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install openjdk-8-jdk</code></pre></div>
+
+<p>لازم هستش که java رو هم به سیستم شناسونده بشه پس با دستور</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gedit /etc/environment</code></pre></div>
+
+<p>و  قرار دادن این کد</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;</span></code></pre></div>
+
+<p>که البته بازم بنا به معماری سیستم شما این ادرس میتونه متفاوت باشه . سپس کافیه کد <code>source /etc/environment</code> رو وارد کنید تا شناسونده بشه
+حالا اگه همه چیز خوب پیش رفته باشه باید با زدن همچین کد هایی برنامه سمپل hello کوردوا بویلد بشه</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova create hello com.example.hello HelloWorld
+<span class="nb">cd </span>hello
+cordova platform add android
+cordova build android</code></pre></div>
+
+<p>اگر که بویلد شد خوب و اگر نشد ارور ها شامل دوتا ارور عمده میشه ارور اول exit code 2 هست که به خاطر اپدیت و نصب نبودن sdk manager و android target 22 هستش . ارور exit code 8 زمانی به وجود میاد که در سیستم 64 بیتی مفسر سیستم 32 نباشه که با وارد کردن دستور زیر در ترمینال حل میشه</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install lib32stdc++6
+sudo apt-get install lib32z1</code></pre></div>
+
+<p>به دلیل کند بودن امولاتور اندروید من استفاده از genymotion رو به شدت توصیه میکنم . 
+من عادت به نوشتن همچین متن های بلند نصب و توسعه ندارم . اگه سوالی داشتید میتونید از تویتر یا گیتهابم یا ایمیلم که توی قایل کانفیگ بلاگ هست اقدام کنید</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%A7%D9%BE%D8%A7%DA%86%DB%8C+%DA%A9%D9%88%D8%B1%D8%AF%D9%88%D8%A7+&amp;url=http://behroozam.com/development/2015/08/27/cordova-installation"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4>behrooz hasanbeygi</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-08-27 00:00">27 Aug 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2015<br>free knowlege for all </section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">بهروزم</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/" class="btn">بازگشت به صفحه اول</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>

@@ -7,6 +7,4 @@ gem 'kramdown'
 gem 'jekyll-watch'
 gem 'jemoji'
 gem 'pygments.rb'
-gem 'yajl-ruby'
-gem 'jekyll-watch'
-gem 'therubyracer'
+
