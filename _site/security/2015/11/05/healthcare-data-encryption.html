@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>رمزنگاری اطلاعات درمانی چیست؟</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://behroozam.com/security/2015/11/05/healthcare-data-encryption.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://behroozam.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/encryption/encryption.jpeg)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">رمزنگاری اطلاعات درمانی چیست؟</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
+              on
+              <span class="date">پنج‌شنبه 14 آبان 1394</span>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section dir="rtl" class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>وقتی در مورد امنیت سیستم‌های اطلاعاتی صحبت میکنیم منظورمان سه عنصر پایه امنیت اطلاعات یعنی </p>
+
+<p>*محرمانگی (‫‪Confidentiality‬‬)</p>
+
+<p>*یکپارچگی ‫(‬ ‫‪Integrity‬‬ ‫)</p>
+
+<p>‬
+*در دسترس بودن ‫(‬ ‫‪Availability‬‬ ‫)</p>
+
+<p>میباشد  . 
+رمزگذاری اطلاعات با کاهش در دست بودن اطلاعات باعث افزایش محرمانگی می‌شود  و از طرفی میتواند باعث کاهش یا افزایش یکپارچگی شود . </p>
+
+<p>رمزگذاری اطلاعات در صنعت درمان به دلیل حجم بالایی از اطلاعات هویتی بیماران ( phi یا personal health information )  از اهمیت بالاتری برخوردار است . </p>
+
+<p>ابتدا تعریف دقیق رمزگذاری میپردازیم : </p>
+
+<blockquote>
+<p>در علم رمزنگاری رمزگذاری عبارت است از رمزگذاری پیام یا اطلاعات به صورتی که تنها گروه‌های مجاز به آن دسترسی داشته باشند [1]</p>
+</blockquote>
+
+<p>رمزنگاری مطالعه رمزگذاری و الگوریتم های رمزگذاری است . در‌واقع رمزنگاری تبدیل پیام از حالت قابل درک ( clear text) به حالت غیر قابل درک (cipher text ) و برعکس است . هدف از رمزگذاری تبدیل داده‌ها به حالتی است که استراق سمع کننده یا کسی که رمز را ندارد نتواند داده‌ها را بخواند . رمزگداری برای امن سازی ارتباطات است . رمزنگاری تکنیک مورد استفاده در رمزگذاری را تعریف میکند </p>
+
+<p>از الگوریتم های معروف رمزنگاری میتوان md5 , SHA,RC4,RC5,Blowfish  را نام برد . </p>
+
+<p>حال به تعریف رمزنگاری اطلاعات درمانی میپردازیم : </p>
+
+<blockquote>
+<p>رمزنگاری داده‌های بهداشتی شکلی از امنیت داده است که در آن سوابق الکترونیکی پزشکی ( EHR ) به اطلاعاتی مبدل می‌شوند که کاربر غیر مجاز قابل به خواندن یا درک آن نیست [2]</p>
+</blockquote>
+
+<p>با توجه به لود بالای اطلاعات توسط مراکز درمانی این کار یعنی رمزنگاری باید به سرعت انجام بشود و از امنیت بالایی برخوردار باشد که شامل دو معقوله رمزنگاری ارتباطات و اطلاعات می‌شود  </p>
+
+<p><img src="/assets/article_images/encryption/vormetric-protects-ePHI-2015-0311.png" alt="HITECH RULES" title="Logo Title Text 1"></p>
+
+<p>رمزنگاری ارتباطات : علاوه بر ایزوله بودن شبکه بیمارستان یا مرکز درمانی توسط VLAN و دیوارآتش به دلیل دوری فیزیکی تکنسین های فنی ریموت سرور امری معمول میباشد  در صورتی که در این ارتباط از روش نا امن همانند telnet استفاده شود که به سادگی قابل رمزگشایی است امنیت دستگاه‌ها متصل به شبکه ممکن مختل شود زیرا با استفاده از حمله MITM  به راحتی میتوان اقدام به تفسیر اطلاعات رد و بدل شده کرد . 
+همچنین استفاده از پرتکول ftp نیز برای جا به جایی فایل‌ها میتواند منجر به رخنه های امنیتی شود . 
+در هردو صورت استفاده از ssh و sftp میتواند به صورت قابل ملاحظه ای ریسک شنود ارتباط یا sniffing را به حداقل برساند . </p>
+
+<p>رمزنگاری داده : 
+موردی که کمتر در مراکز درمانی به آن اهمیت داده می‌شود رمزنگاری داده است . در سال ۲۰۰۹ تنها دو ایالت آمریکا اقدام به رمزنگاری داده‌های درمانی خود پرداختند که تنها در زمان پنج ماهه ای که HITECH اقدام به فعالیت کرد در ایالت کالیفرنیا  حدود ۸۰۰ مورد نقض اطلاعات شخصی بیماران رخ داده بود . 
+این از نظر اهمیت دارد که بدون داشتن یک سیستم گزارش دهی و رمزنگاری حتی در صورت دسترسی غیرمجاز متوجه آن نخواهیم شد . </p>
+
+<p>برای رمزگذاری file system لینوکس به صورت درون کار  توسط فرمت ext4 پشتیبانی می‌شود . در ویندوز تنها فرمت NTFS  توسط EFS  پشتیبانی می‌شود . که هرکدام دارای معایب و فواید مختص به خود هستند . </p>
+
+<p>این مقاله در هفته‌های آینده به روز رسانی خواهد شد </p>
+
+<p>منابع : 
+1- &quot;What is Encryption? | EFF Surveillance Self-Defense Project.&quot; What is Encryption? | EFF Surveillance Self-Defense Project. Surveillance Self-Defense Project, n.d. Web. 03 Nov. 2014. <a href="https://ssd.eff.org/en/module/what-encryption">https://ssd.eff.org/en/module/what-encryption</a>.
+2- https://www.techopedia.com/definition/25054/health-care-data-encryption</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%B1%D9%85%D8%B2%D9%86%DA%AF%D8%A7%D8%B1%DB%8C+%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA+%D8%AF%D8%B1%D9%85%D8%A7%D9%86%DB%8C+%DA%86%DB%8C%D8%B3%D8%AA%D8%9F&amp;url=http://behroozam.com/security/2015/11/05/healthcare-data-encryption"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4>behrooz hasanbeygi</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-11-05 00:00">05 Nov 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2015<br>free knowlege for all </section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">بهروزم</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/" class="btn">بازگشت به صفحه اول</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+
+  </body>
+</html>
