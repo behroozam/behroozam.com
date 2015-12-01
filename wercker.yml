@@ -1,9 +1,11 @@
 box: ruby
 build:
   steps:
+
     # Run a smart version of bundle install
     # which improves build execution time of
     # future builds
+
     - script:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
@@ -12,6 +14,7 @@ build:
 
     # Execute jeykyll doctor command to validate the
     # site against a list of known issues.
+
     - script:
         name: jekyll doctor
         code: bundle exec jekyll doctor
@@ -19,6 +22,8 @@ build:
     - script:
         name: generate site
         code: bundle exec jekyll build --trace --destination ./_site
+
+
  
 deploy:
   steps:
