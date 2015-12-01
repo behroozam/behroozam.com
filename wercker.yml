@@ -1,6 +1,9 @@
 box: ruby
 build:
   steps:
+ - script:
+            name: downgrade GemFile
+            code: gem update --system 2.4.8
     # Install dependencies
     - bundle-install
 
@@ -9,9 +12,7 @@ build:
     - script:
         name: jekyll doctor
         code: bundle exec jekyll doctor
- - script:
-            name: downgrade GemFile
-            code: gem update --system 2.4.8
+
     - script:
         name: generate site
         code: bundle exec jekyll build --trace --destination ./_site
