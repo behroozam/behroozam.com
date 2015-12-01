@@ -28,9 +28,9 @@ wget http://ipecho.net/plain -O - -q ; echo
 <code> sudo apt-get install hydra </code>
 در دسترسه .
 
-البته میتونین به وسیله nmap قبلش یه چکی از ای پی ها بکنید .
+البته میتونین به وسیله nmap قبلش یه چکی از ای پی ها بکنید 
 
-بعد از نصب hydra کافیه یه نگاهی به صفحه منوالش بندازیم حالا خیلی راحت  
+بعد از نصب hydra کافیه یه نگاهی به صفحه منوالش بندازیم حالا خیلی راحت 
 
 > hydra -l admin -p admin -v -M /home/yourname/hosts.txt http-head
 

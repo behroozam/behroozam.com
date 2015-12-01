@@ -17,7 +17,7 @@ image: /assets/article_images/foss/foss.png
 
 >“Free software” means software that respects users' freedom and community. Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software. Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”. We sometimes call it “libre software” to show we do not mean it is gratis.(http://www.gnu.org/philosophy/free-sw.en.html)
 
-نرم‌افزار آزاد به این معنی است که به جامعه و آزادی کاربران احترام میگذارد . تقریباً به این معنی که که کاربران آزاد به اجرا  و کپی و انتشار و مطالعه و تغییر و بهبود نرم‌افزار هستند . نرم‌افزار آزاد به آزادی اهمیت میدهد نه قیمت ( به دلیل ماهیت تفسیر کلمه free در زبان انگلیسی ) . برای درک این مفهوم باید به آزادی همانند آزادی بیان فکر کنید نه آبجوی مجانی . ما بعضی اوقات آن را libre software مینامیم تا نشان دهیم منظورمان رایگان بودن نیست .
+نرم‌افزار آزاد به این معنی است که به جامعه و آزادی کاربران احترام میگذارد . تقریباً به این معنی که که کاربران آزاد به اجرا  و کپی و انتشار و مطالعه و تغییر و بهبود نرم‌افزار هستند . نرم‌افزار آزاد به آزادی اهمیت میدهد نه قیمت ( به دلیل ماهیت تفسیر کلمه free در زبان انگلیسی ) . برای درک این مفهوم باید به آزادی همانند آزادی بیان فکر کنید نه آبجوی مجانی . ما بعضی اوقات آن را libre software مینامیم تا نشان دهیم منظورمان رایگان بودن نیست 
 
 
  
