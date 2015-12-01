@@ -5,15 +5,105 @@
     <description></description>
     <link>http://behroozam.com/</link>
     <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 17 Nov 2015 16:53:30 +0330</pubDate>
-    <lastBuildDate>Tue, 17 Nov 2015 16:53:30 +0330</lastBuildDate>
+    <pubDate>Tue, 01 Dec 2015 22:42:13 +0330</pubDate>
+    <lastBuildDate>Tue, 01 Dec 2015 22:42:13 +0330</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>تفاوت نرم افزار آزاد و متن باز چیست ؟</title>
+        <description>&lt;p&gt;در چندین گفت و گوی اخیری که در مورد &lt;a href=&quot;http://behroozam.com/zconf/2015/09/18/zconf6.html&quot;&gt;مقاله ام داشتم&lt;/a&gt; با استادان موضوعی که خیلی بحث میشد اصولاً تفاوت بین open source و freesoftware بود . اینجا در این مقاله با توجه به منابع معتبری که وجود داره سعی میکنم مرز باریک بین نرم‌افزار آزاد و متن باز رو مشخص  کنم &lt;/p&gt;
+
+&lt;p&gt;ابتدا از تعاریف شروع میکنیم  : &lt;/p&gt;
+
+&lt;p&gt;نرم‌افزار آزاد چیست ؟ &lt;/p&gt;
+
+&lt;p&gt;تعریف بنیاد نرم‌افزارهای آزاد FSF و به طور خاص ریچارد استالمن بنیان گذار پروژه GNU به این صورت میباشد ( مستندات به زبان فارسی هم ترجمه شده و روی سایت gnu.org موجود میباشند )&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Free software” means software that respects users&amp;#39; freedom and community. Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software. Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”. We sometimes call it “libre software” to show we do not mean it is gratis.(http://www.gnu.org/philosophy/free-sw.en.html)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;نرم‌افزار آزاد به این معنی است که به جامعه و آزادی کاربران احترام میگذارد . تقریباً به این معنی که که کاربران آزاد به اجرا  و کپی و انتشار و مطالعه و تغییر و بهبود نرم‌افزار هستند . نرم‌افزار آزاد به آزادی اهمیت میدهد نه قیمت ( به دلیل ماهیت تفسیر کلمه free در زبان انگلیسی ) . برای درک این مفهوم باید به آزادی همانند آزادی بیان فکر کنید نه آبجوی مجانی . ما بعضی اوقات آن را libre software مینامیم تا نشان دهیم منظورمان رایگان بودن نیست .&lt;/p&gt;
+
+&lt;p&gt;و چهار شرطی که باعث میشه یک نرم‌افزار آزاد باشه : &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The freedom to run the program as you wish, for any purpose (freedom 0)&lt;/p&gt;
+
+&lt;p&gt;The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.&lt;/p&gt;
+
+&lt;p&gt;The freedom to redistribute copies so you can help your neighbor (freedom 2)&lt;/p&gt;
+
+&lt;p&gt;The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;آزادی برای اجرای برنامه برای هر منظوری (آزادی ۰)&lt;/li&gt;
+&lt;li&gt;آزادی برای مطالعه و بررسی چگونگی عملکرد برنامه و تغییر آن برای نیاز خود (آزادی ۱). +دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد.&lt;/li&gt;
+&lt;li&gt;آزادی برای توزیع مجدد کپی‌هایی از آن، بنابراین شما می‌توانید به همسایگان خود کمک کنید (آزادی ۲).&lt;/li&gt;
+&lt;li&gt;آزادی برای بهبود برنامه و انتشار این تغییرات برای عموم، بنابراین تمام جامعه از آن بهره +می‌برند (آزادی ۳). دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;و تعریف نرم‌افزار متن باز بر اساس تعریف بنیاد نرم‌افزار های متن باز به این صورت میباشد  ( متن انگلیسی به صورت کامل در منبع موجود میباشد https://opensource.org/osd-annotated )&lt;/p&gt;
+
+&lt;p&gt;نرم‌افزار متن باز چیست ؟ &lt;/p&gt;
+
+&lt;p&gt;نرم‌افزار متن باز نه فقط به معنای دسترسی به کد منبع بلکه باید شرایط توزیع نرم‌افزار را به صورت زیر داشته باشد &lt;/p&gt;
+
+&lt;p&gt;۱- آزادی در بازنشر 
+لایسنس ( مجوز ) نباید از فروش یا قرض دادن نرم‌افزار به عنوان جزی از یک توزیع نرم افزاری مجتمع از چندین منبع جلوگیری نماید . &lt;/p&gt;
+
+&lt;p&gt;۲ -کد منبع &lt;/p&gt;
+
+&lt;p&gt;برنامه باید شامل کد منبع همانند کدی که از روی آن کامپایل شده باشد&lt;/p&gt;
+
+&lt;p&gt;۳- کارهای مشتق شده &lt;/p&gt;
+
+&lt;p&gt;مجوز (لایسنس) باید اجازه تغییرات و مشتق شدن را بدهد و همچنین اجازه نشر آن را بر اساس لایسنس نرم افزاری اصلی را بدهد . &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;منطق : صرف توانایی خواندن کد منبع کافی نیست تا از از تکامل و بازخورد نرم‌افزار حمایت کند &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;۴- یکپارچگی کد منبع و نویسنده 
+مجوز میتواند از انتشار فرم تغییرشکل یافته برنامه جلوگیری نماید تنها زمانی که فایل‌های الصاقی ( patch files ) و کد منبع برای اهدافی در زمان ساخته شدن تغییر نمایند  . &lt;/p&gt;
+
+&lt;p&gt;۴ – بدون تبعیض علیه افراد یا گروه‌ها 
+مجوز نباید در مقابل هر فرد یا گروهی از افراد تبعیض قائل شود.&lt;/p&gt;
+
+&lt;p&gt;۵- بدون هیچ تبعیضی علیه زمینه‌هایی از تلاش &lt;/p&gt;
+
+&lt;p&gt;مجوز نباید از استفاده از نرم‌افزار در زمینه‌های مختلف جلوگیری نماید . همانند استفاده از یک نرم‌افزار مالی در اقتصاد یا ژنتیک . &lt;/p&gt;
+
+&lt;p&gt;۷- توزیع مجوز &lt;/p&gt;
+
+&lt;p&gt;حقوقی که به برنامه الصاق شده باید برای همه اجرا بشود &lt;/p&gt;
+
+&lt;p&gt;۸ – مجوز نباید به صورت اختصاصی برای یک محصول باشد &lt;/p&gt;
+
+&lt;p&gt;نتیجه‌گیری : 
+فرق اساسی ما بین نرم‌افزار  آزاد و اوپن سورس وجود نداره تا زمانی که هردو یک هدف رو دنبال میکنن . تفاوت‌ها در اهمیت و نوع نگاه به زندگی . 
+سادگی در تفسیر اوپن سورس و قوانین سفت و سخت در نرم‌افزار آزاد و همچنین لفظ آزادی که برداشت‌های متفاوتی داره باعث شده جامعه متخصصین به مفهوم اوپن سورس علاقه بیشتری داشته باشن  هرچند با نگاهی عمیق‌تر میشه فهمید قوانین چهار گانه نرم‌افزار آزاد تضمینی هستش که باعث میشه فرهنگ اشتراک گذاری دانش و علم در مقابل ثبت پتنت و کپی رایت زنده بمونه و فارغ از مسایل تجاری برای ساختن دنیایی بهتر استفاده بشه &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ماشین ها انسان هارو کنترل میکنن و کد ها ماشین‌ها رو . چه کسی کد ها رو کنترل میکنه ؟ 
+-ریچارد استالمن &lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
+        <link>http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</link>
+        <guid isPermaLink="true">http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</guid>
+        
+        
+        <category>foss</category>
+        
+      </item>
     
       <item>
         <title>سوکورو تازاکی بی‌رنگ و سال‌های زیارتش </title>
         <description>&lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;h3&gt;قسمتی از متن کتاب سوکورو تازاکی و سالهای زیارتش&lt;/h3&gt;
+&lt;h3&gt; قسمتی از متن کتاب سوکورو تازاکی و سالهای زیارتش &lt;/h3&gt;
 
 &lt;p&gt;سوکورو تازاکی در عمیق‌ترین نقطه جانش به درک رسید . درک اینکه هیچ قلبی صرفاً به واسطه هماهنگی با قلب دیگری وصل نیست . زخم است که قلب ها را عمیقاً به هم پیوند میدهد . 
 پیوند درد با درد شکنندگی با شکنندگی . تا صدای ضجه بلند نشود سکوت معنا ندارد و تا خونی ریخته نشود عفو معنا ندارد و تا از دل ضایعه بزرگی گذر نکنی رضا و رضایت بی‌معنی است . هماهنگی واقعی در همین‌ها ریشه دارد &lt;/p&gt;
@@ -435,25 +525,6 @@ sudo apt-get install lib32z1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
         <pubDate>Mon, 27 Jul 2015 00:00:00 +0430</pubDate>
         <link>http://behroozam.com/featured/2015/07/27/what-happen-to-us.html</link>
         <guid isPermaLink="true">http://behroozam.com/featured/2015/07/27/what-happen-to-us.html</guid>
-        
-        
-        <category>featured</category>
-        
-      </item>
-    
-      <item>
-        <title>فناوری اطلاعات سلامت چیست</title>
-        <description>&lt;p&gt;راستش  همیشه اولین سوالی که در مورد رشته ام ازم پرسیده میشه اینه که رشته شما چی هستش برای اینکه کار خودم راحت کنم مختصری تو این پادکست در مورد اینکه رشته فناوری اطلاعات سلامت چی هستش توضیح میدم&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215822080&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;اهنگ : the trooper - iron maden&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/r9u3uz24jtss5hv/hit-podcast.mp3?dl=0&quot;&gt; دریافت پادکست از دراپ باکس&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 22 Jul 2015 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/featured/2015/07/22/what-is-hit.html</link>
-        <guid isPermaLink="true">http://behroozam.com/featured/2015/07/22/what-is-hit.html</guid>
         
         
         <category>featured</category>
