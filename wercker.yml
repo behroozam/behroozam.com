@@ -2,6 +2,7 @@ box: ruby
 build:
   steps:
     # Install dependencies
+-bundle-install
 - script:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
