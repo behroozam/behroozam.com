@@ -5,7 +5,7 @@ build:
 - script:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
-    - bundle-install
+     bundle-install
 
     # Execute jeykyll doctor command to validate the
     # site against a list of known issues.
