@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
 gem 'jekyll'
+gem 'jekyll-paginate'
+gem 'jemoji'
 gem 'jekyll-sitemap'
 gem 'jekyll-tagging'
 gem 'jalalidate'
