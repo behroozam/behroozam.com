@@ -3,7 +3,8 @@ markdown: redcarpet
 highlighter: pygments
 gems:
   - jalalidate
-  -jemoji
+  - jemoji
+
 # Site settings
 title: "بهروزم"
 description: > # manga / anime / gnu linux / networking
