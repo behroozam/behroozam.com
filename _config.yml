@@ -1,5 +1,6 @@
 # Build settings
 markdown: redcarpet
+hilights: Pygments
 gems:
   - jalalidate
   - jemoji
@@ -17,7 +18,6 @@ name: 'behroozam'
 author: 'behrooz hasanbeygi'
 author_image: "/assets/images/behroozam.jpg"
 
-paginate:	5
 
 url: "http://behroozam.com" # the base hostname & protocol for your site
 baseurl: ""
