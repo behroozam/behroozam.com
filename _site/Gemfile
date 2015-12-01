@@ -4,5 +4,5 @@ gem 'jekyll'
 gem 'jemoji'
 gem 'jalalidate'
 gem 'kramdown'
-gem 'pygments.rb'
+
 

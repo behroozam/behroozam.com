@@ -1,6 +1,5 @@
 # Build settings
 markdown: redcarpet
-highlighter: pygments
 gems:
   - jalalidate
   - jemoji
