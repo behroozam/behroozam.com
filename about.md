@@ -1,5 +1,5 @@
 ---
-layout: about me
+layout: page
 title: درباره من
 permalink: /about/
 ---
