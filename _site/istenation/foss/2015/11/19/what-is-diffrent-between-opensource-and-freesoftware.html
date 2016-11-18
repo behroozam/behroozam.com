@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>تفاوت نرم افزار آزاد و متن باز چیست ؟</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://behroozam.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/foss/foss.png)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">تفاوت نرم افزار آزاد و متن باز چیست ؟</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
+              on
+              <span class="date">پنج‌شنبه 28 آبان 1394</span>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section dir="rtl" class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>در چندین گفت و گوی اخیری که در مورد <a href="http://behroozam.com/zconf/2015/09/18/zconf6.html">مقاله ام داشتم</a> با استادان موضوعی که خیلی بحث میشد اصولاً تفاوت بین open source و freesoftware بود . اینجا در این مقاله با توجه به منابع معتبری که وجود داره سعی میکنم مرز باریک بین نرم‌افزار آزاد و متن باز رو مشخص  کنم </p>
+
+<p>ابتدا از تعاریف شروع میکنیم  : </p>
+
+<p>نرم‌افزار آزاد چیست ؟ </p>
+
+<p>تعریف بنیاد نرم‌افزارهای آزاد FSF و به طور خاص ریچارد استالمن بنیان گذار پروژه GNU به این صورت میباشد ( مستندات به زبان فارسی هم ترجمه شده و روی سایت gnu.org موجود میباشند )</p>
+
+<blockquote>
+<p>“Free software” means software that respects users&#39; freedom and community. Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software. Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”. We sometimes call it “libre software” to show we do not mean it is gratis.(http://www.gnu.org/philosophy/free-sw.en.html)</p>
+</blockquote>
+
+<p>نرم‌افزار آزاد به این معنی است که به جامعه و آزادی کاربران احترام میگذارد . تقریباً به این معنی که که کاربران آزاد به اجرا  و کپی و انتشار و مطالعه و تغییر و بهبود نرم‌افزار هستند . نرم‌افزار آزاد به آزادی اهمیت میدهد نه قیمت ( به دلیل ماهیت تفسیر کلمه free در زبان انگلیسی ) . برای درک این مفهوم باید به آزادی همانند آزادی بیان فکر کنید نه آبجوی مجانی . ما بعضی اوقات آن را libre software مینامیم تا نشان دهیم منظورمان رایگان بودن نیست </p>
+
+<p>و چهار شرطی که باعث میشه یک نرم‌افزار آزاد باشه : </p>
+
+<blockquote>
+<p>The freedom to run the program as you wish, for any purpose (freedom 0)</p>
+
+<p>The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.</p>
+
+<p>The freedom to redistribute copies so you can help your neighbor (freedom 2)</p>
+
+<p>The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.</p>
+</blockquote>
+
+<ul>
+<li>آزادی برای اجرای برنامه برای هر منظوری (آزادی ۰)</li>
+<li>آزادی برای مطالعه و بررسی چگونگی عملکرد برنامه و تغییر آن برای نیاز خود (آزادی ۱). +دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد.</li>
+<li>آزادی برای توزیع مجدد کپی‌هایی از آن، بنابراین شما می‌توانید به همسایگان خود کمک کنید (آزادی ۲).</li>
+<li>آزادی برای بهبود برنامه و انتشار این تغییرات برای عموم، بنابراین تمام جامعه از آن بهره +می‌برند (آزادی ۳). دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد.</li>
+</ul>
+
+<p>و تعریف نرم‌افزار متن باز بر اساس تعریف بنیاد نرم‌افزار های متن باز به این صورت میباشد  ( متن انگلیسی به صورت کامل در منبع موجود میباشد https://opensource.org/osd-annotated )</p>
+
+<p>نرم‌افزار متن باز چیست ؟ </p>
+
+<p>نرم‌افزار متن باز نه فقط به معنای دسترسی به کد منبع بلکه باید شرایط توزیع نرم‌افزار را به صورت زیر داشته باشد </p>
+
+<p>۱- آزادی در بازنشر 
+لایسنس ( مجوز ) نباید از فروش یا قرض دادن نرم‌افزار به عنوان جزی از یک توزیع نرم افزاری مجتمع از چندین منبع جلوگیری نماید . </p>
+
+<p>۲ -کد منبع </p>
+
+<p>برنامه باید شامل کد منبع همانند کدی که از روی آن کامپایل شده باشد</p>
+
+<p>۳- کارهای مشتق شده </p>
+
+<p>مجوز (لایسنس) باید اجازه تغییرات و مشتق شدن را بدهد و همچنین اجازه نشر آن را بر اساس لایسنس نرم افزاری اصلی را بدهد . </p>
+
+<blockquote>
+<p>منطق : صرف توانایی خواندن کد منبع کافی نیست تا از از تکامل و بازخورد نرم‌افزار حمایت کند </p>
+</blockquote>
+
+<p>۴- یکپارچگی کد منبع و نویسنده 
+مجوز میتواند از انتشار فرم تغییرشکل یافته برنامه جلوگیری نماید تنها زمانی که فایل‌های الصاقی ( patch files ) و کد منبع برای اهدافی در زمان ساخته شدن تغییر نمایند  . </p>
+
+<p>۴ – بدون تبعیض علیه افراد یا گروه‌ها 
+مجوز نباید در مقابل هر فرد یا گروهی از افراد تبعیض قائل شود.</p>
+
+<p>۵- بدون هیچ تبعیضی علیه زمینه‌هایی از تلاش </p>
+
+<p>مجوز نباید از استفاده از نرم‌افزار در زمینه‌های مختلف جلوگیری نماید . همانند استفاده از یک نرم‌افزار مالی در اقتصاد یا ژنتیک . </p>
+
+<p>۷- توزیع مجوز </p>
+
+<p>حقوقی که به برنامه الصاق شده باید برای همه اجرا بشود </p>
+
+<p>۸ – مجوز نباید به صورت اختصاصی برای یک محصول باشد </p>
+
+<p>نتیجه‌گیری : 
+فرق اساسی ما بین نرم‌افزار  آزاد و اوپن سورس وجود نداره تا زمانی که هردو یک هدف رو دنبال میکنن . تفاوت‌ها در اهمیت و نوع نگاه به زندگی . 
+سادگی در تفسیر اوپن سورس و قوانین سفت و سخت در نرم‌افزار آزاد و همچنین لفظ آزادی که برداشت‌های متفاوتی داره باعث شده جامعه متخصصین به مفهوم اوپن سورس علاقه بیشتری داشته باشن  هرچند با نگاهی عمیق‌تر میشه فهمید قوانین چهار گانه نرم‌افزار آزاد تضمینی هستش که باعث میشه فرهنگ اشتراک گذاری دانش و علم در مقابل ثبت پتنت و کپی رایت زنده بمونه و فارغ از مسایل تجاری برای ساختن دنیایی بهتر استفاده بشه </p>
+
+<blockquote>
+<p>ماشین ها انسان هارو کنترل میکنن و کد ها ماشین‌ها رو . چه کسی کد ها رو کنترل میکنه ؟ 
+-ریچارد استالمن </p>
+</blockquote>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%AA%D9%81%D8%A7%D9%88%D8%AA+%D9%86%D8%B1%D9%85+%D8%A7%D9%81%D8%B2%D8%A7%D8%B1+%D8%A2%D8%B2%D8%A7%D8%AF+%D9%88+%D9%85%D8%AA%D9%86+%D8%A8%D8%A7%D8%B2+%DA%86%DB%8C%D8%B3%D8%AA+%D8%9F&amp;url=http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+              
+              
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'behroozam';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4>behrooz hasanbeygi</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-11-19 00:00">19 Nov 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2016<br>free knowlege for all </section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">بهروزم</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/" class="btn">بازگشت به صفحه اول</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+
+  </body>
+</html>
