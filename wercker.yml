@@ -15,8 +15,6 @@ build:
         code: bundle exec jekyll build --trace --destination ./_site
 
     - create-file:
-        name: generate robots.txt
-        filename: ./_site/robots.txt
         content: |-
           User-agent: *
           Allow: /
