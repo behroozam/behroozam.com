@@ -29,7 +29,10 @@ build:
 
 deploy:
   steps:
-    - gh-pages:
-        token: $GIT_TOKEN
-        domain: behroozam.com
-        basedir: public
+    - install-packages:
+      packages: git ssh-client
+    - leipert/git-push:
+       gh_oauth: $GIT_TOKEN
+       repo: behroozam/behroozam.com
+       branch: gh-pages
+       basedir: public
