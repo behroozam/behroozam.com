@@ -21,7 +21,7 @@ build:
     - create-file:
         name: generate robots.txt
         filename: ./_site/robots.txt
-	overwrite: true
+        overwrite: true
         content: |-
           User-agent: *
           Allow: /
