@@ -20,7 +20,7 @@ build:
         content: |-
           User-agent: *
           Allow: /
-          Sitemap: http://mehdix.ir/sitemap.xml
+          Sitemap: http://behroozam.com/sitemap.xml
 deploy:
   steps:
     - lukevivier/gh-pages:
