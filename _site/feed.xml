@@ -3,11 +3,11 @@
   <channel>
     <title>بهروزم</title>
     <description></description>
-    <link>http://behroozam.com/</link>
-    <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Mar 2017 17:21:45 +0330</pubDate>
-    <lastBuildDate>Thu, 02 Mar 2017 17:21:45 +0330</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 24 Mar 2017 15:36:06 +0430</pubDate>
+    <lastBuildDate>Fri, 24 Mar 2017 15:36:06 +0430</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>آینده از نگاه من</title>
@@ -67,11 +67,11 @@
 &lt;p&gt;در انتها خوشحال میشم که نظرات و دیدگاه‌های شما رو هم در این مورد بدونم&lt;/p&gt;
 </description>
         <pubDate>Thu, 02 Mar 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</link>
-        <guid isPermaLink="true">http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</guid>
+        <link>http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</link>
+        <guid isPermaLink="true">http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</guid>
         
         
-        <category>futurist</category>
+        <category>Futurist</category>
         
       </item>
     
@@ -96,15 +96,15 @@
 &lt;img src=&quot;/assets/article_images/anime/akira.jpg&quot; alt=&quot;پوستر فیلم اکیرا&quot;&gt;
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;و اما دهه نود و اوج گیری محبوبیت انیمه های ژاپنی و محبوب شدن ژانر هنرهای رزمی پخش سراسری انیمه در دنیا با &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AF%DB%8C%D8%AC%DB%8C%D9%85%D9%88%D9%86&quot;&gt;دیجیمون&lt;/a&gt; و&lt;a href=&quot;https://en.wikipedia.org/wiki/Dragon_Ball_Z&quot;&gt; دراگون‌بال زی&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D9%84%D9%88%D8%B1_%D9%85%D9%88%D9%86&quot;&gt;سیلورمون&lt;/a&gt; باعث شکل‌گیری طرفداران سرسخت انیمه در دنیا میشه &lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;دهه نود اونقدر پربار هست که ترجیح میدم در مقاله کامل تری بهش بپردازم، همین بس که انیمه &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D8%B2%D8%B1%DA%A9&quot;&gt;برسرک&lt;/a&gt; یکی از شاهکارهای انیمه محصول دهه ۹۰ میلادی هستش &lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;img src=&quot;/assets/article_images/anime/shonen.jpg&quot; alt=&quot;انیمه های خاطره انگیز برای متولدین دهه ۶۰ و ۷۰. درسته ؟&quot;&gt;
-&lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;قرن ۲۱ اما با رشد تکنولوژیکی صنعت کامپیوتر انیمه هم از این قافله عقب نمیمونه و اولین انیمه به اسم &lt;a href=&quot;https://en.wikipedia.org/wiki/A.LI.CE&quot;&gt;آلیس&lt;/a&gt; کاملاً با گرافیک کامپیوتری ساخته شده خلق میشه&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;از دهه ابتدایی قرن ۲۱ در انیمه میشه به عنوان اوج‌گیری خرده‌فرهنگ &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D9%88%D8%AA%D8%A7%DA%A9%D9%88&quot;&gt;اوتاکو&lt;/a&gt; اسم برد که به تفصیل در مقاله دیگری بهش پرداخته میشه&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;اغلب آثار پرمخاطب و بلند دهه اول مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%D9%84%DB%8C%DA%86_%28%D9%85%D8%A7%D9%86%DA%AF%D8%A7%29&quot;&gt;بلیچ&lt;/a&gt;،&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%B1%D9%88%D8%AA%D9%88&quot;&gt;ناروتو&lt;/a&gt;،&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%81%D8%B1%DB%8C_%D8%AA%DB%8C%D9%84&quot;&gt;فیری‌تیل&lt;/a&gt;،… نسخه انیمه ای از مانگاهای پرطرفدار شونن رو تشکیل میدن البته ژانرهایی مثل تریلر &lt;/span&gt;&lt;/span&gt;( &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AF%D9%81%D8%AA%D8%B1_%D9%85%D8%B1%DA%AF&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;دفتر مرگ &lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%DB%8C%E2%80%8C%D8%B4%D9%88%D8%AC%D9%88&quot;&gt;بی شوجو &lt;/a&gt;&lt;/span&gt;&lt;/span&gt;( &lt;a href=&quot;https://en.wikipedia.org/wiki/Clannad_%28visual_novel%29&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;کلند&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%DB%8C%E2%80%8C%D8%B4%D9%88%D9%86%D9%86&quot;&gt;بی شونن &lt;/a&gt;&lt;/span&gt;&lt;/span&gt;(&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87_%D8%AF%D8%A8%DB%8C%D8%B1%D8%B3%D8%AA%D8%A7%D9%86_%D8%A7%D9%88%D8%B1%D8%A7%D9%86&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;اوران های اسکول&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;هم در جذب مخاطب تأثیر به سزایی رو داشتند&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;البته میشه گفت انیمه هایی بر خلاف رویکرد غالب این صنعت هم در جذب مخاطب بی اثر نبوده&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;آثار شاخص سینمایی مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%BE%D8%A7%D9%BE%D8%B1%DB%8C%DA%A9%D8%A7_(%D9%81%DB%8C%D9%84%D9%85_%DB%B2%DB%B0%DB%B0%DB%B6)&quot;&gt;پابریکا&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B2%DB%8C%DA%AF%D8%B1_%D9%87%D8%B2%D8%A7%D8%B1%D9%87&quot;&gt;بازیگر هزاره&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%BE%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D9%86%D8%AF%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%AA%D9%88%DA%A9%DB%8C%D9%88&quot;&gt;پدرخوانده های توکیو&lt;/a&gt; اثر های شاخص و جدی و تحسین شده ساتوشی کن و انیمه هایی مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%DA%AF%D9%88_%D9%BE%D8%B1%D8%A7%DA%A9%D8%B3%DB%8C&quot;&gt;ارگو پراکسی&lt;/a&gt;   در ژانر &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D8%AF%D8%A8%DB%8C%D8%A7%D8%AA_%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%DB%8C_%D8%B1%D8%B3%D8%AA%D8%A7%D8%AE%DB%8C%D8%B2%DB%8C_%D9%88_%D9%BE%D8%B3%D8%A7%D8%B1%D8%B3%D8%AA%D8%A7%D8%AE%DB%8C%D8%B2%DB%8C&quot;&gt;پسا-آخرالزمانی&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%85%D9%88%D8%B1%D8%A7%DB%8C%DB%8C_%DA%86%D8%A7%D9%85%D9%BE%D9%84%D9%88&quot;&gt;سامورایی چمپلو&lt;/a&gt; اثر&lt;a href=&quot;https://en.wikipedia.org/wiki/Sh%C5%ABk%C5%8D_Murase&quot;&gt; شوکو موراسه&lt;/a&gt; و البته انیمه هایی در سبک &lt;a href=&quot;https://en.wikipedia.org/wiki/Slice_of_life&quot;&gt;زندگی روزمره&lt;/a&gt; مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%85%D9%88%D8%B4%DB%8C%E2%80%8C%D8%B4%DB%8C&quot;&gt;موشیشی&lt;/a&gt; و &lt;a href=&quot;https://en.wikipedia.org/wiki/Natsume&#39;s_Book_of_Friends&quot;&gt;ناتسومه &lt;/a&gt;همه و همه از آثار بلند و پرمخاطب این دهه قرار میگیرن&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;قرن ۲۱ اما با رشد تکنولوژیکی صنعت کامپیوتر انیمه هم از این قافله عقب نمیمونه و اولین انیمه به اسم &lt;a href=&quot;https://en.wikipedia.org/wiki/A.LI.CE&quot;&gt;آلیس&lt;/a&gt; کاملاً با گرافیک کامپیوتری ساخته شده خلق میشه&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;از دهه ابتدایی قرن ۲۱ در انیمه میشه به عنوان اوج‌گیری خرده‌فرهنگ &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D9%88%D8%AA%D8%A7%DA%A9%D9%88&quot;&gt;اوتاکو&lt;/a&gt; اسم برد که به تفصیل در مقاله دیگری بهش پرداخته میشه&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;اغلب آثار پرمخاطب و بلند دهه اول مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%D9%84%DB%8C%DA%86_%28%D9%85%D8%A7%D9%86%DA%AF%D8%A7%29&quot;&gt;بلیچ&lt;/a&gt;،&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%B1%D9%88%D8%AA%D9%88&quot;&gt;ناروتو&lt;/a&gt;،&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%81%D8%B1%DB%8C_%D8%AA%DB%8C%D9%84&quot;&gt;فیری‌تیل&lt;/a&gt;،… نسخه انیمه ای از مانگاهای پرطرفدار شونن رو تشکیل میدن البته ژانرهایی مثل تریلر &lt;/span&gt;&lt;/span&gt;( &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AF%D9%81%D8%AA%D8%B1_%D9%85%D8%B1%DA%AF&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;دفتر مرگ &lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%DB%8C%E2%80%8C%D8%B4%D9%88%D8%AC%D9%88&quot;&gt;بی شوجو &lt;/a&gt;&lt;/span&gt;&lt;/span&gt;( &lt;a href=&quot;https://en.wikipedia.org/wiki/Clannad_%28visual_novel%29&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;کلند&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%DB%8C%E2%80%8C%D8%B4%D9%88%D9%86%D9%86&quot;&gt;بی شونن &lt;/a&gt;&lt;/span&gt;&lt;/span&gt;(&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87_%D8%AF%D8%A8%DB%8C%D8%B1%D8%B3%D8%AA%D8%A7%D9%86_%D8%A7%D9%88%D8%B1%D8%A7%D9%86&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;اوران های اسکول&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;هم در جذب مخاطب تأثیر به سزایی رو داشتند&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;البته میشه گفت انیمه هایی بر خلاف رویکرد غالب این صنعت هم در جذب مخاطب بی اثر نبوده&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;آثار شاخص سینمایی مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%BE%D8%A7%D9%BE%D8%B1%DB%8C%DA%A9%D8%A7_(%D9%81%DB%8C%D9%84%D9%85_%DB%B2%DB%B0%DB%B0%DB%B6)&quot;&gt;پابریکا&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B2%DB%8C%DA%AF%D8%B1_%D9%87%D8%B2%D8%A7%D8%B1%D9%87&quot;&gt;بازیگر هزاره&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%BE%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D9%86%D8%AF%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%AA%D9%88%DA%A9%DB%8C%D9%88&quot;&gt;پدرخوانده های توکیو&lt;/a&gt; اثر های شاخص و جدی و تحسین شده ساتوشی کن و انیمه هایی مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%DA%AF%D9%88_%D9%BE%D8%B1%D8%A7%DA%A9%D8%B3%DB%8C&quot;&gt;ارگو پراکسی&lt;/a&gt;   در ژانر &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D8%AF%D8%A8%DB%8C%D8%A7%D8%AA_%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%DB%8C_%D8%B1%D8%B3%D8%AA%D8%A7%D8%AE%DB%8C%D8%B2%DB%8C_%D9%88_%D9%BE%D8%B3%D8%A7%D8%B1%D8%B3%D8%AA%D8%A7%D8%AE%DB%8C%D8%B2%DB%8C&quot;&gt;پسا-آخرالزمانی&lt;/a&gt; و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%85%D9%88%D8%B1%D8%A7%DB%8C%DB%8C_%DA%86%D8%A7%D9%85%D9%BE%D9%84%D9%88&quot;&gt;سامورایی چمپلو&lt;/a&gt; اثر&lt;a href=&quot;https://en.wikipedia.org/wiki/Sh%C5%ABk%C5%8D_Murase&quot;&gt; شوکو موراسه&lt;/a&gt; و البته انیمه هایی در سبک &lt;a href=&quot;https://en.wikipedia.org/wiki/Slice_of_life&quot;&gt;زندگی روزمره&lt;/a&gt; مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%85%D9%88%D8%B4%DB%8C%E2%80%8C%D8%B4%DB%8C&quot;&gt;موشیشی&lt;/a&gt; و &lt;a href=&quot;https://en.wikipedia.org/wiki/Natsume's_Book_of_Friends&quot;&gt;ناتسومه &lt;/a&gt;همه و همه از آثار بلند و پرمخاطب این دهه قرار میگیرن&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;دهه دوم رو میشه بازسازی دهه ۹۰ قلمداد کرد موضوعات سیاسی و اجتماعی در راس دغدغه انیمه های جدی قرار گرفته &lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;ژانر رمنس و شونن به قدرت خودش پابرجاهست ولی جایگزین مناسبی هنوز برای آثار پرمخاطبی مثل ناروتو و بلیچ وجود نداره&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;اثر تحسین شده &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AD%D9%85%D9%84%D9%87_%D8%A8%D9%87_%D8%AA%D8%A7%DB%8C%D8%AA%D8%A7%D9%86&quot;&gt;حمله به تایتان‌ها&lt;/a&gt; هم توانست که برای مخاطبینی که هنوز نتوسته بودن با انیمه ارتباط برقرار کنن جذاب و تأثیرگذار باشه&lt;/span&gt;&lt;/span&gt;. &lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;پخش آثار انیمه‌ای در غرب هم که در ابتدا دهه ۸۰ با ژانر مکا و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D9%BE%D8%B1%D8%A7%DB%8C_%D9%81%D8%B6%D8%A7%DB%8C%DB%8C&quot;&gt;اسپیس اوپرا &lt;/a&gt;شروع شده بود حالا با پخش آثار جدی تری مثل &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%DB%8C%DA%A9%D9%88-%D9%BE%D8%A7%D8%B3&quot;&gt;سایکو&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;-&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;پس ، &lt;a href=&quot;https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter&quot;&gt;هانتر اکس هانتر&lt;/a&gt; ، و &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D9%88%D8%B1%D8%AF_%D8%A2%D8%B1%D8%AA_%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86&quot;&gt;سورد آرت آنلاین&lt;/a&gt; طرفداران بیشتری رو جذب خودش کرده&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;a href=&quot;http://www.fantasy.ir/news/?title=%D8%A7%D9%86%DB%8C%D9%85%D9%87&quot;&gt;خوندن مطالب سایت گمانه‌زن هم در مورد انیمه میتونه جذاب باشه .&lt;/a&gt;&lt;/p&gt;
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;در مقالات بعدی به زیرسبک های انیمه ای ،فرهنگ انیمه و مانگا و تأثیرش بر صنعت بازی و مد و انیمه های مورد علاقه خودم اشاره میکنم&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;خوشحال میشم که ژانر ها و انیمه های مورد علاقه خودتون یا پیشنهادها و انتقاداتتون رو در نظرات پاسخ بدم &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Feb 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/anime/2017/02/23/anime-world.html</link>
-        <guid isPermaLink="true">http://behroozam.com/anime/2017/02/23/anime-world.html</guid>
+        <link>http://localhost:4000/anime/2017/02/23/anime-world.html</link>
+        <guid isPermaLink="true">http://localhost:4000/anime/2017/02/23/anime-world.html</guid>
         
         
         <category>anime</category>
@@ -160,8 +160,8 @@
 &lt;p&gt;دیر هتین.......(دیرآمدی)&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Jan 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2017/01/06/the-Identity.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2017/01/06/the-Identity.html</guid>
+        <link>http://localhost:4000/life/2017/01/06/the-Identity.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2017/01/06/the-Identity.html</guid>
         
         
         <category>life</category>
@@ -191,8 +191,8 @@
 به نظر من نویسنده از مقام معنوی برخوردار نیست دارای فر ایزدی و جایگاه فراطبیعی یا دارای نبوغ و استعداد شگرف نیست ولی متن یا نوشته او در صورتی خواندنی می‌شود که تجربیات،دانش،تخیل خود را طوری به کار گیرد که امضای او پای اثرش باقی بماند.&lt;/p&gt;
 </description>
         <pubDate>Fri, 09 Dec 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</link>
-        <guid isPermaLink="true">http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</guid>
+        <link>http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</link>
+        <guid isPermaLink="true">http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</guid>
         
         
         <category>book</category>
@@ -230,8 +230,8 @@
 با توجه به ریشه‌یابی که در بالا از فضای سانتی مانتال ایران شد میتونم بگم که این کار سختی هستش ولی در یک مقیاس بزرگ‌تر اگر به تاریخ نگاه کنیم در بزنگاه ها اگر جامعه ما شناخت کافی  رو در مورد اندیشه‌ها و افکار و شیادینی که از جهل اون ها سواستفاده کردن میداشتند هیچ‌گاه درگیر مسائلی اینچنین نبودیم ولی چشم انداز آینده میتونه انگیزه‌ای باشه برای ایجاد تغییرات مثبت که وسیله دانش و شناخت اشتباه گذشتگان رو ما تکرار نکنیم.&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</guid>
+        <link>http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</guid>
         
         
         <category>life</category>
@@ -250,8 +250,8 @@
 در یک شب پاییزی بهروز اینچنین گفت&lt;/p&gt;
 </description>
         <pubDate>Fri, 21 Oct 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</guid>
+        <link>http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</guid>
         
         
         <category>life</category>
@@ -270,8 +270,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/life/2016/08/25/undeep-social.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/08/25/undeep-social.html</guid>
+        <link>http://localhost:4000/life/2016/08/25/undeep-social.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/08/25/undeep-social.html</guid>
         
         
         <category>life</category>
@@ -360,8 +360,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</link>
-        <guid isPermaLink="true">http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</guid>
+        <link>http://localhost:4000/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</link>
+        <guid isPermaLink="true">http://localhost:4000/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</guid>
         
         
         <category>foss</category>
@@ -390,8 +390,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</link>
-        <guid isPermaLink="true">http://behroozam.com/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</guid>
+        <link>http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</link>
+        <guid isPermaLink="true">http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</guid>
         
         
         <category>book</category>
@@ -452,8 +452,8 @@
 2- https://www.techopedia.com/definition/25054/health-care-data-encryption&lt;/p&gt;
 </description>
         <pubDate>Thu, 05 Nov 2015 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/security/2015/11/05/healthcare-data-encryption.html</link>
-        <guid isPermaLink="true">http://behroozam.com/security/2015/11/05/healthcare-data-encryption.html</guid>
+        <link>http://localhost:4000/security/2015/11/05/healthcare-data-encryption.html</link>
+        <guid isPermaLink="true">http://localhost:4000/security/2015/11/05/healthcare-data-encryption.html</guid>
         
         
         <category>security</category>
