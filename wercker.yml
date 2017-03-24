@@ -32,7 +32,7 @@ deploy:
     - install-packages:
       packages: git ssh-client
     - leipert/git-push:
-       gh_oauth: $GIT_TOKEN
+       gh_oauth: $sss
        repo: behroozam/behroozam.com
        branch: gh-pages
        basedir: public
