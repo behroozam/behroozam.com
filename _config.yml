@@ -4,6 +4,7 @@ highlighter: pygments
 paginate: 5
 language: 'fa-IR'
 gems:
+  - jekyll-sitemap
   - jekyll-paginate
   - jalalidate
   - jemoji
