@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages"
 gem "execjs"
 gem 'jekyll-coffeescript'
 gem 'jemoji'
@@ -8,3 +8,4 @@ gem 'therubyracer'
 gem 'redcarpet'
 gem 'jekyll-paginate'
 gem 'kramdown'
+gem 'pygments.rb'

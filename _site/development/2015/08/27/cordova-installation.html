@@ -46,7 +46,7 @@
               <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
               on
-              <span class="date">2015-08-27 00:00:00 +0430</span>
+              <span class="date">پنج‌شنبه 05 شهریور 1394</span>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -70,47 +70,47 @@
 
 <p>در ابتدا کافیه nodejs و npm رو دریافت کنید</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install nodejs npm</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo apt-get install nodejs npm</code></pre></figure>
 
 <p>سپس بر اساس مستندات کوردوا کافیه در ترمینال این دستور رو وارد کنیم تا اخرین نسخه دانلود بشه</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g cordova</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm install -g cordova</code></pre></figure>
 
 <p>خب تا اینجای کار همه چیز به خوبی و خوشی انجام شده . قسمت بد ماجرا تحریم های ظالمانه گوگل علیه دولوپر های عزیزمون هستش . پس با یه تغییر ip که انجام میدین google sdk manager رو دریافت میکنید فقط به دلیل جلوگیری از ارور های بعدی لطفا اخرین نسخه android sdk platform tools و android sdk build tools بعلاوه android 22 و 23 رو دریافت کنید . به دلیل اینکه راه های زیادی برای دریافت sdk manager هست در این مورد زیاد توضیح نمیدم . فقط یادتون باشه همه چیز باید آپدیت باشه . بخاطر همین به یه اینترنت خوب نیاز دارید
 بعد از نصب sdk manager و مشتقاتش حالا نیاز که اون رو به PATH سیستم بشناسونیم . برای من که از zsh استفاده میکنم کافیه در قسمت  <code>/home/<user>/.zshrc</code> قرار بدین و برای bash که اکثر کاربرا استفاده میکنن کافیه در همین مسیر <code>.bashrc</code> این رو قرار بدین کافیه تایپ کنید</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nano /home/username shoma/.bashrc</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>nano /home/username shoma/.bashrc</code></pre></figure>
 
 <p>و سپس این هارو به اخرش اضافه میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;/Android/Sdk/tools
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;Android/Sdk/platform-tools</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;/Android/Sdk/tools
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/&lt;user&gt;Android/Sdk/platform-tools</code></pre></figure>
 
 <p>سپس کد <code>source /home/<user>/.bashrc</code> رو وارد کنید تا پروفایل شما ری استارت بشه
 البته توجه کنید که sdk manager من در دایرکتوری Android/sdk قرار داره که احتمالا با شما متفاوت هستش پس ادرس خودتون باهاش عوض کنید
 سپس اقدام به نصب jdk میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install openjdk-8-jdk</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo apt-get install openjdk-8-jdk</code></pre></figure>
 
 <p>لازم هستش که java رو هم به سیستم شناسونده بشه پس با دستور</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gedit /etc/environment</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo gedit /etc/environment</code></pre></figure>
 
 <p>و  قرار دادن این کد</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">"/usr/lib/jvm/java-8-openjdk-amd64"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;</span></code></pre></figure>
 
 <p>که البته بازم بنا به معماری سیستم شما این ادرس میتونه متفاوت باشه . سپس کافیه کد <code>source /etc/environment</code> رو وارد کنید تا شناسونده بشه
 حالا اگه همه چیز خوب پیش رفته باشه باید با زدن همچین کد هایی برنامه سمپل hello کوردوا بویلد بشه</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cordova create hello com.example.hello HelloWorld
-<span class="nb">cd </span>hello
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>cordova create hello com.example.hello HelloWorld
+<span class="nb">cd</span> hello
 cordova platform add android
 cordova build android</code></pre></figure>
 
 <p>اگر که بویلد شد خوب و اگر نشد ارور ها شامل دوتا ارور عمده میشه ارور اول exit code 2 هست که به خاطر اپدیت و نصب نبودن sdk manager و android target 22 هستش . ارور exit code 8 زمانی به وجود میاد که در سیستم 64 بیتی مفسر سیستم 32 نباشه که با وارد کردن دستور زیر در ترمینال حل میشه</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install lib32stdc++6
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo apt-get install lib32stdc++6
 sudo apt-get install lib32z1</code></pre></figure>
 
 <p>به دلیل کند بودن امولاتور اندروید من استفاده از genymotion رو به شدت توصیه میکنم 
