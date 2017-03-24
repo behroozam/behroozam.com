@@ -32,4 +32,4 @@ deploy:
     - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         domain: behroozam.com
-basedir: build
+        basedir: _site
