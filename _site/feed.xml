@@ -3,83 +3,11 @@
   <channel>
     <title>بهروزم</title>
     <description></description>
-    <link>http://behroozam.com/</link>
-    <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 19 Apr 2017 13:20:08 +0430</pubDate>
-    <lastBuildDate>Wed, 19 Apr 2017 13:20:08 +0430</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 19 Apr 2017 13:28:10 +0430</pubDate>
+    <lastBuildDate>Wed, 19 Apr 2017 13:28:10 +0430</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
-    
-      <item>
-        <title>آموزش راه اندازی درگاه پیام کوتاه</title>
-        <description>&lt;p&gt;شاید صحبت کردن از gsm  و تکنولوژی های نسل دومی تلفن همراه الان با وجود سرویس های مختلف پوش نوتیفیکیشن و پیام رسان های موبایلی مبتنی بر اینترنت و خدمات نسل سوم و چهارم یه جورایی خاطره بازی و منسوخ به نظر برسه ولی باید توجه کرد که با وجود سه بیلیون خط فعال gsm در دنیا و همچنین هزینه پایین پیاده سازی سلوشن های موبایلی میتونه در کسب کار های ما هم خیلی موثر باشه و البته این موضوع فراتر از ارسال مسیج های گروهی و تبلیغاتی هستش.
-من به عنوان یه sysadmin تنبل این وسط حوصله مانیتورینگ رو ندارم و معمولا هم ایمیل هام رو چک نمیکنم.این تکنولوژی زمانی به کمک من اومد که به وسیله پایپلاین ها و ارسال خطاها به من به صورت اتوماتیک خیلی از کارها سروسامان گرفت البته با ترکیب و اندکی خلاقیت . توجه کنید که اینجا فقط میخوام از پیاده سازی یه smsgateway در سطح  سازمان های کوچک و متوسط بگم منتهی مزیتی که این سلوشن نسبت به شرکت های بزرگ ارائه دهنده خدمات مبتنی بر ارزش داره تست و پیاده سازی سرویس هاتون به سرعت agile برای استارتاپ هایی که نمیخوان هزینه زیادی رو انجام بدن ولی کیفیت براشون مهم هست. کاربرد دیگه ای که این سلوشن داره برای دستگاه های IOT هست که در مناطق دور افتاده برای مثال برای مقاصد محیط زیستی و پژوهشی استفاده میشه که امکان دسترسی به اینترنت مقدور نیست. 
-صنعت سلامت همگانی public health هم میتونه به عنوان سامانه های اطلاعاتی برای انواع غربالگری ها و مقاصد پژوهشی از این سلوشن استفاده کنه.
-این آموزش مناسب توسعه دهنده ها و مدیران سیستم سطح متوسط به بالا هستش &lt;/p&gt;
-
-&lt;p&gt;نحوه راه اندازی مودم gsm به همراه رابط کاربری playsms 
-برای راه اندازی playsms  نیازبه یک پایگاه داده mysql  و وب سرور ترجیهاآپاچی نیاز داریم. 
-مراحل نصب playsms :
-ابتدا بسته فشرده برنامه را از سایت playsms  دریافت میکنیم سپس استخراج و کپی کردن و اقدام به ساخت سیملینک میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;tar -zxf playsms-1.4.tar.gz -C /usr/local/src
-ls -l /usr/local/src/
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/src/playsms-1.4/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .&lt;/p&gt;
-
-&lt;p&gt;Nano install.conf.dist 
-cp install.conf.dist install.conf
-بعد از ثبت تغییرات اقدام به نصب آن میکنیم 
-sudo ./install-playsms.sh&lt;/p&gt;
-
-&lt;p&gt;پس از نصب میتوانید برنامه را به بوت اضافه کنید 
- Sudo echo /usr/local/bin/playsmsd start &amp;gt; /etc/init.d/rc.local&lt;/p&gt;
-
-&lt;p&gt;سپس ابتدا اقدام به دانلود و نصب gammu  و gammu-smsd  مینمایم .
-برای نصب gammu  و gammu-smsd  میتوان در صورت موجود بودن از پکیج منیجر استفاده نمود در غیر این صورت اقدام به نصب به صورت دست میکینم . 
-در صورت موجود بودن پکیج منیجر 
-Sudo apt-get install gammu gammu-smsd&lt;/p&gt;
-
-&lt;p&gt;سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند 
-sudo chmod 777 /dev/ttyUSB0
-دایکرکتوری را جهت دریافت SMS  میسازیم 
-mkdir -p /var/log/gammu /var/spool/gammu/{inbox,outbox,sent,error}&lt;/p&gt;
-
-&lt;p&gt;سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم 
-chown www-data:www-data -R /var/spool/gammu/*
-حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم 
-wget -c https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
- cp gammu-smsdrc /etc/
-تنطیمات پیشفرض را تغییر میدهیم 
-nano /etc/gammu-smsdrc
-در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود )
-مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم 
-ln -s /etc/gammu-smsdrc /etc/gammurc&lt;/p&gt;
-
-&lt;p&gt;برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات 
-nano /etc/init.d/gammu-smsd
-جای user=gammu  با user=root عوض شود 
-برای شناسایی تنظیمات یکبار سرویس gammu-smsd را ری استارت میکنیم 
-Sudo systemctl restart gammu-smsd.service
-سپس برای شناسایی مودم  کامند زیر را وارد میکنیم
-gammu -f /var/log/gammulog identify
-عملیات پیکره بندی به پایان رسیده حال برای تست gammu دستور زیر را وارد میکنیم 
-gammu sendsms TEXT 0912*******  -unicode -text &amp;quot;سلام دنیا&amp;quot;
-به جای 0912 ادرس گیرنده را وارد نمایید &lt;/p&gt;
-
-&lt;p&gt;برای مدیریت پیام های ارسالی و دریافتی وارد پنل میشویم
-ادرس پیشفرض 127.0.0.1/playsms و رمز نام کاربری admin  میباشد 
-حالا برای تنظیمات شناسایی gammu  توسط playsms به قسمت تنظیمات رفته و در قسمت manage gateway and smsc رویgammu  کلیک کرده و در قسمت spool folder  ادرس /var/spool/gammu را وارد میکنیم  و ذخیره سازی میکنیم . سپس به تنظیمات main رفته و در انجا default smscر را gammu  انتخاب میکنیم . 
-پایان &lt;/p&gt;
-</description>
-        <pubDate>Wed, 19 Apr 2017 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/featured/2017/04/19/gammu-with-playsms.html</link>
-        <guid isPermaLink="true">http://behroozam.com/featured/2017/04/19/gammu-with-playsms.html</guid>
-        
-        
-        <category>featured</category>
-        
-      </item>
     
       <item>
         <title>آموزش راه اندازی درگاه پیام کوتاه</title>
@@ -170,8 +98,8 @@ Sudo apt-get install gammu gammu-smsd
 پایان &lt;/p&gt;
 </description>
         <pubDate>Wed, 19 Apr 2017 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</link>
-        <guid isPermaLink="true">http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</guid>
+        <link>http://localhost:4000/development/2017/04/19/gammu-with-playsms.html</link>
+        <guid isPermaLink="true">http://localhost:4000/development/2017/04/19/gammu-with-playsms.html</guid>
         
         
         <category>development</category>
@@ -236,8 +164,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p&gt;در انتها خوشحال میشم که نظرات و دیدگاه‌های شما رو هم در این مورد بدونم&lt;/p&gt;
 </description>
         <pubDate>Thu, 02 Mar 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</link>
-        <guid isPermaLink="true">http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</guid>
+        <link>http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</link>
+        <guid isPermaLink="true">http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</guid>
         
         
         <category>Futurist</category>
@@ -272,8 +200,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;خوشحال میشم که ژانر ها و انیمه های مورد علاقه خودتون یا پیشنهادها و انتقاداتتون رو در نظرات پاسخ بدم &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Feb 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/anime/2017/02/23/anime-world.html</link>
-        <guid isPermaLink="true">http://behroozam.com/anime/2017/02/23/anime-world.html</guid>
+        <link>http://localhost:4000/anime/2017/02/23/anime-world.html</link>
+        <guid isPermaLink="true">http://localhost:4000/anime/2017/02/23/anime-world.html</guid>
         
         
         <category>anime</category>
@@ -329,8 +257,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p&gt;دیر هتین.......(دیرآمدی)&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Jan 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2017/01/06/the-Identity.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2017/01/06/the-Identity.html</guid>
+        <link>http://localhost:4000/life/2017/01/06/the-Identity.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2017/01/06/the-Identity.html</guid>
         
         
         <category>life</category>
@@ -360,8 +288,8 @@ Sudo apt-get install gammu gammu-smsd
 به نظر من نویسنده از مقام معنوی برخوردار نیست دارای فر ایزدی و جایگاه فراطبیعی یا دارای نبوغ و استعداد شگرف نیست ولی متن یا نوشته او در صورتی خواندنی می‌شود که تجربیات،دانش،تخیل خود را طوری به کار گیرد که امضای او پای اثرش باقی بماند.&lt;/p&gt;
 </description>
         <pubDate>Fri, 09 Dec 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</link>
-        <guid isPermaLink="true">http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</guid>
+        <link>http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</link>
+        <guid isPermaLink="true">http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</guid>
         
         
         <category>book</category>
@@ -399,8 +327,8 @@ Sudo apt-get install gammu gammu-smsd
 با توجه به ریشه‌یابی که در بالا از فضای سانتی مانتال ایران شد میتونم بگم که این کار سختی هستش ولی در یک مقیاس بزرگ‌تر اگر به تاریخ نگاه کنیم در بزنگاه ها اگر جامعه ما شناخت کافی  رو در مورد اندیشه‌ها و افکار و شیادینی که از جهل اون ها سواستفاده کردن میداشتند هیچ‌گاه درگیر مسائلی اینچنین نبودیم ولی چشم انداز آینده میتونه انگیزه‌ای باشه برای ایجاد تغییرات مثبت که وسیله دانش و شناخت اشتباه گذشتگان رو ما تکرار نکنیم.&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</guid>
+        <link>http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</guid>
         
         
         <category>life</category>
@@ -419,8 +347,8 @@ Sudo apt-get install gammu gammu-smsd
 در یک شب پاییزی بهروز اینچنین گفت&lt;/p&gt;
 </description>
         <pubDate>Fri, 21 Oct 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</guid>
+        <link>http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</guid>
         
         
         <category>life</category>
@@ -439,8 +367,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/life/2016/08/25/undeep-social.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/08/25/undeep-social.html</guid>
+        <link>http://localhost:4000/life/2016/08/25/undeep-social.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/08/25/undeep-social.html</guid>
         
         
         <category>life</category>
@@ -529,11 +457,41 @@ Sudo apt-get install gammu gammu-smsd
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</link>
-        <guid isPermaLink="true">http://behroozam.com/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</guid>
+        <link>http://localhost:4000/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</link>
+        <guid isPermaLink="true">http://localhost:4000/foss/2015/11/19/what-is-diffrent-between-opensource-and-freesoftware.html</guid>
         
         
         <category>foss</category>
+        
+      </item>
+    
+      <item>
+        <title>سوکورو تازاکی بی‌رنگ و سال‌های زیارتش </title>
+        <description>&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;h3&gt; قسمتی از متن کتاب سوکورو تازاکی و سالهای زیارتش &lt;/h3&gt;
+
+&lt;p&gt;سوکورو تازاکی در عمیق‌ترین نقطه جانش به درک رسید . درک اینکه هیچ قلبی صرفاً به واسطه هماهنگی با قلب دیگری وصل نیست . زخم است که قلب ها را عمیقاً به هم پیوند میدهد . 
+پیوند درد با درد شکنندگی با شکنندگی . تا صدای ضجه بلند نشود سکوت معنا ندارد و تا خونی ریخته نشود عفو معنا ندارد و تا از دل ضایعه بزرگی گذر نکنی رضا و رضایت بی‌معنی است . هماهنگی واقعی در همین‌ها ریشه دارد &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;سوکورو تازاکی  فردی موفق و تحصیلکرده از طبقه متوسط رو به بالای جامعه که عاشق تماشا و ساختن ایستگاه های قطار است  ولی پشت این نقاب موفقیت فردی تنها است که ترسی عمیق از  گذشته ها و دلبستن دارد  اما باز شدن پای یک زن به زندگی او باعث می‌شود تا به گذشته بازگردد  به عمق فاجعه بزند و سعی کند تا بفهمد چرا روزگاری تمام دوستانش دیگر نخواستند او را ببینند &lt;/p&gt;
+
+&lt;p&gt;سوکورو تازاکی داستان تصمیم ما انسان‌ها است . سرنوشتی که خود رقم میزنیم . گاهی یک سکوت طولانی مدت تبدیل به بغض می‌شود  بغض به نا امیدی و سپس خشم . رفتار سوکورو از جنس همان غرور و لجاجت احمقانه انسان‌ها نیست وقتی دوستانش دیگر نخواستند اورا ببینند وقتی هایدا ناگهان غیب شد فکر میکرد سرنوشت اوست که همواره کسانی که دوست دارد را از دست بدهد . این ضربه ها این زخم عمیق باعث می‌شود دیگر ریسک دل بستن به کسی را به خود ندهد ولی با ورود سارا به زندگیش او حالا انگیزه‌ای برای کشف واقعیت دارد تا از بن بستی که در آن افتاده رها شود .&lt;/p&gt;
+
+&lt;p&gt;به سبک سیاق کارهای موراکامی چیز هایی هم هست که هیچ‌گاه روشن نمیشود . برای مثال آن پیانیست جز که هاله دور آدم‌ها را میدید یا رفتن ناگهانی هایدا .دنیایی که موراکامی خلق میکند سرشار از دیالوگ هایی است که شمارا به فکر فرو خواهد برد . حس همزاد پنداری شگفتی از رمز و راز ها و تلفیق واقعیت و خیال  . حتی ممکن است گاهی به موراکامی رشک برید که چگونه میتواند چنین دیالوگ ها و افرادی را بسازد . سوکورو تازاکی بی‌رنگ شاید در پرونده موراکامی در مقایسه با دیگر رمان هایش مثل کافکا در کرانه و شکار گوسفند وحشی و 1q84 اثر شاخصی نباشد ولی کماکان اثر ارزشمندی در کارنامه موراکامی است . &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;پی نوشت : گاهی ما آدم‌ها مغزمون رو تبدیل به کشو هایی پر از موضوعات مجهول میکنیم . شاید میترسیم که به عمق فاجعه بزنیم . شاید میترسیم که هیولایی وحشتناک و بدتر در میان خاکستری اتفاقاتی که تبدیل به خاطره و خاطره هایی که تبدیل به تکه‌هایی پراکنده شدن وجود داشته باشه  . ولی زمانی باید همه این‌ها رو کنار بزاریم و بپرسیم چرا . چه بهتر که تلاش بکنیم و شکست بخوریم تا همواره حسرت این رو بکشیم که چرا روزی نپرسیدیم چرا ؟&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
+        <link>http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</link>
+        <guid isPermaLink="true">http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</guid>
+        
+        
+        <category>book</category>
         
       </item>
     
