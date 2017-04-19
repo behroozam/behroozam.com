@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<script id="dsq-count-scr" src="//behroozam.disqus.com/count.js" async></script>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>آموزش راه اندازی درگاه پیام کوتاه</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://localhost:4000/development/2017/04/19/gammu-with-playsms.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/gammu/gammu.png)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">آموزش راه اندازی درگاه پیام کوتاه</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
+              on
+              <span class="date">چهارشنبه 30 فروردین 1396</span>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section dir="rtl" class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>شاید صحبت کردن از gsm  و تکنولوژی های نسل دومی تلفن همراه الان با وجود سرویس های مختلف پوش نوتیفیکیشن و پیام رسان های موبایلی مبتنی بر اینترنت و خدمات نسل سوم و چهارم یه جورایی خاطره بازی و منسوخ به نظر برسه ولی باید توجه کرد که با وجود سه بیلیون خط فعال gsm در دنیا و همچنین هزینه پایین پیاده سازی سلوشن های موبایلی میتونه در کسب کار های ما هم خیلی موثر باشه و البته این موضوع فراتر از ارسال مسیج های گروهی و تبلیغاتی هستش.
+من به عنوان یه sysadmin تنبل این وسط حوصله مانیتورینگ رو ندارم و معمولا هم ایمیل هام رو چک نمیکنم.این تکنولوژی زمانی به کمک من اومد که به وسیله پایپلاین ها و ارسال خطاها به من به صورت اتوماتیک خیلی از کارها سروسامان گرفت البته با ترکیب و اندکی خلاقیت . توجه کنید که اینجا فقط میخوام از پیاده سازی یه smsgateway در سطح  سازمان های کوچک و متوسط بگم منتهی مزیتی که این سلوشن نسبت به شرکت های بزرگ ارائه دهنده خدمات مبتنی بر ارزش داره تست و پیاده سازی سرویس هاتون به سرعت agile برای استارتاپ هایی که نمیخوان هزینه زیادی رو انجام بدن ولی کیفیت براشون مهم هست. کاربرد دیگه ای که این سلوشن داره برای دستگاه های IOT هست که در مناطق دور افتاده برای مثال برای مقاصد محیط زیستی و پژوهشی استفاده میشه که امکان دسترسی به اینترنت مقدور نیست. 
+صنعت سلامت همگانی public health هم میتونه به عنوان سامانه های اطلاعاتی برای انواع غربالگری ها و مقاصد پژوهشی از این سلوشن استفاده کنه.
+این آموزش مناسب توسعه دهنده ها و مدیران سیستم سطح متوسط به بالا هستش </p>
+
+<h2>نحوه راه اندازی مودم gsm به همراه رابط کاربری playsms</h2>
+
+<p>برای راه اندازی playsms  نیازبه یک پایگاه داده mysql  و وب سرور ترجیهاآپاچی نیاز داریم. 
+مراحل نصب playsms :
+ابتدا بسته فشرده برنامه را از سایت playsms  دریافت میکنیم سپس استخراج و کپی کردن و اقدام به ساخت سیملینک میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tar  -zxf playsms-1.4.tar.gz -C /usr/local/src
+ls -l usr/local/src
+<span class="nb">cd</span> usr/local/src/playsms-1.4</code></pre></figure>
+
+<p>سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>Nano install.conf.dist 
+cp install.conf.dist install.conf</code></pre></figure>
+
+<p>بعد از ثبت تغییرات اقدام به نصب آن میکنیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo ./install-playsms.sh</code></pre></figure>
+
+<p>پس از نصب میتوانید برنامه را به بوت اضافه کنید </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span> Sudo <span class="nb">echo</span> /usr/local/bin/playsmsd start &gt; /etc/init.d/rc.local</code></pre></figure>
+
+<p>سپس ابتدا اقدام به دانلود و نصب gammu  و gammu-smsd  مینمایم .
+برای نصب gammu  و gammu-smsd  میتوان در صورت موجود بودن از پکیج منیجر استفاده نمود در غیر این صورت اقدام به نصب به صورت دست میکینم . 
+در صورت موجود بودن پکیج منیجر 
+<code>
+Sudo apt-get install gammu gammu-smsd
+</code>
+سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo chmod <span class="m">777</span> /dev/ttyUSB0</code></pre></figure>
+
+<p>دایکرکتوری را جهت دریافت SMS  میسازیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>mkdir -p /var/log/gammu /var/spool/gammu/<span class="o">{</span>inbox,outbox,sent,error<span class="o">}</span></code></pre></figure>
+
+<p>سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>chown www-data:www-data -R /var/spool/gammu/*</code></pre></figure>
+
+<p>حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>wget -c https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
+ cp gammu-smsdrc /etc/</code></pre></figure>
+
+<p>تنطیمات پیشفرض را تغییر میدهیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>nano /etc/gammu-smsdrc</code></pre></figure>
+
+<p>در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود )
+مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>ln -s /etc/gammu-smsdrc /etc/gammurc</code></pre></figure>
+
+<p>برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>nano /etc/init.d/gammu-smsd</code></pre></figure>
+
+<p>جای user=gammu  با user=root عوض شود 
+برای شناسایی تنظیمات یکبار سرویس gammu-smsd را ری استارت میکنیم </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>Sudo systemctl restart gammu-smsd.service</code></pre></figure>
+
+<p>سپس برای شناسایی مودم  کامند زیر را وارد میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>gammu -f /var/log/gammulog identify</code></pre></figure>
+
+<p>عملیات پیکره بندی به پایان رسیده حال برای تست gammu دستور زیر را وارد میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>gammu sendsms TEXT <span class="m">0912</span>*******  -unicode -text <span class="s2">&quot;سلام دنیا&quot;</span></code></pre></figure>
+
+<p>به جای 0912 ادرس گیرنده را وارد نمایید</p>
+
+<h2>تنظیمات پنل playsms</h2>
+
+<p>برای مدیریت پیام های ارسالی و دریافتی وارد پنل میشویم
+ادرس پیشفرض 127.0.0.1/playsms و رمز نام کاربری admin  میباشد 
+حالا برای تنظیمات شناسایی gammu  توسط playsms به قسمت تنظیمات رفته و در قسمت manage gateway and smsc رویgammu  کلیک کرده و در قسمت spool folder  ادرس /var/spool/gammu را وارد میکنیم  و ذخیره سازی میکنیم . سپس به تنظیمات main رفته و در انجا default smscر را gammu  انتخاب میکنیم . 
+پایان </p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%B1%D8%A7%D9%87+%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%DB%8C+%D8%AF%D8%B1%DA%AF%D8%A7%D9%87+%D9%BE%DB%8C%D8%A7%D9%85+%DA%A9%D9%88%D8%AA%D8%A7%D9%87&amp;url=http://localhost:4000/development/2017/04/19/gammu-with-playsms"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+              
+            
+              
+              
+            
+              
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4>behrooz hasanbeygi</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2017-04-19 00:00">19 Apr 2017</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2017<br>free knowlege for all </section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">بهروزم</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/" class="btn">بازگشت به صفحه اول</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+
+  </body>
+</html>
