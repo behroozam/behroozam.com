@@ -116,7 +116,8 @@ Sudo apt-get install gammu gammu-smsd
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>nano /etc/gammu-smsdrc</code></pre></figure>
 
-<p>در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود )
+<p>میتوانید تنظیمات گوشی یا مودم gsm مورد نظر خودتون رو در <a href="https://wammu.eu/phones/">اینجا</a> پیدا کنید
+در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
 مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم </p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>ln -s /etc/gammu-smsdrc /etc/gammurc</code></pre></figure>

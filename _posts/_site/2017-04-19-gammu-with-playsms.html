@@ -1,0 +1,85 @@
+<p>شاید صحبت کردن از gsm  و تکنولوژی های نسل دومی تلفن همراه الان با وجود سرویس های مختلف پوش نوتیفیکیشن و پیام رسان های موبایلی مبتنی بر اینترنت و خدمات نسل سوم و چهارم یه جورایی خاطره بازی و منسوخ به نظر برسه ولی باید توجه کرد که با وجود سه بیلیون خط فعال gsm در دنیا و همچنین هزینه پایین پیاده سازی سلوشن های موبایلی میتونه در کسب کار های ما هم خیلی موثر باشه و البته این موضوع فراتر از ارسال مسیج های گروهی و تبلیغاتی هستش.
+من به عنوان یه sysadmin تنبل این وسط حوصله مانیتورینگ رو ندارم و معمولا هم ایمیل هام رو چک نمیکنم.این تکنولوژی زمانی به کمک من اومد که به وسیله پایپلاین ها و ارسال خطاها به من به صورت اتوماتیک خیلی از کارها سروسامان گرفت البته با ترکیب و اندکی خلاقیت . توجه کنید که اینجا فقط میخوام از پیاده سازی یه smsgateway در سطح  سازمان های کوچک و متوسط بگم منتهی مزیتی که این سلوشن نسبت به شرکت های بزرگ ارائه دهنده خدمات مبتنی بر ارزش داره تست و پیاده سازی سرویس هاتون به سرعت agile برای استارتاپ هایی که نمیخوان هزینه زیادی رو انجام بدن ولی کیفیت براشون مهم هست. کاربرد دیگه ای که این سلوشن داره برای دستگاه های IOT هست که در مناطق دور افتاده برای مثال برای مقاصد محیط زیستی و پژوهشی استفاده میشه که امکان دسترسی به اینترنت مقدور نیست. 
+صنعت سلامت همگانی public health هم میتونه به عنوان سامانه های اطلاعاتی برای انواع غربالگری ها و مقاصد پژوهشی از این سلوشن استفاده کنه.
+این آموزش مناسب توسعه دهنده ها و مدیران سیستم سطح متوسط به بالا هستش</p>
+
+<p>##نحوه راه اندازی مودم gsm به همراه رابط کاربری playsms 
+برای راه اندازی playsms  نیازبه یک پایگاه داده mysql  و وب سرور ترجیهاآپاچی نیاز داریم. 
+مراحل نصب playsms :
+ابتدا بسته فشرده برنامه را از سایت playsms  دریافت میکنیم سپس استخراج و کپی کردن و اقدام به ساخت سیملینک میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">tar  -zxf playsms-1.4.tar.gz -C /usr/local/src
+ls -l usr/local/src
+<span class="nb">cd </span>usr/local/src/playsms-1.4</code></pre></figure>
+
+<p>سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Nano install.conf.dist 
+cp install.conf.dist install.conf</code></pre></figure>
+
+<p>بعد از ثبت تغییرات اقدام به نصب آن میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo ./install-playsms.sh</code></pre></figure>
+
+<p>پس از نصب میتوانید برنامه را به بوت اضافه کنید</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Sudo <span class="nb">echo</span> /usr/local/bin/playsmsd start &gt; /etc/init.d/rc.local</code></pre></figure>
+
+<p>سپس ابتدا اقدام به دانلود و نصب gammu  و gammu-smsd  مینمایم .
+برای نصب gammu  و gammu-smsd  میتوان در صورت موجود بودن از پکیج منیجر استفاده نمود در غیر این صورت اقدام به نصب به صورت دست میکینم . 
+در صورت موجود بودن پکیج منیجر 
+<code>
+Sudo apt-get install gammu gammu-smsd
+</code>
+سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chmod 777 /dev/ttyUSB0</code></pre></figure>
+
+<p>دایکرکتوری را جهت دریافت SMS  میسازیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p /var/log/gammu /var/spool/gammu/<span class="o">{</span>inbox,outbox,sent,error<span class="o">}</span></code></pre></figure>
+
+<p>سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chown www-data:www-data -R /var/spool/gammu/<span class="k">*</span></code></pre></figure>
+
+<p>حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget -c https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
+ cp gammu-smsdrc /etc/</code></pre></figure>
+
+<p>تنطیمات پیشفرض را تغییر میدهیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nano /etc/gammu-smsdrc</code></pre></figure>
+
+<p>میتوانید تنظیمات گوشی یا مودم gsm مورد نظر خودتون رو در <a href="https://wammu.eu/phones/">اینجا</a> پیدا کنید
+در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
+مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /etc/gammu-smsdrc /etc/gammurc</code></pre></figure>
+
+<p>برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nano /etc/init.d/gammu-smsd</code></pre></figure>
+
+<p>جای user=gammu  با user=root عوض شود 
+برای شناسایی تنظیمات یکبار سرویس gammu-smsd را ری استارت میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Sudo systemctl restart gammu-smsd.service</code></pre></figure>
+
+<p>سپس برای شناسایی مودم  کامند زیر را وارد میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu -f /var/log/gammulog identify</code></pre></figure>
+
+<p>عملیات پیکره بندی به پایان رسیده حال برای تست gammu دستور زیر را وارد میکنیم</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu sendsms TEXT 0912<span class="k">*******</span>  -unicode -text <span class="s2">"سلام دنیا"</span></code></pre></figure>
+
+<p>به جای 0912 ادرس گیرنده را وارد نمایید</p>
+
+<p>##تنظیمات پنل playsms
+برای مدیریت پیام های ارسالی و دریافتی وارد پنل میشویم
+ادرس پیشفرض 127.0.0.1/playsms و رمز نام کاربری admin  میباشد 
+حالا برای تنظیمات شناسایی gammu  توسط playsms به قسمت تنظیمات رفته و در قسمت manage gateway and smsc رویgammu  کلیک کرده و در قسمت spool folder  ادرس /var/spool/gammu را وارد میکنیم  و ذخیره سازی میکنیم . سپس به تنظیمات main رفته و در انجا default smscر را gammu  انتخاب میکنیم . 
+پایان</p>
+

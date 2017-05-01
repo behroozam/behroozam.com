@@ -5,9 +5,94 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 19 Apr 2017 13:28:10 +0430</pubDate>
-    <lastBuildDate>Wed, 19 Apr 2017 13:28:10 +0430</lastBuildDate>
+    <pubDate>Tue, 02 May 2017 00:27:47 +0430</pubDate>
+    <lastBuildDate>Tue, 02 May 2017 00:27:47 +0430</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>نحوه نصب و راه اندازی مانتیورینگ اسنورت</title>
+        <description>&lt;p&gt;معمولاً مدیران سرور ها توجه زیادی به معقوله امنیت دارن ولی پیاده‌سازی سرویسی که بتونه تهدیدات رو شناسایی کنه و قابل یادگیری باشه امر سخت و طاقت فرسایی هستش یکی از ابتدایی ترین معقوله ها در این زمینه تأیید دو مرحله برای SSH و یا محدود کردن IP هایی که دسترسی به ریموت دارند هست ولی دیگر سرویس ها آسیب‌پذیر باقی میمونه . 
+در این زمینه ابزار های Intrusion detection system یا به اختصار ids ها توسعه پیدا کردند که به صورت کلی شامل دو نوع host based یا HIDS و network based یا NIDS تقسیم‌بندی میشن. 
+نوع  HOST based تنها برای مدیریت یکی از نود ها یا سیستم‌ها هستش یعنی تحلیل پکت ها و لاگ گیری انجام میشه ولی برای یک سیستم .
+نوع network based روی gateway تعبیه میشه و اقدام به تحلیل پکت ها و سیگنیچر حمله ها میکنه و در صورت حمله از وقوعش جلوگیری یا در صورت خرابکاری به مدیر سیستم اطلاع میده. 
+مورد دیگه درمورد ids ها مدل های پیشگیری یا شناسایی خطرات احتمالی است که شامل دو مدل Signature-based و Anomaly-based میشه .
+مدلSignature-based با استفاده از الگوها و روش‌هایی که از حملات شناسایی شده اقدام به آنالیز رفتار سیستم و پکت‌ها میکنه از نقطه قوت های این مدل سرعت بالا منطقی بودن و عدم هشدار های کاذب هستش.
+مدل  Anomaly-based در اصل برای شناسایی حملاتی به وجود اومده که به zero-day attack معروف هستن در این حملات اصولاً از روش‌هایی استفاده میشه که ناشناخته هستند. در این روش رفتار نرمال سیستم برای مدتی مورد ارزیابی قرار میگیره و در صورت رفتاری خارج از عادت‌های سیستم اتفاق افتاد به سیس ادمین هشدار میده . از مشکلات این نوع سیستم‌ها  میتونه هشدارهای کاذب یا پیچیدگی در فهم باشه .
+یکی از ابزار هایی که در این زمینه تبدیل به یک استاندارد شده snort هست که NIDS محسوب میشه که از دو مود  Anomaly-based و Signature-based به خوبی پشتیبانی میکنه . &lt;/p&gt;
+
+&lt;h3&gt;مهم: اگر که با شبکه و زیرساخت و سرویس های لینوکسی و قوائد nix و ruby و bundler و ruby on rails  آشنا نیستید این آموزش برای شما طراحی نشده&lt;/h3&gt;
+
+&lt;h3&gt;نکته: قصد داشتم نحوه نصب و کانفیگ snort رو هم آموزش بدم که دیدم در &lt;a href=&quot;http://netamooz.net/snort-ids-installation-configuration/&quot;&gt;این سایت&lt;/a&gt; آموزش داده پس به پیاده‌سازی یه وب اینترفیس و سیستم تحلیل لاگ بسنده میکنم . البته که سنترالایز کردن لاگ های snort میتونه حرکت خوبی باشه مثل استفاده از graylog ,elasticsearch ولی استفاده از ابزارهای مانیتورینگ امنیتی در محیط های کوچکتر میتونه مفیدتر باشه .&lt;/h3&gt;
+
+&lt;p&gt;من از ابزار snorby برای این موضوع استفاده میکنم &lt;/p&gt;
+
+&lt;p&gt;در قدم اول روبی و gems رو بر روی سیستم نصب میکنیم &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ruby-full
+or
+sudo yum install ruby ruby-devel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;و گیت البته &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install git
+or
+sudo yum install git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;سپس اقدام به clone کردن snorby میکنیم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/Snorby/snorby&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;مراحل نصب &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; snorby 
+bundle install 
+bundle &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; rake snorby:setup 
+rails server -p &lt;span class=&quot;m&quot;&gt;8888&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;تا اینجای کار اگه همه چیز به خوبی و خوشی پیش رفته باشه و در دپندنسی های پکیج های روبی به مشکلی برنخورده باشین ( انتظار میره که بلد باشین پیش نیاز ها رو رفع کنید ) باید بریم سراغ فرستادن لاگ های snort به سمت یکی از دیتابیس های مورد علاقمون که mysql(mariadb) یا postgres هست . متأسفانه از نسخه ۲.۹ به بعد فرستادن لاگ ها از طریق کانفیگ snort غیر فعال شده پس برای این کار نیاز به ابزار دیگه ای به اسم barnyard2 داریم . برای کانفیگ و نصب این ابزار کافیه&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;sudo autogen.sh &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;رو وارد کنیم تا فایل configure ساخته بشه سپس در سویچ های configure این خطوط اضافه &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;./configure --with-mysql –with-mysql-libraries&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib64/mysql   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;البته توجه کنید که بنا به معماری سیستم شما این آدرس لایبرری میتونه متفاوت باشه که میتونید با&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt; 
+whereis libmysqlclient &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;این آدرس رو پیدا کنید در صورت حل شدن دپندنسی ها سراغ کانفیگ بریم 
+حالا هر کجای سیستم شما که barnyard نصب شده به دنبال کانفیگش میگردیم :))) 
+بعد از پیدا کردن کانفیگ توصیه ام این هستش که در پوشه تنظیمات snort کپی بشه که از آشفتگی های بعدی جلوگیری کنه برای مثال&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;sudo cp /user/local/lib/etc/barnyard2.conf /etc/snort/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;حال نوبت اضافه کردن تغییرات به کانفیگ هستش توجه کنید که من از دیتابیس خود snorby جهت ذخیره سازی لاگ های استاندارد snort استفاده میکنم تحت فیلد alert در انتها کانفیگ قرار میدم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;nano etc/snort/barnyard2
+output database: alert, mysql, &lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root &lt;span class=&quot;nv&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;???? &lt;span class=&quot;nv&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;snorby &lt;span class=&quot;nv&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localhost&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;حال در صورت اجرایی بودن سرویس snortd میشه به راحتی لاگ های دریافتی رو در دیتابیس درج کرد&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;sudo /usr/local/bin/barnyard2 -c /etc/snort/barnyard2.conf -d /var/log/snort&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;حال نوبت لاگین کردن به پنل snorby است که به صورت پیشفرض روی پورت ۳۰۰۰  اجرا می‌شود که من به دلیل درگیر بودن این پورت از سویچ -p استفاده میکنم 
+نکته مهم : حتماً در صورت تست و نهایی شدن از یک وب سرور جهت اجرا کردن وب اپلیکیشن استفاده کنید 
+نام کاربری و رمز پیشفرض به ترتیب : snorby@example.com و snorby هست که توصیه میکنم حتماً تعویض کنید &lt;/p&gt;
+
+&lt;p&gt;وارد داشبود شدید مشاهده میکنید که لاگ در حال ذخیره شدن است . &lt;/p&gt;
+
+&lt;h3&gt;برای دوستانی که با سرویس های لاگ منیجمنت و آنالیز آشنایی دارند توصیه میکنم از filebeat جهت ارسال لاگ هابه logstash استفاده کنند .&lt;/h3&gt;
+</description>
+        <pubDate>Mon, 01 May 2017 00:00:00 +0430</pubDate>
+        <link>http://localhost:4000/security/2017/05/01/how-to-implement-ids-gui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/security/2017/05/01/how-to-implement-ids-gui.html</guid>
+        
+        
+        <category>security</category>
+        
+      </item>
     
       <item>
         <title>آموزش راه اندازی درگاه پیام کوتاه</title>
@@ -66,7 +151,8 @@ Sudo apt-get install gammu gammu-smsd
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;nano /etc/gammu-smsdrc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود )
+&lt;p&gt;میتوانید تنظیمات گوشی یا مودم gsm مورد نظر خودتون رو در &lt;a href=&quot;https://wammu.eu/phones/&quot;&gt;اینجا&lt;/a&gt; پیدا کنید
+در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
 مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم &lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;ln -s /etc/gammu-smsdrc /etc/gammurc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -462,36 +548,6 @@ Sudo apt-get install gammu gammu-smsd
         
         
         <category>foss</category>
-        
-      </item>
-    
-      <item>
-        <title>سوکورو تازاکی بی‌رنگ و سال‌های زیارتش </title>
-        <description>&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;h3&gt; قسمتی از متن کتاب سوکورو تازاکی و سالهای زیارتش &lt;/h3&gt;
-
-&lt;p&gt;سوکورو تازاکی در عمیق‌ترین نقطه جانش به درک رسید . درک اینکه هیچ قلبی صرفاً به واسطه هماهنگی با قلب دیگری وصل نیست . زخم است که قلب ها را عمیقاً به هم پیوند میدهد . 
-پیوند درد با درد شکنندگی با شکنندگی . تا صدای ضجه بلند نشود سکوت معنا ندارد و تا خونی ریخته نشود عفو معنا ندارد و تا از دل ضایعه بزرگی گذر نکنی رضا و رضایت بی‌معنی است . هماهنگی واقعی در همین‌ها ریشه دارد &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;سوکورو تازاکی  فردی موفق و تحصیلکرده از طبقه متوسط رو به بالای جامعه که عاشق تماشا و ساختن ایستگاه های قطار است  ولی پشت این نقاب موفقیت فردی تنها است که ترسی عمیق از  گذشته ها و دلبستن دارد  اما باز شدن پای یک زن به زندگی او باعث می‌شود تا به گذشته بازگردد  به عمق فاجعه بزند و سعی کند تا بفهمد چرا روزگاری تمام دوستانش دیگر نخواستند او را ببینند &lt;/p&gt;
-
-&lt;p&gt;سوکورو تازاکی داستان تصمیم ما انسان‌ها است . سرنوشتی که خود رقم میزنیم . گاهی یک سکوت طولانی مدت تبدیل به بغض می‌شود  بغض به نا امیدی و سپس خشم . رفتار سوکورو از جنس همان غرور و لجاجت احمقانه انسان‌ها نیست وقتی دوستانش دیگر نخواستند اورا ببینند وقتی هایدا ناگهان غیب شد فکر میکرد سرنوشت اوست که همواره کسانی که دوست دارد را از دست بدهد . این ضربه ها این زخم عمیق باعث می‌شود دیگر ریسک دل بستن به کسی را به خود ندهد ولی با ورود سارا به زندگیش او حالا انگیزه‌ای برای کشف واقعیت دارد تا از بن بستی که در آن افتاده رها شود .&lt;/p&gt;
-
-&lt;p&gt;به سبک سیاق کارهای موراکامی چیز هایی هم هست که هیچ‌گاه روشن نمیشود . برای مثال آن پیانیست جز که هاله دور آدم‌ها را میدید یا رفتن ناگهانی هایدا .دنیایی که موراکامی خلق میکند سرشار از دیالوگ هایی است که شمارا به فکر فرو خواهد برد . حس همزاد پنداری شگفتی از رمز و راز ها و تلفیق واقعیت و خیال  . حتی ممکن است گاهی به موراکامی رشک برید که چگونه میتواند چنین دیالوگ ها و افرادی را بسازد . سوکورو تازاکی بی‌رنگ شاید در پرونده موراکامی در مقایسه با دیگر رمان هایش مثل کافکا در کرانه و شکار گوسفند وحشی و 1q84 اثر شاخصی نباشد ولی کماکان اثر ارزشمندی در کارنامه موراکامی است . &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;پی نوشت : گاهی ما آدم‌ها مغزمون رو تبدیل به کشو هایی پر از موضوعات مجهول میکنیم . شاید میترسیم که به عمق فاجعه بزنیم . شاید میترسیم که هیولایی وحشتناک و بدتر در میان خاکستری اتفاقاتی که تبدیل به خاطره و خاطره هایی که تبدیل به تکه‌هایی پراکنده شدن وجود داشته باشه  . ولی زمانی باید همه این‌ها رو کنار بزاریم و بپرسیم چرا . چه بهتر که تلاش بکنیم و شکست بخوریم تا همواره حسرت این رو بکشیم که چرا روزی نپرسیدیم چرا ؟&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 19 Nov 2015 00:00:00 +0330</pubDate>
-        <link>http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</link>
-        <guid isPermaLink="true">http://localhost:4000/book/2015/11/19/Colorless-Tsukuru-Tazaki-and-His-Years-of-Pilgrimage.html</guid>
-        
-        
-        <category>book</category>
         
       </item>
     
