@@ -85,6 +85,10 @@
 <lastmod>2017-05-01T00:00:00+04:30</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/life/2017/11/01/existence.html</loc>
+<lastmod>2017-11-01T00:00:00+03:30</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -104,6 +108,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/book/effect-of-foss-on-healthcare.pdf</loc>
-<lastmod>2015-09-15T01:16:06+04:30</lastmod>
+<lastmod>2017-11-10T19:35:02+03:30</lastmod>
 </url>
 </urlset>

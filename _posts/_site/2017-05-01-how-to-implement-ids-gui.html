@@ -9,21 +9,21 @@
 
 <p>###مهم: اگر که با شبکه و زیرساخت و سرویس های لینوکسی و قوائد nix و ruby و bundler و ruby on rails  آشنا نیستید این آموزش برای شما طراحی نشده</p>
 
-<p>###نکته: قصد داشتم نحوه نصب و کانفیگsnort رو هم آموزش بدم که دیدم در این سایت آموزش داده پس به پیاده‌سازی یه وب اینترفیس و سیستم تحلیل لاگ بسنده میکنم . البته که سنترالایز کردن لاگ های snort میتونه حرکت خوبی باشه مثل استفاده از graylog ,elasticsearch ولی استفاده از ابزارهای مانیتورینگ امنیتی در محیط های کوچکتر میتونه مفیدتر باشه .</p>
+<p>###نکته: قصد داشتم نحوه نصب و کانفیگ snort رو هم آموزش بدم که دیدم در <a href="http://netamooz.net/snort-ids-installation-configuration/">این سایت</a> آموزش داده پس به پیاده‌سازی یه وب اینترفیس و سیستم تحلیل لاگ بسنده میکنم . البته که سنترالایز کردن لاگ های snort میتونه حرکت خوبی باشه مثل استفاده از graylog ,elasticsearch ولی استفاده از ابزارهای مانیتورینگ امنیتی در محیط های کوچکتر میتونه مفیدتر باشه .</p>
 
 <p>من از ابزار snorby برای این موضوع استفاده میکنم</p>
 
 <p>در قدم اول روبی و gems رو بر روی سیستم نصب میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install ruby-full
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install ruby-full
 or
-sudo yum install ruby ruby-devel</code></pre></figure>
+<span class="nb">sudo </span>yum install ruby ruby-devel</code></pre></figure>
 
 <p>و گیت البته</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install git
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install git
 or
-sudo yum install git</code></pre></figure>
+<span class="nb">sudo </span>yum install git</code></pre></figure>
 
 <p>سپس اقدام به clone کردن snorby میکنیم</p>
 
@@ -34,15 +34,15 @@ sudo yum install git</code></pre></figure>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>snorby 
 bundle install 
 bundle <span class="nb">exec </span>rake snorby:setup 
-rails server -p 8888</code></pre></figure>
+rails server <span class="nt">-p</span> 8888</code></pre></figure>
 
 <p>تا اینجای کار اگه همه چیز به خوبی و خوشی پیش رفته باشه و در دپندنسی های پکیج های روبی به مشکلی برنخورده باشین ( انتظار میره که بلد باشین پیش نیاز ها رو رفع کنید ) باید بریم سراغ فرستادن لاگ های snort به سمت یکی از دیتابیس های مورد علاقمون که mysql(mariadb) یا postgres هست . متأسفانه از نسخه ۲.۹ به بعد فرستادن لاگ ها از طریق کانفیگ snort غیر فعال شده پس برای این کار نیاز به ابزار دیگه ای به اسم barnyard2 داریم . برای کانفیگ و نصب این ابزار کافیه</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo autogen.sh </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>autogen.sh </code></pre></figure>
 
 <p>رو وارد کنیم تا فایل configure ساخته بشه سپس در سویچ های configure این خطوط اضافه</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./configure --with-mysql –with-mysql-libraries<span class="o">=</span>/usr/lib64/mysql	</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./configure <span class="nt">--with-mysql</span> –with-mysql-libraries<span class="o">=</span>/usr/lib64/mysql	</code></pre></figure>
 
 <p>البته توجه کنید که بنا به معماری سیستم شما این آدرس لایبرری میتونه متفاوت باشه که میتونید با</p>
 
@@ -53,7 +53,7 @@ whereis libmysqlclient </code></pre></figure>
 حالا هر کجای سیستم شما که barnyard نصب شده به دنبال کانفیگش میگردیم :))) 
 بعد از پیدا کردن کانفیگ توصیه ام این هستش که در پوشه تنظیمات snort کپی بشه که از آشفتگی های بعدی جلوگیری کنه برای مثال</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo cp /user/local/lib/etc/barnyard2.conf /etc/snort/</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>cp /user/local/lib/etc/barnyard2.conf /etc/snort/</code></pre></figure>
 
 <p>حال نوبت اضافه کردن تغییرات به کانفیگ هستش توجه کنید که من از دیتابیس خود snorby جهت ذخیره سازی لاگ های استاندارد snort استفاده میکنم تحت فیلد alert در انتها کانفیگ قرار میدم</p>
 
@@ -62,11 +62,11 @@ output database: alert, mysql, <span class="nv">user</span><span class="o">=</sp
 
 <p>حال در صورت اجرایی بودن سرویس snortd میشه به راحتی لاگ های دریافتی رو در دیتابیس درج کرد</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /usr/local/bin/barnyard2 -c /etc/snort/barnyard2.conf -d /var/log/snort</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo</span> /usr/local/bin/barnyard2 <span class="nt">-c</span> /etc/snort/barnyard2.conf <span class="nt">-d</span> /var/log/snort</code></pre></figure>
 
 <p>حال نوبت لاگین کردن به پنل snorby است که به صورت پیشفرض روی پورت ۳۰۰۰  اجرا می‌شود که من به دلیل درگیر بودن این پورت از سویچ -p استفاده میکنم 
 نکته مهم : حتماً در صورت تست و نهایی شدن از یک وب سرور جهت اجرا کردن وب اپلیکیشن استفاده کنید 
 نام کاربری و رمز پیشفرض به ترتیب : snorby@example.com و snorby هست که توصیه میکنم حتماً تعویض کنید</p>
 
 <p>وارد داشبود شدید مشاهده میکنید که لاگ در حال ذخیره شدن است . 
-##برای دوستانی که با سرویس های لاگ منیجمنت و آنالیز آشنایی دارند توصیه میکنم از filebeat جهت ارسال لاگ هابه logstash استفاده کنند .</p>
+###برای دوستانی که با سرویس های لاگ منیجمنت و آنالیز آشنایی دارند توصیه میکنم از filebeat جهت ارسال لاگ هابه logstash استفاده کنند .</p>

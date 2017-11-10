@@ -8,8 +8,8 @@
 مراحل نصب playsms :
 ابتدا بسته فشرده برنامه را از سایت playsms  دریافت میکنیم سپس استخراج و کپی کردن و اقدام به ساخت سیملینک میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">tar  -zxf playsms-1.4.tar.gz -C /usr/local/src
-ls -l usr/local/src
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">tar</span>  <span class="nt">-zxf</span> playsms-1.4.tar.gz <span class="nt">-C</span> /usr/local/src
+<span class="nb">ls</span> <span class="nt">-l</span> usr/local/src
 <span class="nb">cd </span>usr/local/src/playsms-1.4</code></pre></figure>
 
 <p>سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .</p>
@@ -19,11 +19,11 @@ cp install.conf.dist install.conf</code></pre></figure>
 
 <p>بعد از ثبت تغییرات اقدام به نصب آن میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo ./install-playsms.sh</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo</span> ./install-playsms.sh</code></pre></figure>
 
 <p>پس از نصب میتوانید برنامه را به بوت اضافه کنید</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Sudo <span class="nb">echo</span> /usr/local/bin/playsmsd start &gt; /etc/init.d/rc.local</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Sudo <span class="nb">echo</span> /usr/local/bin/playsmsd start <span class="o">&gt;</span> /etc/init.d/rc.local</code></pre></figure>
 
 <p>سپس ابتدا اقدام به دانلود و نصب gammu  و gammu-smsd  مینمایم .
 برای نصب gammu  و gammu-smsd  میتوان در صورت موجود بودن از پکیج منیجر استفاده نمود در غیر این صورت اقدام به نصب به صورت دست میکینم . 
@@ -33,19 +33,19 @@ Sudo apt-get install gammu gammu-smsd
 </code>
 سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chmod 777 /dev/ttyUSB0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>chmod 777 /dev/ttyUSB0</code></pre></figure>
 
 <p>دایکرکتوری را جهت دریافت SMS  میسازیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p /var/log/gammu /var/spool/gammu/<span class="o">{</span>inbox,outbox,sent,error<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir <span class="nt">-p</span> /var/log/gammu /var/spool/gammu/<span class="o">{</span>inbox,outbox,sent,error<span class="o">}</span></code></pre></figure>
 
 <p>سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chown www-data:www-data -R /var/spool/gammu/<span class="k">*</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chown www-data:www-data <span class="nt">-R</span> /var/spool/gammu/<span class="k">*</span></code></pre></figure>
 
 <p>حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget -c https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget <span class="nt">-c</span> https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
  cp gammu-smsdrc /etc/</code></pre></figure>
 
 <p>تنطیمات پیشفرض را تغییر میدهیم</p>
@@ -56,7 +56,7 @@ Sudo apt-get install gammu gammu-smsd
 در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
 مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /etc/gammu-smsdrc /etc/gammurc</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln <span class="nt">-s</span> /etc/gammu-smsdrc /etc/gammurc</code></pre></figure>
 
 <p>برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات</p>
 
@@ -69,11 +69,11 @@ Sudo apt-get install gammu gammu-smsd
 
 <p>سپس برای شناسایی مودم  کامند زیر را وارد میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu -f /var/log/gammulog identify</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu <span class="nt">-f</span> /var/log/gammulog identify</code></pre></figure>
 
 <p>عملیات پیکره بندی به پایان رسیده حال برای تست gammu دستور زیر را وارد میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu sendsms TEXT 0912<span class="k">*******</span>  -unicode -text <span class="s2">"سلام دنیا"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gammu sendsms TEXT 0912<span class="k">*******</span>  <span class="nt">-unicode</span> <span class="nt">-text</span> <span class="s2">"سلام دنیا"</span></code></pre></figure>
 
 <p>به جای 0912 ادرس گیرنده را وارد نمایید</p>
 
