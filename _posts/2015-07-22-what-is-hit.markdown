@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "فناوری اطلاعات سلامت چیست"
 date: 2015-07-22
 categories: featured

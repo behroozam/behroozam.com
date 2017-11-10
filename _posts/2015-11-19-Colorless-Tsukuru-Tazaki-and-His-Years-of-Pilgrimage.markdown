@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "سوکورو تازاکی بی‌رنگ و سال‌های زیارتش "
 date: 2015-11-19
 categories: book

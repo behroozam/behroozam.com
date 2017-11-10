@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "اپاچی کوردوا "
 date: 2015-08-27
 categories: development

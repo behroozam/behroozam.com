@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "رمزنگاری اطلاعات درمانی چیست؟"
 date: 2015-11-05
 categories: security

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "تفاوت نرم افزار آزاد و متن باز چیست ؟"
 date: 2015-11-19
 categories: foss

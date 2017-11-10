@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "مرد جوانی که در افق قرار داشت "
 date: 2015-07-27
 categories: featured

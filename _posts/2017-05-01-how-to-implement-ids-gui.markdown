@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "نحوه نصب و راه اندازی مانتیورینگ اسنورت"
 date: 2017-05-01
 categories: security

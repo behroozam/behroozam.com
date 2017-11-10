@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "مؤلف زنده است"
 date: 2016-12-09
 categories: book

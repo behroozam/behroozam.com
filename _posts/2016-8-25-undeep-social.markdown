@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "اجتماع کم عمق"
 date: 2016-08-25
 categories: life

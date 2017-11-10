@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "آموزش راه اندازی درگاه پیام کوتاه"
 date: 2017-04-19
 categories: development

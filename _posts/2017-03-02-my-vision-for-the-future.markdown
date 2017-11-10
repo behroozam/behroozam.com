@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "آینده از نگاه من"
 date: 2017-03-2
 categories: Futurist

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "ما را چه شده است ؟"
 date: 2015-07-27
 categories: featured

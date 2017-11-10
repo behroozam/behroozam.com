@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "هویت:"
 date: 2017-01-06
 categories: life

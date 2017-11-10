@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "از محتوای خوب تا اجتماع خوب"
 date: 2016-11-18
 categories: life

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "پرونده انیمه|قسمت اول:آشنایی با جهان انیمه"
 date: 2017-02-23
 categories: anime

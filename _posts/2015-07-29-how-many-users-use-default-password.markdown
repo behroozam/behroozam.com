@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "یکم امنیت "
 date: 2015-07-29
 categories: featured

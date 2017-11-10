@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "من از نسل دیگری هستم"
 date: 2015-05-25
 categories: featured

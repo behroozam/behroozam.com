@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "اینچنین گفت بهروز"
 date: 2016-10-21
 categories: life

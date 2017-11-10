@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "مسیر کم گذر"
 date: 2015-09-09
 categories: life
