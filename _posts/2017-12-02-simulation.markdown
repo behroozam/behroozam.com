@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "ذهن درون خمره"
 date: 2017-12-02
-categories: life
+categories: philosophy
 image: /assets/article_images/simulation/simulation.jpg
 ---
 

@@ -7,6 +7,7 @@ build:
         code: bundle config build.nokogiri --use-system-libraries
 
     - bundle-install
+    - bundle install
 
     # Execute jeykyll doctor command to validate the
     # site against a list of known issues.
@@ -16,11 +17,11 @@ build:
 
     - script:
         name: generate site
-        code: bundle exec jekyll build --trace --destination ./_site
+        code: bundle exec jekyll build
 
     - create-file:
         name: generate robots.txt
-        filename: ./_site/robots.txt
+        filename: _site/robots.txt
         overwrite: true
         content: |-
           User-agent: *
@@ -32,4 +33,4 @@ deploy:
     - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         domain: behroozam.com
-        basedir: ./_site
+        basedir: _site
