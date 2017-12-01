@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "هستی"
-date: 2017-11-1o
+date: 2017-11-10
 categories: life
 image: /assets/article_images/existence/existence.jpg
 
