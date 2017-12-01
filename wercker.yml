@@ -16,11 +16,11 @@ build:
 
     - script:
         name: generate site
-        code: bundle exec jekyll build --trace --destination ./_site
+        code: bundle exec jekyll build --trace --destination _site
 
     - create-file:
         name: generate robots.txt
-        filename: ./_site/robots.txt
+        filename: _site/robots.txt
         overwrite: true
         content: |-
           User-agent: *
@@ -32,4 +32,4 @@ deploy:
     - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         domain: behroozam.com
-        basedir: ./_site
+        basedir: _site
