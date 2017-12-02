@@ -8,7 +8,7 @@ gems:
   - jekyll-paginate
   - jalalidate
   - jemoji
-
+  - jekyll-jalali
 # Site settings
 title: "بهروزم"
 description: > # manga / anime / gnu linux / networking

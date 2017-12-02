@@ -3,10 +3,10 @@
   <channel>
     <title>بهروزم</title>
     <description></description>
-    <link>http://behroozam.com/</link>
-    <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 02 Dec 2017 02:10:52 +0330</pubDate>
-    <lastBuildDate>Sat, 02 Dec 2017 02:10:52 +0330</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 02 Dec 2017 17:44:56 +0330</pubDate>
+    <lastBuildDate>Sat, 02 Dec 2017 17:44:56 +0330</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -20,8 +20,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sat, 02 Dec 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/philosophy/2017/12/02/simulation.html</link>
-        <guid isPermaLink="true">http://behroozam.com/philosophy/2017/12/02/simulation.html</guid>
+        <link>http://localhost:4000/philosophy/2017/12/02/simulation.html</link>
+        <guid isPermaLink="true">http://localhost:4000/philosophy/2017/12/02/simulation.html</guid>
         
         
         <category>philosophy</category>
@@ -45,8 +45,8 @@
 &lt;p&gt;۱- فلاسفه قرن ۱۹ همانند شوپنهاور و نیچه به ذات وجودی انسان باور داشتند و البته بدون تغییر و می‌شد گفت که ان ها به اختیار به معنای انچه قوه تفکر برای انتخاب هست باور نداشتند در قرن بیستم فلاسفه اگزیستانسیال اراده ادمی را مقدم بر همه چیز پنداشتند یعنی انسان به دنیا می اید سرنوشت خود را رقم میزند و می میرد این جمله تاریخی سارتر که انسان محکوم به ازادی است را به یاد بیاورید ,  حالا گویا دوباره با داغ شدن مباحث ازادی اراده(free will ) در نوروساینس به گذشته و افکار جبرگرا بازمیگردیم , البته از نظر اجتماعی میتواند تاثیرات مثبتی همانند بازتعریف مفهوم جرم و طبقه اجتماعی را داشته باشد , البته در عصری که از آرمان ها به خاطر سود شخصی به راحتی عبور میکنیم برجسته شدن مسائلی از این دست هم ممکن است صرفا پوچ بودن زندگی آدمی را صرفا برجسته نماید &lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Nov 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2017/11/10/existence.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2017/11/10/existence.html</guid>
+        <link>http://localhost:4000/life/2017/11/10/existence.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2017/11/10/existence.html</guid>
         
         
         <category>life</category>
@@ -130,8 +130,8 @@ output database: alert, mysql, &lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt
 &lt;h3&gt;برای دوستانی که با سرویس های لاگ منیجمنت و آنالیز آشنایی دارند توصیه میکنم از filebeat جهت ارسال لاگ هابه logstash استفاده کنند .&lt;/h3&gt;
 </description>
         <pubDate>Mon, 01 May 2017 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/security/2017/05/01/how-to-implement-ids-gui.html</link>
-        <guid isPermaLink="true">http://behroozam.com/security/2017/05/01/how-to-implement-ids-gui.html</guid>
+        <link>http://localhost:4000/security/2017/05/01/how-to-implement-ids-gui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/security/2017/05/01/how-to-implement-ids-gui.html</guid>
         
         
         <category>security</category>
@@ -228,8 +228,8 @@ Sudo apt-get install gammu gammu-smsd
 پایان &lt;/p&gt;
 </description>
         <pubDate>Wed, 19 Apr 2017 00:00:00 +0430</pubDate>
-        <link>http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</link>
-        <guid isPermaLink="true">http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</guid>
+        <link>http://localhost:4000/development/2017/04/19/gammu-with-playsms.html</link>
+        <guid isPermaLink="true">http://localhost:4000/development/2017/04/19/gammu-with-playsms.html</guid>
         
         
         <category>development</category>
@@ -294,8 +294,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p&gt;در انتها خوشحال میشم که نظرات و دیدگاه‌های شما رو هم در این مورد بدونم&lt;/p&gt;
 </description>
         <pubDate>Thu, 02 Mar 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</link>
-        <guid isPermaLink="true">http://behroozam.com/futurist/2017/03/02/my-vision-for-the-future.html</guid>
+        <link>http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</link>
+        <guid isPermaLink="true">http://localhost:4000/futurist/2017/03/02/my-vision-for-the-future.html</guid>
         
         
         <category>Futurist</category>
@@ -330,8 +330,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p dir=&quot;rtl&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;font-family: DejaVu Sans;&quot;&gt;&lt;span lang=&quot;fa-IR&quot;&gt;خوشحال میشم که ژانر ها و انیمه های مورد علاقه خودتون یا پیشنهادها و انتقاداتتون رو در نظرات پاسخ بدم &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Feb 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/anime/2017/02/23/anime-world.html</link>
-        <guid isPermaLink="true">http://behroozam.com/anime/2017/02/23/anime-world.html</guid>
+        <link>http://localhost:4000/anime/2017/02/23/anime-world.html</link>
+        <guid isPermaLink="true">http://localhost:4000/anime/2017/02/23/anime-world.html</guid>
         
         
         <category>anime</category>
@@ -387,8 +387,8 @@ Sudo apt-get install gammu gammu-smsd
 &lt;p&gt;دیر هتین.......(دیرآمدی)&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Jan 2017 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2017/01/06/the-Identity.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2017/01/06/the-Identity.html</guid>
+        <link>http://localhost:4000/life/2017/01/06/the-Identity.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2017/01/06/the-Identity.html</guid>
         
         
         <category>life</category>
@@ -418,8 +418,8 @@ Sudo apt-get install gammu gammu-smsd
 به نظر من نویسنده از مقام معنوی برخوردار نیست دارای فر ایزدی و جایگاه فراطبیعی یا دارای نبوغ و استعداد شگرف نیست ولی متن یا نوشته او در صورتی خواندنی می‌شود که تجربیات،دانش،تخیل خود را طوری به کار گیرد که امضای او پای اثرش باقی بماند.&lt;/p&gt;
 </description>
         <pubDate>Fri, 09 Dec 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</link>
-        <guid isPermaLink="true">http://behroozam.com/book/2016/12/09/the-return-to-the-author.html</guid>
+        <link>http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</link>
+        <guid isPermaLink="true">http://localhost:4000/book/2016/12/09/the-return-to-the-author.html</guid>
         
         
         <category>book</category>
@@ -457,8 +457,8 @@ Sudo apt-get install gammu gammu-smsd
 با توجه به ریشه‌یابی که در بالا از فضای سانتی مانتال ایران شد میتونم بگم که این کار سختی هستش ولی در یک مقیاس بزرگ‌تر اگر به تاریخ نگاه کنیم در بزنگاه ها اگر جامعه ما شناخت کافی  رو در مورد اندیشه‌ها و افکار و شیادینی که از جهل اون ها سواستفاده کردن میداشتند هیچ‌گاه درگیر مسائلی اینچنین نبودیم ولی چشم انداز آینده میتونه انگیزه‌ای باشه برای ایجاد تغییرات مثبت که وسیله دانش و شناخت اشتباه گذشتگان رو ما تکرار نکنیم.&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/11/18/from-good-content-to-good-society.html</guid>
+        <link>http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/11/18/from-good-content-to-good-society.html</guid>
         
         
         <category>life</category>
@@ -477,8 +477,8 @@ Sudo apt-get install gammu gammu-smsd
 در یک شب پاییزی بهروز اینچنین گفت&lt;/p&gt;
 </description>
         <pubDate>Fri, 21 Oct 2016 00:00:00 +0330</pubDate>
-        <link>http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</link>
-        <guid isPermaLink="true">http://behroozam.com/life/2016/10/21/thus-spoke-behrooz.html</guid>
+        <link>http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2016/10/21/thus-spoke-behrooz.html</guid>
         
         
         <category>life</category>
