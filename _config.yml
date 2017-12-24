@@ -1,5 +1,6 @@
 # Build settings
 markdown: redcarpet
+future: true
 highlighter: pygments
 paginate: 5
 language: 'fa-IR'
