@@ -6,6 +6,9 @@ build:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
 
+    - install-packages:
+              packages: cmake
+
     - bundle-install
 
     # Execute jeykyll doctor command to validate the
