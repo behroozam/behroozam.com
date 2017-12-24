@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "شبانه ها"
 date: 2017-12-25
-categories: life
+categories: philosophy
 image: /assets/article_images/nocturnes/nocturnes.jpg
 ---
 
