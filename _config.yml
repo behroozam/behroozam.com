@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 paginate: 5
 language: 'fa-IR'
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jalalidate
