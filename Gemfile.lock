@@ -257,6 +257,7 @@ DEPENDENCIES
   kramdown
   pygments.rb
   redcarpet
+  rouge
   therubyracer
 
 BUNDLED WITH
