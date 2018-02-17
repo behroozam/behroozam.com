@@ -1,7 +1,10 @@
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 future: true
-highlighter: pygments
+#highlighter: pygments
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 paginate: 5
 language: 'fa-IR'
 plugins:
