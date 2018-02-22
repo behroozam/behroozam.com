@@ -1,8 +1,31 @@
 ---
-layout: page
-title: درباره من
 permalink: /about/
 ---
+<html lang="en">
 
-<script align="center" src="https://atbox.io/7202559118217/embed?l=en"></script><noscript><a href="https://atbox.io/7202559118217/resume?l=en">Behrooz Ha's resume</a></noscript>
+<head>
+<link rel="stylesheet" href="/css/portfolio.css">
+<script type="text/javascript" src="/js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/typewriter.js"></script>
+<script type="text/javascript" src="/js/portfolio.js"></script>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>John Doe</title>
+</head>
+
+<body>
+  <div class="terminal">
+    <span class="dollar"></span> hi there, i'm john
+    <br/>
+    <span class="dollar"></span> a web developer
+    <br/>
+    <span class="dollar"></span> based in uk
+    <br/>
+    <span class="dollar"></span> i drink a lot of tea
+    <br/>
+    <span class="dollar"></span> and build beautiful websites
+  </div>
+
+</body>
+
+</html>
 
