@@ -2,30 +2,29 @@
 permalink: /about/
 ---
 <html lang="en">
-
 <head>
-<link rel="stylesheet" href="/css/portfolio.css">
-<script type="text/javascript" src="/js/jquery-3.3.1.slim.min.js"></script>
-<script type="text/javascript" src="/js/typewriter.js"></script>
-<script type="text/javascript" src="/js/portfolio.js"></script>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>John Doe</title>
+<link rel="stylesheet" href="css/terminal.css">
 </head>
-
 <body>
-  <div class="terminal">
-    <span class="dollar"></span> hi there, i'm john
-    <br/>
-    <span class="dollar"></span> a web developer
-    <br/>
-    <span class="dollar"></span> based in uk
-    <br/>
-    <span class="dollar"></span> i drink a lot of tea
-    <br/>
-    <span class="dollar"></span> and build beautiful websites
-  </div>
+<div id="terminal">
+  <code>
+    $ curl -vvv behroozam.com/about.html<br>
+    > Connected to behroozam.com<br>
+    > GET /about.html HTTP/1.1<br>
+    > Host: behroozam.com<br>
+    > User-Agent: curl/7.58.0<br>
+    > Accept: */*<br>
+    > HTTP/1.1 200 <br>
+   {
+  "name": "behrooz hassanbeygi",
+  "Job": "Devops",
+  "mail": "b{dot}hasanbg{at}gmail{dot}com"
+}
 
+    <span class="cursor">_</span>
+  </code>
+  <div class="overlay"></div>
+</div>
 </body>
-
 </html>
 
