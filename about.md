@@ -3,7 +3,7 @@ permalink: /about/
 ---
 <html lang="en">
 <head>
-<link rel="stylesheet" href="css/terminal.css">
+<link rel="stylesheet" href="../css/terminal.css">
 </head>
 <body>
 <div id="terminal">
