@@ -59,3 +59,24 @@ social:
     share_url:
     share_title:
     share_link:
+
+  - icon:	medium
+    url:	https://medium.com/@b3hroozam
+    desc:	Follow me
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	vimeo
+    url:	https://virgool.io/@b3hroozam
+    desc:	Follow me
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	linkedin
+    url:	https://www.linkedin.com/in/behroozam/
+    desc:	Follow me
+    share_url:
+    share_title:
+    share_link:
