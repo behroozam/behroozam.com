@@ -1,292 +1,0 @@
-<!DOCTYPE html>
-<html>
-<script id="dsq-count-scr" src="//behroozam.disqus.com/count.js" async></script>
-  <head>
-  <meta charset="utf-8">
-  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <title>راه انداختن vagrant در سه سوت</title>
-  <meta name="description" content="" />
-
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <link rel="canonical" href="http://localhost:4000/featured/2018/02/17/vagrant.html">
-
-  <link rel="shortcut icon" href="/assets/images/favicon.ico">
-<!--  <link rel="stylesheet" href=""> -->
-  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
-  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
-</head>
-
-  <body itemscope itemtype="http://schema.org/Article">
-    <!-- header start -->
-
-<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
-
-<!-- header end -->
-
-    <main class="content" role="main">
-      <article class="post">
-        
-        <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/assets/article_images/vagrant/vagrant.png)">
-            Article Image
-          </div>
-          <div class="post-meta">
-            <h1 class="post-title">راه انداختن vagrant در سه سوت</h1>
-            <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
-              on
-              <span class="date">شنبه 28 بهمن 1396</span>
-              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
-            </div>
-            <div style="text-align:center">
-              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <section dir="rtl" class="post-content">
-          <div class="post-reading">
-            <span class="post-reading-time"></span> read
-          </div>
-          <a name="topofpage"></a>
-          <p>بیاین برگردیم به ده سال قبل نه خبری از داکر بود نه معماری پردازنده ها جوری بود که بشه رو مجازی سازی مانور زیادی داد و مجازی سازی تو استفاده از vmware و virtualbox و kvm  تعریف میشد تازه اگر kvm رو فاکتور نگیریم که تا مدت ها اون هم مهجور بود .
- با اینکه هنوز مجازی سازی سنتی low level استفاده زیادی داره ولی سلوشن های کانتینر مثل lxc و lxd و docker خیلی پر طرفدار شده. شاید از خودتون بپرسین من چرا باید از vagrant استفاده کنم درحالی که داکر مدرن تر و کلی اپشن بیشتر میده و معماریش هم میکروسرویس و مدیریت منابع به آسونی انجام میشه ماونت پوینتم میتونه به اشتراک گذاری بشه و آپشن های خفن تر نتورکینگ داره .
- جواب رو میشه تو سه بخش خلاصه کرد .
-۱ -اساسا معماری کانتینر های داکر به دلیل ایزولیشن و انجام یه تسک هستش ( بعضی ها رعایت نمیکنن کلی سرویس میپاشن تو یه کانتینر و کلی لایه اضافه میکنن که حجم کانتینتر به شدت بالا میبره در نتیجه عملا فرق انچنانی با سرویس های سنتی نداره و یه مجازی سازی شبه سنتی که با داکرماشین مدیریت میشه ) . پس اگر میخواین دیتابیس و وب سرویس و کش سرور و ردیس تون رو یه ماشین مجازی باشه و نه چندین کانتینر بهترین راه استفاده از vagrant .
-2- داکر هنوز راه زیادی برای پشتیبانی از تمام پلتفرم ها داره . میدونیم که اکثر شرکت ها در بخش اینترپرایز یا از ورژن های قدیمی تر کرنل لیونکس استفاده میکنن یا از freebsd که قاعدتا از داکر پیشتبانی نمیکنند 
-۳ – قطعا برای سیس ادمین های سنتی تر اداپت شدن با این همه حجم تغییراتی که در چند سال گذشته در زمینه مجازی سازی اتفاق افتاده سخت تره . Vagrant میتونه به سادگی این ترس از تغییر رو از بین ببره ( البته که چیزی جز یه کامندلاین برای مدیریت vm options نیست و ساختار فایل سیستم و    مدریت پردازش به کل با داکر فرق میکنه ولی خیلی بهتر از محیط گرافیکی )
-۴- برای توسعه دهنده هایی که مسلط به داکر ریجستری و داکر کامپوز نیستن فرایند دولوپ رو میتونه سریعتر  و از شلوغ کاری تو سیستم اصلی رو کمتر بکنه . هیچکی نمیخواد که بعد از پایان پروژه کلی پکیج بلااستفاده رو سیستمش داشته باشه</p>
-
-<p>تا اینجای کار یا vagrant به درد شما میخوره یا نمیخوره پس میریم سراغ تعریف vagrant که چی هستش و اپشن هایی که میده چیه و چه جور تو سه سوت سه تا اینستنس  centos 7 به همراه داکرانجین بیاریم بالا بدون درد و خونریزی تو وطن دائم التحریم ایران .</p>
-
-<p>Vagrant چیه ؟
-وگرانت  ابزاری که برای ساخت ماشین مجازی و محیط توسعه به کار میره و تمرکزش روی اتوماتیک سازی فرایند ها هستش</p>
-
-<p>چه جوری یه ماشین مجازی رو تو سه سوت با وگرانت بالا بیاریم :
-اول نیاز به نصب وگرانت هستش که به سادگی میتونید از اینجا پکیج مناسب سیستم عامل خودتون رو دانلود کنید . یه دایرکتوری بسازید و واردش بشین 
-تو قدم بعدی نیازهستش که یه باکس از پیش ساخته شده وگرانت به عنوان سیستم عامل خودتون انتخاب کنیدبرای مثال من باکس centos 7 رو دانلود کردم  ( این قسمت نیازمند دانلود ایمج سیستم عامل مذکور هستش )</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant init centos/7 
-</code></pre></div></div>
-<p>کامند init یه فایل Vagrantfile میسازه که توی اون تمامی تنظیمات ماشین مجازی ذخیره شده
-تو قدم بعدی کافی هستش که vagrant up بزنید تا ایمیج سیستم عامل دانلود بشه و سیستم آپ بشه .
-قدم بعدی vagrant ssh هستش که وارد سیستم بشین و پکیج های مورد علاقتون رو نصب کنید یا سیستم عامل کانفیگ کنید . توجه کنید یوزر vagrant دارای دسترسی sudoers هست
-در آخر پس از پایان کار vagrant destroy که باعث میشه ایمیج به همراه متعلقاتش به فنا بره 
-برای دیدن اینکه چه ماشین مجازی های روی vagrant در حال اجرا هستن میتونید از کامند vagrant global-status  استفاده کنید .</p>
-
-<p>سناریو هایی هم البته وجود داره که بخواین از تنظیمات یا اتومیشن  خودتون استفاده کنید ورگنت از پلاگین های مختلف هم پشتیبانی میکنه برای مثال در اکثر پروژه هایی که مورد تحریم واقع شدیم باید از پراکسی برای دور زدن تحریم ها استفاده کنیم که پلاگین vagrant-proxyconf به صورت اتوماتیک تنظیمات پکیج منیجر و اکثر پکیج های پرکاربرد مثل docker رو تغییر ماده تا ترافیک پشت پراکسی منتقل بشه</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin install vagrant-proxyconf
-<span class="c">#in vagrant file</span>
-config.proxy.http     <span class="o">=</span> <span class="s2">"http://yourproxy:8080"</span>
-config.proxy.https    <span class="o">=</span> <span class="s2">"http://yourproxy:8080"</span>
-config.proxy.no_proxy <span class="o">=</span> <span class="s2">"localhost,127.0.0.1"</span>
-</code></pre></div></div>
-
-<p>مورد دیگه ای که درمورد وگرنت هست این هستش که میتونید به ماشین مجازی خودتون public یا private ایپی بدین . به این صورت که اگر پابلیک باشه تو اینترنت یا شبکه لوکالتون قابل دسترس هستش بسته به ip که میدین . دو مثال برای شبکه پابلیک و پرایوت میزنم</p>
-
-<p>پرایوت :
-زمانی که میخواین با dhcp به هرکدوم از هاست های vagrant خودتون ایپی بدین که لوکال ماشین مجازی باشه . یا برای تست میخواین تعداد زیادی ماشین مجازی بیارین بالا کافیه چند تا دایرکتوری بسازین تنظیمات رو روی dhcp بزارین توVagrantfile و آپ کنید</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
-  config.vm.network <span class="s2">"private_network"</span>, <span class="nb">type</span>: <span class="s2">"dhcp"</span>
-end
-</code></pre></div></div>
-<p>پابلیک :
-فرض میگیریم سابنت شبکه شما 192.168.10.0 هستش برای دیده شدن ماشین مجازیتون تو این شبکه کافیه در تنظیمات یه ایپی دستی ست کنید</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
-config.vm.network <span class="s2">"public_network"</span>, ip: <span class="s2">"192.168.10.7"</span>
-</code></pre></div></div>
-<p>سناریو دیگه اتومیشن هستش تصور کنید حداقل ده تا سرور تستی میخواین راه اندازی کنید که هرکدوم نصب و کانفیگش قطعا زمان بر خواهد بود . چکار میکنید ؟
-خوشبختانه vagrant از  bash script و کلا قابلیت provision پشتیبانی میکنه پس دستتون برای این دست از فعالیت های اتومیشن باز هستش برای مثال میخواین داکر رو روی وگرانت نصب کنید ( virtualization inside virtualization 😂 😂 )
-مثالش اینجور میشه 
-تو تنظیمات Vagrantfile اسکریپت رو معرفی میکنید</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> config.vm.provision :shell, path: <span class="s2">"../rancher.sh"</span>
-</code></pre></div></div>
-<p>بعد تو دایرکتوری parent اسکریپت  rancher.sh رو میسازین به این صورت</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /bin/bash</span>
-yum update <span class="nt">-y</span>
-curl <span class="nt">-fsSL</span> https://get.docker.com/ | sh
-<span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker.service
-<span class="nb">sudo </span>systemctl start docker
-</code></pre></div></div>
-
-<p>بسته به نیاز شما این سناریوها میتونه پیچیده تر باشه.
- اپشن های دیگه ای برای محدود کردن یا مشخص کردن تعداد هسته های cpu و ram و interface هست که در این مقاله جا نمیشد امیدوارم که این مقاله به شما کمک کنه که به سادگی و در سه سوت ماشین مجازی خودتون رو راه اندازی کنید</p>
-
-
-        </section>
-        <footer class="post-footer">
-          <section class="share">
-            
-              
-                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%B1%D8%A7%D9%87+%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%86+vagrant+%D8%AF%D8%B1+%D8%B3%D9%87+%D8%B3%D9%88%D8%AA&amp;url=http://localhost:4000/featured/2018/02/17/vagrant"
-                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
-                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
-                </a>
-              
-              
-         <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://behroozam.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
-              
-            
-              
-              
-         <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://behroozam.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
-              
-            
-              
-              
-         <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://behroozam.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
-              
-            
-          </section>
-        </footer>
-        <div class="bottom-teaser cf">
-          <div class="isLeft">
-            <h5 class="index-headline featured"><span>Written by</span></h5>
-            <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
-              <h4>behrooz hasanbeygi</h4>
-              <p class="bio"></p>
-              <hr>
-              <p class="published">Published <time datetime="2018-02-17 00:00">17 Feb 2018</time></p>
-            </section>
-          </div>
-          
-          <div class="isRight">
-            <h5 class="index-headline featured"><span>Supported by</span></h5>
-            <footer class="site-footer">
-              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
-              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
-              <div class="inner">
-                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2018<br>free knowlege for all </section>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </article>
-    </main>
-    <div class="bottom-closer">
-      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
-        Image
-      </div>
-      <div class="inner">
-        <h1 class="blog-title">بهروزم</h1>
-        <h2 class="blog-description"></h2>
-        <a href="/" class="btn">بازگشت به صفحه اول</a>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js"></script>
-<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
-<script>
-(function ($) {
-  "use strict";
-  $(document).ready(function(){
-
-    var $window = $(window),
-    $image = $('.post-image-image, .teaserimage-image');
-    
-      $window.on('scroll', function() {
-        var top = $window.scrollTop();
-
-        if (top < 0 || top > 1500) { return; }
-        $image
-          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
-          .css('opacity', 1-Math.max(top/700, 0));
-      });
-      $window.trigger('scroll');
-
-      var height = $('.article-image').height();
-      $('.post-content').css('padding-top', height + 'px');
-
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({ scrollTop: target.offset().top }, 500);
-            return false;
-          }
-        }
-      });
-
-  });
-}(jQuery));
-</script>
-
-
-
-  </body>
-</html>
