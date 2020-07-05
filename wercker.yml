@@ -1,4 +1,4 @@
-box: ruby:2.4
+box: ruby:2.5
 build:
   steps:
     # Install dependencies
