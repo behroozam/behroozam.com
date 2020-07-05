@@ -17,7 +17,7 @@ permalink: /about/
     > HTTP/1.1 200 <br>
    {
   "name": "behrooz hassanbeygi",
-  "Job": "Devops",
+  "Job": "DevOps Engineer",
   "mail": "b{dot}hasanbg{at}gmail{dot}com"
 }
 

@@ -13,6 +13,7 @@ plugins:
   - jalalidate
   - jemoji
   - jekyll-jalali
+  - jekyll-display-medium-posts
 # Site settings
 title: "بهروزم"
 description: > # manga / anime / gnu linux / networking
@@ -25,7 +26,8 @@ cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
 name: 'behroozam'
 author: 'behrooz hasanbeygi'
 author_image: "/assets/images/behroozam.jpg"
-
+collections:
+  - medium_posts
 
 url: "http://behroozam.com" # the base hostname & protocol for your site
 baseurl: ""
@@ -61,7 +63,7 @@ social:
     share_link:
 
   - icon:	medium
-    url:	https://medium.com/@b3hroozam
+    url:	https://medium.com/@behroozam
     desc:	Follow me
     share_url:
     share_title:
