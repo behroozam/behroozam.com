@@ -5,7 +5,7 @@ build:
     - script:
         name: install latest bundle version 
         code: gem install bundler
-        
+
     - script:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
@@ -36,7 +36,7 @@ build:
 
 deploy:
   steps:
-    - lukevivier/gh-pages:
+    - lukevivier/gh-pages@0.2.1:
         token: $GITHUB_TOKEN
         domain: behroozam.com
         basedir: _site
