@@ -86,7 +86,7 @@
 برای دیدن اینکه چه ماشین مجازی های روی vagrant در حال اجرا هستن میتونید از کامند vagrant global-status  استفاده کنید .</p>
 
 <p>سناریو هایی هم البته وجود داره که بخواین از تنظیمات یا اتومیشن  خودتون استفاده کنید ورگنت از پلاگین های مختلف هم پشتیبانی میکنه برای مثال در اکثر پروژه هایی که مورد تحریم واقع شدیم باید از پراکسی برای دور زدن تحریم ها استفاده کنیم که پلاگین vagrant-proxyconf به صورت اتوماتیک تنظیمات پکیج منیجر و اکثر پکیج های پرکاربرد مثل docker رو تغییر ماده تا ترافیک پشت پراکسی منتقل بشه</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin install vagrant-proxyconf
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin <span class="nb">install </span>vagrant-proxyconf
 <span class="c">#in vagrant file</span>
 config.proxy.http     <span class="o">=</span> <span class="s2">"http://yourproxy:8080"</span>
 config.proxy.https    <span class="o">=</span> <span class="s2">"http://yourproxy:8080"</span>

@@ -78,15 +78,15 @@
 
 <p>در قدم اول روبی و gems رو بر روی سیستم نصب میکنیم</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install ruby-full
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>ruby-full
 or
-<span class="nb">sudo </span>yum install ruby ruby-devel</code></pre></figure>
+<span class="nb">sudo </span>yum <span class="nb">install </span>ruby ruby-devel</code></pre></figure>
 
 <p>و گیت البته</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install git
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>git
 or
-<span class="nb">sudo </span>yum install git</code></pre></figure>
+<span class="nb">sudo </span>yum <span class="nb">install </span>git</code></pre></figure>
 
 <p>سپس اقدام به clone کردن snorby میکنیم</p>
 
@@ -95,8 +95,8 @@ or
 <p>مراحل نصب</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>snorby 
-bundle install 
-bundle <span class="nb">exec </span>rake snorby:setup 
+bundle <span class="nb">install 
+</span>bundle <span class="nb">exec </span>rake snorby:setup 
 rails server <span class="nt">-p</span> 8888</code></pre></figure>
 
 <p>تا اینجای کار اگه همه چیز به خوبی و خوشی پیش رفته باشه و در دپندنسی های پکیج های روبی به مشکلی برنخورده باشین ( انتظار میره که بلد باشین پیش نیاز ها رو رفع کنید ) باید بریم سراغ فرستادن لاگ های snort به سمت یکی از دیتابیس های مورد علاقمون که mysql(mariadb) یا postgres هست . متأسفانه از نسخه ۲.۹ به بعد فرستادن لاگ ها از طریق کانفیگ snort غیر فعال شده پس برای این کار نیاز به ابزار دیگه ای به اسم barnyard2 داریم . برای کانفیگ و نصب این ابزار کافیه</p>
@@ -116,7 +116,7 @@ whereis libmysqlclient </code></pre></figure>
 حالا هر کجای سیستم شما که barnyard نصب شده به دنبال کانفیگش میگردیم :))) 
 بعد از پیدا کردن کانفیگ توصیه ام این هستش که در پوشه تنظیمات snort کپی بشه که از آشفتگی های بعدی جلوگیری کنه برای مثال</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>cp /user/local/lib/etc/barnyard2.conf /etc/snort/</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo cp</span> /user/local/lib/etc/barnyard2.conf /etc/snort/</code></pre></figure>
 
 <p>حال نوبت اضافه کردن تغییرات به کانفیگ هستش توجه کنید که من از دیتابیس خود snorby جهت ذخیره سازی لاگ های استاندارد snort استفاده میکنم تحت فیلد alert در انتها کانفیگ قرار میدم</p>
 

@@ -5,9 +5,9 @@
     <description></description>
     <link>http://behroozam.com/</link>
     <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Jul 2020 11:03:15 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Jul 2020 11:03:15 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Mon, 06 Jul 2020 11:12:09 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Jul 2020 11:12:09 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.7</generator>
     
       <item>
         <title>هجوم</title>
@@ -53,7 +53,7 @@
 برای دیدن اینکه چه ماشین مجازی های روی vagrant در حال اجرا هستن میتونید از کامند vagrant global-status  استفاده کنید .&lt;/p&gt;
 
 &lt;p&gt;سناریو هایی هم البته وجود داره که بخواین از تنظیمات یا اتومیشن  خودتون استفاده کنید ورگنت از پلاگین های مختلف هم پشتیبانی میکنه برای مثال در اکثر پروژه هایی که مورد تحریم واقع شدیم باید از پراکسی برای دور زدن تحریم ها استفاده کنیم که پلاگین vagrant-proxyconf به صورت اتوماتیک تنظیمات پکیج منیجر و اکثر پکیج های پرکاربرد مثل docker رو تغییر ماده تا ترافیک پشت پراکسی منتقل بشه&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vagrant plugin install vagrant-proxyconf
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vagrant plugin &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;vagrant-proxyconf
 &lt;span class=&quot;c&quot;&gt;#in vagrant file&lt;/span&gt;
 config.proxy.http     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://yourproxy:8080&quot;&lt;/span&gt;
 config.proxy.https    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://yourproxy:8080&quot;&lt;/span&gt;
@@ -365,15 +365,15 @@ curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://get.docker.com/
 
 &lt;p&gt;در قدم اول روبی و gems رو بر روی سیستم نصب میکنیم&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install ruby-full
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-full
 or
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum install ruby ruby-devel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby ruby-devel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;و گیت البته&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install git
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git
 or
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum install git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;سپس اقدام به clone کردن snorby میکنیم&lt;/p&gt;
 
@@ -382,8 +382,8 @@ or
 &lt;p&gt;مراحل نصب&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;snorby 
-bundle install 
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake snorby:setup 
+bundle &lt;span class=&quot;nb&quot;&gt;install 
+&lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake snorby:setup 
 rails server &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8888&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;تا اینجای کار اگه همه چیز به خوبی و خوشی پیش رفته باشه و در دپندنسی های پکیج های روبی به مشکلی برنخورده باشین ( انتظار میره که بلد باشین پیش نیاز ها رو رفع کنید ) باید بریم سراغ فرستادن لاگ های snort به سمت یکی از دیتابیس های مورد علاقمون که mysql(mariadb) یا postgres هست . متأسفانه از نسخه ۲.۹ به بعد فرستادن لاگ ها از طریق کانفیگ snort غیر فعال شده پس برای این کار نیاز به ابزار دیگه ای به اسم barnyard2 داریم . برای کانفیگ و نصب این ابزار کافیه&lt;/p&gt;
@@ -403,7 +403,7 @@ whereis libmysqlclient &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 حالا هر کجای سیستم شما که barnyard نصب شده به دنبال کانفیگش میگردیم :))) 
 بعد از پیدا کردن کانفیگ توصیه ام این هستش که در پوشه تنظیمات snort کپی بشه که از آشفتگی های بعدی جلوگیری کنه برای مثال&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;cp /user/local/lib/etc/barnyard2.conf /etc/snort/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo cp&lt;/span&gt; /user/local/lib/etc/barnyard2.conf /etc/snort/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;حال نوبت اضافه کردن تغییرات به کانفیگ هستش توجه کنید که من از دیتابیس خود snorby جهت ذخیره سازی لاگ های استاندارد snort استفاده میکنم تحت فیلد alert در انتها کانفیگ قرار میدم&lt;/p&gt;
 
@@ -449,7 +449,7 @@ output database: alert, mysql, &lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt
 &lt;p&gt;سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Nano install.conf.dist 
-cp install.conf.dist install.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;install.conf.dist install.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;بعد از ثبت تغییرات اقدام به نصب آن میکنیم&lt;/p&gt;
 
@@ -467,15 +467,15 @@ Sudo apt-get install gammu gammu-smsd
 &lt;/code&gt;
 سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chmod 777 /dev/ttyUSB0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;777 /dev/ttyUSB0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;دایکرکتوری را جهت دریافت SMS  میسازیم&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /var/log/gammu /var/spool/gammu/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;inbox,outbox,sent,error&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /var/log/gammu /var/spool/gammu/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;inbox,outbox,sent,error&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chown www-data:www-data &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; /var/spool/gammu/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;chown &lt;/span&gt;www-data:www-data &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; /var/spool/gammu/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم&lt;/p&gt;
 
@@ -490,7 +490,7 @@ Sudo apt-get install gammu gammu-smsd
 در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
 مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ln &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /etc/gammu-smsdrc /etc/gammurc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /etc/gammu-smsdrc /etc/gammurc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات&lt;/p&gt;
 
