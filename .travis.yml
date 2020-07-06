@@ -1,16 +1,18 @@
 language: ruby
+rvm:
+- 2.5
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 branches:
   only:
   - master
 script:
-  - gem install bundler
-  - gem install
-  - bundler install
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - bundle exec jekyll build
+  - bundle exec rake test
 deploy:
   provider: pages
-  local-dir: ./site
-  target-branch: master
+  local-dir: ./_site
   email: deploy@travis-ci.org
   name: Deployment Bot
   skip-cleanup: true
