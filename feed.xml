@@ -5,8 +5,8 @@
     <description></description>
     <link>http://behroozam.com/</link>
     <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Jul 2020 13:34:41 +0000</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2020 13:34:41 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2020 13:43:09 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 13:43:09 +0000</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -17,8 +17,8 @@
 
 &lt;p&gt;قبلا از genymotion یا نسخه رسمی مجازی ساز اندروید روی virtualbox استفاده کرده بودم و به نظرم سنگین و به درد نخور بودن ، پس با خودم گفتم از اونجایی که با kvm  راحت تری یه سرچ کن ببین چیزی وجود داره که به android-x86 رسیدم ، بعد از نصب android-x86 به وسیله virt-manager که GUI عه qemu/kvm عه به این نتیجه رسیدم که خیر به دلیل cpu overload  و مصرف منابع خیلی زیاد و کارایی کم این هم به درد ما نخواهد خورد.&lt;/p&gt;
 
-&lt;p&gt;تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشتت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
-پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانیتر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.&lt;/p&gt;
+&lt;p&gt;تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
+پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانتینر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.&lt;/p&gt;
 
 &lt;p&gt;اینجا میخوام مراحل نصب و راه اندازی anbox رو توضیح بدم هرچند همه این ها تو داکیومنت های خود پروژه هم به این آدرس هست ولی خب چون چند تا مرحله کوتاه بیشتر نیست میگم&lt;/p&gt;
 
@@ -60,9 +60,9 @@ reboot
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/fidibo/anbox.png&quot; alt=&quot;اینم نمایی از فول اسکرین برنامه فیدیبو روی گنو/لینوکس &quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-        <link>http://behroozam.com/featured/2020/06/15/fidibo-anbox.html</link>
-        <guid isPermaLink="true">http://behroozam.com/featured/2020/06/15/fidibo-anbox.html</guid>
+        <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2020/07/15/fidibo-anbox.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2020/07/15/fidibo-anbox.html</guid>
         
         
         <category>featured</category>

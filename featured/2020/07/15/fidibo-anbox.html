@@ -16,7 +16,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://behroozam.com/featured/2020/06/15/fidibo-anbox.html">
+  <link rel="canonical" href="http://behroozam.com/featured/2020/07/15/fidibo-anbox.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -47,7 +47,7 @@
               <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
               on
-              <span class="date">دوشنبه 26 خرداد 1399</span>
+              <span class="date">چهارشنبه 25 تیر 1399</span>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -67,8 +67,8 @@
 
 <p>قبلا از genymotion یا نسخه رسمی مجازی ساز اندروید روی virtualbox استفاده کرده بودم و به نظرم سنگین و به درد نخور بودن ، پس با خودم گفتم از اونجایی که با kvm  راحت تری یه سرچ کن ببین چیزی وجود داره که به android-x86 رسیدم ، بعد از نصب android-x86 به وسیله virt-manager که GUI عه qemu/kvm عه به این نتیجه رسیدم که خیر به دلیل cpu overload  و مصرف منابع خیلی زیاد و کارایی کم این هم به درد ما نخواهد خورد.</p>
 
-<p>تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشتت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
-پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانیتر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.</p>
+<p>تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
+پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانتینر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.</p>
 
 <p>اینجا میخوام مراحل نصب و راه اندازی anbox رو توضیح بدم هرچند همه این ها تو داکیومنت های خود پروژه هم به این آدرس هست ولی خب چون چند تا مرحله کوتاه بیشتر نیست میگم</p>
 
@@ -115,7 +115,7 @@ reboot
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%A7%D8%AC%D8%B1%D8%A7+%DA%A9%D8%B1%D8%AF%D9%86+%D9%81%DB%8C%D8%AF%DB%8C%D8%A8%D9%88+%D8%B1%D9%88%DB%8C+%DA%AF%D9%86%D9%88%2F%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3&amp;url=http://behroozam.com/featured/2020/06/15/fidibo-anbox"
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%A7%D8%AC%D8%B1%D8%A7+%DA%A9%D8%B1%D8%AF%D9%86+%D9%81%DB%8C%D8%AF%DB%8C%D8%A8%D9%88+%D8%B1%D9%88%DB%8C+%DA%AF%D9%86%D9%88%2F%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3&amp;url=http://behroozam.com/featured/2020/07/15/fidibo-anbox"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -279,7 +279,7 @@ s.setAttribute('data-timestamp', +new Date());
               <h4>behrooz hasanbeygi</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2020-06-15 00:00">15 Jun 2020</time></p>
+              <p class="published">Published <time datetime="2020-07-15 00:00">15 Jul 2020</time></p>
             </section>
           </div>
           
