@@ -48,7 +48,7 @@ sudo snap install --devmode --beta anbox
 sudo apt install android-tools-adb
 ```
 
-حالا  apk عه fidibo رو از این آدرس دانلود کنید و اینجوری نصبش کنید
+حالا  apk عه fidibo رو  [از این آدرس](https://fidibo.com/) دانلود کنید و اینجوری نصبش کنید
 ``` bash
 adb install ~/Downloads/fidibo.7.8.9.apk
 ```
