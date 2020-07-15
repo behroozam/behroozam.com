@@ -5,9 +5,69 @@
     <description></description>
     <link>http://behroozam.com/</link>
     <atom:link href="http://behroozam.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Jul 2020 12:08:47 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Jul 2020 12:08:47 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2020 13:19:37 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 13:19:37 +0000</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>اجرا کردن فیدیبو روی گنو/لینوکس</title>
+        <description>&lt;p&gt;چند وقتی هستش که دارم کتاب طریق شاهان رو روی فیدیبو میخونم ، معمولا قبل از خواب و روی گوشی موبایلم ولی از اونجایی که داستان خیلی جذاب شد دلم میخواست از طریق لپتاپم بتونم مابقی داستان رو ادامه بدم و به ساعت قبل از خواب محدود نشه ولی یه مشکل بزرگ وجود داشت ، متاسفانه فیدیبو هنوز هیچ نسخه ای رو برای وب و دسکتاپ های لینوکسی عرضه نکرده پس باید یه روشی رو پیدا میکردم که بتونم اپلیکیشنی رو که فیدیبو برای ویندوز یا اندروید منتشر کرده رو روی دستگاهم که با سیستم عامل ubuntu 1804 نصب و اجرا کنم.&lt;/p&gt;
+
+&lt;p&gt;اولین گزینه ای که به ذهنم رسید اجرا کردن اپلیکیشن رسمی ورژن مایکروسافت به وسیله Wine بود ولی متاسفانه با وجود نصب کردن تمامی پیش نیازهای ویندوزی به وسیله winetricks خروجی برنامه چیزی که انتظارش رو داشتم نبود و به درستی فونت هارو نمایش نمیداد. پس باید به فکر یه جایگزین میبودم پس رفتم سراغ راه حل دوم یعنی نصب اپلیکیشن اندروید.&lt;/p&gt;
+
+&lt;p&gt;قبلا از genymotion یا نسخه رسمی مجازی ساز اندروید روی virtualbox استفاده کرده بودم و به نظرم سنگین و به درد نخور بودن ، پس با خودم گفتم از اونجایی که با kvm  راحت تری یه سرچ کن ببین چیزی وجود داره که به android-x86 رسیدم ، بعد از نصب android-x86 به وسیله virt-manager که GUI عه qemu/kvm عه به این نتیجه رسیدم که خیر به دلیل cpu overload  و مصرف منابع خیلی زیاد و کارایی کم این هم به درد ما نخواهد خورد.&lt;/p&gt;
+
+&lt;p&gt;تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشتت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
+پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانیتر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.&lt;/p&gt;
+
+&lt;p&gt;اینجا میخوام مراحل نصب و راه اندازی anbox رو توضیح بدم هرچند همه این ها تو داکیومنت های خود پروژه هم به این آدرس هست ولی خب چون چند تا مرحله کوتاه بیشتر نیست میگم&lt;/p&gt;
+
+&lt;p&gt;اگه مثل من ubuntu 1804 هستین و هنوز تصمیم به مهاجرت به ورژن های بالاتر رو نگرفتین باید دوتا از کرنل فیچرهایی که مربوط به اندروید هستن و تو ورژن های بعدی ابونتو به صورت پیشفرض وجود دارن رو نصب کنید 
+یعنی ashmem و binder&lt;/p&gt;
+
+&lt;p&gt;به این صورت که terminal خودتون رو روی گنو/لینوکس خودتون باز میکنید و مینویسید&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;software-properties-common
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;add-apt-repository ppa:morphis/anbox-support
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;linux-headers-generic anbox-modules-dkms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;و بعدش باید این کرنل ماژول هارو به وسیله modprobe فعال کنید و سیستم رو ربیوت کنید تا لود بشن&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;modprobe ashmem_linux
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;modprobe binder_linux
+reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;مرحله بعد نصب خود anbox هستش که به راحتی توسط snap که به صورت پیشفرض روی توزیع های ابونتو وجود داره انجام میشه&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;snap &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--devmode&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--beta&lt;/span&gt; anbox
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;برای نصب اپلیکیشن لازمه که قبلش adb tools رو نصب کرده باشید&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;android-tools-adb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;حالا  apk عه fidibo رو از این آدرس دانلود کنید و اینجوری نصبش کنید&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adb &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; ~/Downloads/fidibo.7.8.9.apk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;اگه همه چی به خوبی و خوشی پیش رفته باشه حالا میتونید فیدیبو رو با زدن&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;anbox.appmgr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;تو لیست اپلیکیشن ها پیدا کنید و اجرا کنید&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/fidibo/anbox.png&quot; alt=&quot;اینم نمایی از فول اسکرین برنامه فیدیبو روی گنو/لینوکس &quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+        <link>http://behroozam.com/featured/2020/06/15/fidibo-anbox.html</link>
+        <guid isPermaLink="true">http://behroozam.com/featured/2020/06/15/fidibo-anbox.html</guid>
+        
+        
+        <category>featured</category>
+        
+      </item>
     
       <item>
         <title>از دست دادن</title>
@@ -464,103 +524,6 @@ output database: alert, mysql, &lt;span class=&quot;nv&quot;&gt;user&lt;/span&gt
         
         
         <category>security</category>
-        
-      </item>
-    
-      <item>
-        <title>آموزش راه اندازی درگاه پیام کوتاه</title>
-        <description>&lt;p&gt;شاید صحبت کردن از gsm  و تکنولوژی های نسل دومی تلفن همراه الان با وجود سرویس های مختلف پوش نوتیفیکیشن و پیام رسان های موبایلی مبتنی بر اینترنت و خدمات نسل سوم و چهارم یه جورایی خاطره بازی و منسوخ به نظر برسه ولی باید توجه کرد که با وجود سه بیلیون خط فعال gsm در دنیا و همچنین هزینه پایین پیاده سازی سلوشن های موبایلی میتونه در کسب کار های ما هم خیلی موثر باشه و البته این موضوع فراتر از ارسال مسیج های گروهی و تبلیغاتی هستش.
-من به عنوان یه sysadmin تنبل این وسط حوصله مانیتورینگ رو ندارم و معمولا هم ایمیل هام رو چک نمیکنم.این تکنولوژی زمانی به کمک من اومد که به وسیله پایپلاین ها و ارسال خطاها به من به صورت اتوماتیک خیلی از کارها سروسامان گرفت البته با ترکیب و اندکی خلاقیت . توجه کنید که اینجا فقط میخوام از پیاده سازی یه smsgateway در سطح  سازمان های کوچک و متوسط بگم منتهی مزیتی که این سلوشن نسبت به شرکت های بزرگ ارائه دهنده خدمات مبتنی بر ارزش داره تست و پیاده سازی سرویس هاتون به سرعت agile برای استارتاپ هایی که نمیخوان هزینه زیادی رو انجام بدن ولی کیفیت براشون مهم هست. کاربرد دیگه ای که این سلوشن داره برای دستگاه های IOT هست که در مناطق دور افتاده برای مثال برای مقاصد محیط زیستی و پژوهشی استفاده میشه که امکان دسترسی به اینترنت مقدور نیست. 
-صنعت سلامت همگانی public health هم میتونه به عنوان سامانه های اطلاعاتی برای انواع غربالگری ها و مقاصد پژوهشی از این سلوشن استفاده کنه.
-این آموزش مناسب توسعه دهنده ها و مدیران سیستم سطح متوسط به بالا هستش&lt;/p&gt;
-
-&lt;p&gt;##نحوه راه اندازی مودم gsm به همراه رابط کاربری playsms 
-برای راه اندازی playsms  نیازبه یک پایگاه داده mysql  و وب سرور ترجیهاآپاچی نیاز داریم. 
-مراحل نصب playsms :
-ابتدا بسته فشرده برنامه را از سایت playsms  دریافت میکنیم سپس استخراج و کپی کردن و اقدام به ساخت سیملینک میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-zxf&lt;/span&gt; playsms-1.4.tar.gz &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; /usr/local/src
-&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; usr/local/src
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;usr/local/src/playsms-1.4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;سپس تنظیمات برنامه را تغییر میدهیم. توجه داشته باشید که پیش نیاز این مرحله نصب و پیکره بندی mysql  میباشد به این منظور میتوان از myphpadmin نیز جهت ایجاد پایگاه داده و کاربران مجاز و تغییر privilege ها نیز استفاده نمود .&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Nano install.conf.dist 
-&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;install.conf.dist install.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;بعد از ثبت تغییرات اقدام به نصب آن میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./install-playsms.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;پس از نصب میتوانید برنامه را به بوت اضافه کنید&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Sudo &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; /usr/local/bin/playsmsd start &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/init.d/rc.local&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;سپس ابتدا اقدام به دانلود و نصب gammu  و gammu-smsd  مینمایم .
-برای نصب gammu  و gammu-smsd  میتوان در صورت موجود بودن از پکیج منیجر استفاده نمود در غیر این صورت اقدام به نصب به صورت دست میکینم . 
-در صورت موجود بودن پکیج منیجر 
-&lt;code&gt;
-Sudo apt-get install gammu gammu-smsd
-&lt;/code&gt;
-سپس یا متصل کردن پورت com یا usb  به دستگاه پرمیشن های دستگاه را ست میکنیم همانند&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;777 /dev/ttyUSB0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;دایکرکتوری را جهت دریافت SMS  میسازیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /var/log/gammu /var/spool/gammu/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;inbox,outbox,sent,error&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;سپس به پوشه WWW/DATA دسترسی به نوشتار د پوشه gammu میدهیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;chown &lt;/span&gt;www-data:www-data &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; /var/spool/gammu/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;حال تنظیمان پیشفرض gammu-smsd را دانلود کرده و تغییر میدهیم و در دایرکتوری /etc  کپی میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; https://raw.githubusercontent.com/antonraharja/playSMS/master/contrib/gammu/linux/gammu-smsdrc
- cp gammu-smsdrc /etc/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;تنطیمات پیشفرض را تغییر میدهیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano /etc/gammu-smsdrc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;میتوانید تنظیمات گوشی یا مودم gsm مورد نظر خودتون رو در &lt;a href=&quot;https://wammu.eu/phones/&quot;&gt;اینجا&lt;/a&gt; پیدا کنید
-در قسمت device=/dev/ttyUSB0 را وارد کرده و در قسمت connection=at19200  را وارد میکنیم ( جهت خطایابی به مسیر لاگ توجه شود)
-مهم: برای اینکه تنظیمات توسط gammu هم مورد استفاده قرار کید اقدام به ایجاد سافت لینک سیمبولیک مینماییم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /etc/gammu-smsdrc /etc/gammurc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;برای راه اندازی سرویس میتوان user=gammu  را به سیستم اضافه کرد ولی برای یکپارچگی بهتر است که در تنظیمات&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano /etc/init.d/gammu-smsd&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;جای user=gammu  با user=root عوض شود 
-برای شناسایی تنظیمات یکبار سرویس gammu-smsd را ری استارت میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Sudo systemctl restart gammu-smsd.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;سپس برای شناسایی مودم  کامند زیر را وارد میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gammu &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /var/log/gammulog identify&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;عملیات پیکره بندی به پایان رسیده حال برای تست gammu دستور زیر را وارد میکنیم&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gammu sendsms TEXT 0912&lt;span class=&quot;k&quot;&gt;*******&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-unicode&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;سلام دنیا&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;به جای 0912 ادرس گیرنده را وارد نمایید&lt;/p&gt;
-
-&lt;p&gt;##تنظیمات پنل playsms
-برای مدیریت پیام های ارسالی و دریافتی وارد پنل میشویم
-ادرس پیشفرض 127.0.0.1/playsms و رمز نام کاربری admin  میباشد 
-حالا برای تنظیمات شناسایی gammu  توسط playsms به قسمت تنظیمات رفته و در قسمت manage gateway and smsc رویgammu  کلیک کرده و در قسمت spool folder  ادرس /var/spool/gammu را وارد میکنیم  و ذخیره سازی میکنیم . سپس به تنظیمات main رفته و در انجا default smscر را gammu  انتخاب میکنیم . 
-پایان&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
-        <link>http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</link>
-        <guid isPermaLink="true">http://behroozam.com/development/2017/04/19/gammu-with-playsms.html</guid>
-        
-        
-        <category>development</category>
         
       </item>
     

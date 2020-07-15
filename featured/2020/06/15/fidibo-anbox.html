@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<script id="dsq-count-scr" src="//behroozam.disqus.com/count.js" async></script>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>اجرا کردن فیدیبو روی گنو/لینوکس</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://behroozam.com/featured/2020/06/15/fidibo-anbox.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://behroozam.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo2.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/fidibo/Fidibo-logo.png)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">اجرا کردن فیدیبو روی گنو/لینوکس</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">behrooz hasanbeygi</h4>
+              on
+              <span class="date">دوشنبه 26 خرداد 1399</span>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section dir="rtl" class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>چند وقتی هستش که دارم کتاب طریق شاهان رو روی فیدیبو میخونم ، معمولا قبل از خواب و روی گوشی موبایلم ولی از اونجایی که داستان خیلی جذاب شد دلم میخواست از طریق لپتاپم بتونم مابقی داستان رو ادامه بدم و به ساعت قبل از خواب محدود نشه ولی یه مشکل بزرگ وجود داشت ، متاسفانه فیدیبو هنوز هیچ نسخه ای رو برای وب و دسکتاپ های لینوکسی عرضه نکرده پس باید یه روشی رو پیدا میکردم که بتونم اپلیکیشنی رو که فیدیبو برای ویندوز یا اندروید منتشر کرده رو روی دستگاهم که با سیستم عامل ubuntu 1804 نصب و اجرا کنم.</p>
+
+<p>اولین گزینه ای که به ذهنم رسید اجرا کردن اپلیکیشن رسمی ورژن مایکروسافت به وسیله Wine بود ولی متاسفانه با وجود نصب کردن تمامی پیش نیازهای ویندوزی به وسیله winetricks خروجی برنامه چیزی که انتظارش رو داشتم نبود و به درستی فونت هارو نمایش نمیداد. پس باید به فکر یه جایگزین میبودم پس رفتم سراغ راه حل دوم یعنی نصب اپلیکیشن اندروید.</p>
+
+<p>قبلا از genymotion یا نسخه رسمی مجازی ساز اندروید روی virtualbox استفاده کرده بودم و به نظرم سنگین و به درد نخور بودن ، پس با خودم گفتم از اونجایی که با kvm  راحت تری یه سرچ کن ببین چیزی وجود داره که به android-x86 رسیدم ، بعد از نصب android-x86 به وسیله virt-manager که GUI عه qemu/kvm عه به این نتیجه رسیدم که خیر به دلیل cpu overload  و مصرف منابع خیلی زیاد و کارایی کم این هم به درد ما نخواهد خورد.</p>
+
+<p>تقریبا داشتم از خواندن کتاب مورد علاقه ام روی لپتاپم ناامید میشدم که یادم اومد قبلا سلوشنی رو به اسم shashlik ( بله همون شیشلیک خودمون ) تست کرده بودم که میتونست برنامه های اندروید رو روی گنو/لینوکس اجرا کنه ولی پرفورمنس ضعیفی داشتت وقتی به پروژه روی گیتهاب سر زدم سالها بودش که نگهداری نمیشد و کدها قدیمی شده بود 
+پس دنبال جایگزینی برای shashlik کشتم که anbox رو پیدا کردم. anbox یه راه حلی هستش که میاد از قابلیت LXC یعنی کانیتر در سطح لینوکس برای ایزوله کردن اپلیکیشن ها تو usernamespace خودش استفاده میکنه و بحث رندرینگ گرافیکی اپلیکیشن ها و پردازش رو به وسیله کرنل لینوکس و بحث شبکه و دسترسی هارو به وسیله دیمنست خودش ردیف میکنه ، خداییش که راه حل خفنیه.</p>
+
+<p>اینجا میخوام مراحل نصب و راه اندازی anbox رو توضیح بدم هرچند همه این ها تو داکیومنت های خود پروژه هم به این آدرس هست ولی خب چون چند تا مرحله کوتاه بیشتر نیست میگم</p>
+
+<p>اگه مثل من ubuntu 1804 هستین و هنوز تصمیم به مهاجرت به ورژن های بالاتر رو نگرفتین باید دوتا از کرنل فیچرهایی که مربوط به اندروید هستن و تو ورژن های بعدی ابونتو به صورت پیشفرض وجود دارن رو نصب کنید 
+یعنی ashmem و binder</p>
+
+<p>به این صورت که terminal خودتون رو روی گنو/لینوکس خودتون باز میکنید و مینویسید</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>software-properties-common
+<span class="nb">sudo </span>add-apt-repository ppa:morphis/anbox-support
+<span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install </span>linux-headers-generic anbox-modules-dkms
+</code></pre></div></div>
+
+<p>و بعدش باید این کرنل ماژول هارو به وسیله modprobe فعال کنید و سیستم رو ربیوت کنید تا لود بشن</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>modprobe ashmem_linux
+<span class="nb">sudo </span>modprobe binder_linux
+reboot
+</code></pre></div></div>
+<p>مرحله بعد نصب خود anbox هستش که به راحتی توسط snap که به صورت پیشفرض روی توزیع های ابونتو وجود داره انجام میشه</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>snap <span class="nb">install</span> <span class="nt">--devmode</span> <span class="nt">--beta</span> anbox
+</code></pre></div></div>
+
+<p>برای نصب اپلیکیشن لازمه که قبلش adb tools رو نصب کرده باشید</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>android-tools-adb
+</code></pre></div></div>
+
+<p>حالا  apk عه fidibo رو از این آدرس دانلود کنید و اینجوری نصبش کنید</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb <span class="nb">install</span> ~/Downloads/fidibo.7.8.9.apk
+</code></pre></div></div>
+
+<p>اگه همه چی به خوبی و خوشی پیش رفته باشه حالا میتونید فیدیبو رو با زدن</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anbox.appmgr
+</code></pre></div></div>
+
+<p>تو لیست اپلیکیشن ها پیدا کنید و اجرا کنید</p>
+
+<p><img src="/assets/article_images/fidibo/anbox.png" alt="اینم نمایی از فول اسکرین برنامه فیدیبو روی گنو/لینوکس " /></p>
+
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D8%A7%D8%AC%D8%B1%D8%A7+%DA%A9%D8%B1%D8%AF%D9%86+%D9%81%DB%8C%D8%AF%DB%8C%D8%A8%D9%88+%D8%B1%D9%88%DB%8C+%DA%AF%D9%86%D9%88%2F%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3&amp;url=http://behroozam.com/featured/2020/06/15/fidibo-anbox"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+              
+              
+         <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://behroozam.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/behroozam.jpg)">Blog Logo</div>
+              <h4>behrooz hasanbeygi</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2020-06-15 00:00">15 Jun 2020</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content Under GNU FDL <a href="/">behrooz hasanbeygi</a>  2020<br>free knowlege for all </section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">بهروزم</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/" class="btn">بازگشت به صفحه اول</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37514057-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-37514057-2');
+</script>
+
+
+
+  </body>
+</html>
