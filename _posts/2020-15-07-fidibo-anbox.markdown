@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "اجرا کردن فیدیبو روی گنو/لینوکس"
-date: 2020-06-15
+date: 2020-07-15
 categories: featured
 image: /assets/article_images/fidibo/Fidibo-logo.png
 ---
