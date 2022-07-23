@@ -14,3 +14,5 @@ gem 'jekyll-hinduarabic'
 gem 'commonmarker'
 gem  'rouge'
 gem  'jekyll-display-medium-posts'
+
+gem "webrick", "~> 1.7"
