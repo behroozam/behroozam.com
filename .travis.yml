@@ -10,12 +10,12 @@ branches:
 script:
   - bundle exec jekyll build
 deploy:
-  provider: pages
+  provider: pages:git
   local-dir: ./_site
   email: deploy@travis-ci.org
   name: Deployment Bot
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   keep-history: true
+  edge: true
   on:
     branch: master
