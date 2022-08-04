@@ -4,7 +4,7 @@ comments: true
 title: "فناوری اطلاعات سلامت چیست"
 date: 2015-07-22
 categories: featured
-image: /assets/article_images/podcast/podcast.jpg
+image: assets/article_images/podcast/podcast.jpg
 
 ---
 راستش  همیشه اولین سوالی که در مورد رشته ام ازم پرسیده میشه اینه که رشته شما چی هستش برای اینکه کار خودم راحت کنم مختصری تو این پادکست در مورد اینکه رشته فناوری اطلاعات سلامت چی هستش توضیح میدم

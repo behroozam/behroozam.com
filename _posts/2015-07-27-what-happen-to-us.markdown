@@ -4,7 +4,7 @@ comments: true
 title: "ما را چه شده است ؟"
 date: 2015-07-27
 categories: featured
-image: /assets/article_images/kapskhol/kapskhol.jpg
+image: assets/article_images/kapskhol/kapskhol.jpg
 
 ---
 همه چیز از اونجایی شروع شد که یکی از کاربران تویتر برای [قتل پزشک اردبیلی دکتر پیرزاده ](http://www.irna.ir/fa/News/81692430/)  نوشت

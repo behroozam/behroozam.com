@@ -1,0 +1,18 @@
+{%-if include.limit and site.medium_posts.size > include.limit -%}
+  {%-assign limit_exceeded = true-%}
+{%-else-%}
+  {%-assign limit_exceeded = false-%}
+{%-endif-%}
+
+{%- if site.medium_posts -%}
+  <ul>
+    {%- for post in site.medium_posts limit: include.limit -%}
+        <li>
+          <a href="{{ post.medium_link }}">{{ post.title | downcase }}</a>
+        </li>
+    {%- endfor -%}
+    {%- if include.show_more and limit_exceeded -%}
+      <li><a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a></li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

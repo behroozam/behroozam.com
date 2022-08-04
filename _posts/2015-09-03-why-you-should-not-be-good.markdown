@@ -4,7 +4,7 @@ comments: true
 title: "در ستایش بد بودن"
 date: 2015-09-03
 categories: life
-image: /assets/article_images/life/choice.jpg
+image: assets/article_images/life/choice.jpg
 
 ---
 

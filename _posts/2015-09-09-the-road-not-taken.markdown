@@ -4,7 +4,7 @@ comments: true
 title: "مسیر کم گذر"
 date: 2015-09-09
 categories: life
-image: /assets/article_images/matrix/matrix.jpg
+image: assets/article_images/matrix/matrix.jpg
 
 ---
 

@@ -1,84 +1,45 @@
-# Build settings
+title: بهروزم # name of the site
+author: Behrouz Hasanbeygi # name of site's author
+email: riccardo.graziosi97@gmail.com # email of site's author
+url: https://behroozam.com # root address of the site
+baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
+description: > # description of the site (multiple lines allowed)
+  بهروزم جایی که یاد گرفتم بهبود یه تلاش دائمی است
+
+permalink: /:slug.html
+
+favicon: "favicon.ico" # name+extension of favicon (which must be put on the root folder)
+
+google_analytics: "UA-37514057-2"
+
+future: true # if the post is belong to the future :))
+
 markdown: kramdown
-future: true
-#highlighter: pygments
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-paginate: 5
-language: 'fa-IR'
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jalalidate
-  - jemoji
-  - jekyll-jalali
-  - jekyll-display-medium-posts
-# Site settings
-title: "بهروزم"
-description: > # manga / anime / gnu linux / networking
-email: b.hasanbg[at]gmail[dot]com
-#blog logo
-logo: "/assets/images/logo2.jpg"
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+  syntax_highlighter_opts:
+    default_lang: bash
+    css_class   : 'syntax'
 
-name: 'behroozam'
-author: 'behrooz hasanbeygi'
-author_image: "/assets/images/behroozam.jpg"
+theme_config:
+  appearance: "auto" # can be "light", "dark" or "auto"
+  back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%F %R" # customize how date is formatted
+  jdate_format: "%A %d %b %Y" # jalali date format
+  show_description: false # show blog description in home page
+
+sass:
+  style: :compressed
+
+comments: true
+
 collections:
   - medium_posts
 
-url: "http://behroozam.com" # the base hostname & protocol for your site
-baseurl: ""
-
-# social icons and sharing options
-social:
-  - icon:	twitter
-    url:	https://twitter.com/b3hroozam
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
-
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: https://www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
-
-  - icon:	github
-    url:	https://github.com/behroozam
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	instagram
-    url:	https://instagram.com/behroozam
-    desc:	Follow me
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	medium
-    url:	https://medium.com/@behroozam
-    desc:	Follow me
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	vimeo
-    url:	https://virgool.io/@b3hroozam
-    desc:	Follow me
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	linkedin
-    url:	https://www.linkedin.com/in/behroozam/
-    desc:	Follow me
-    share_url:
-    share_title:
-    share_link:
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-jalali
+  - jekyll-sitemap
+  - jekyll-display-medium-posts

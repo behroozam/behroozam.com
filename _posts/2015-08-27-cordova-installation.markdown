@@ -4,7 +4,7 @@ comments: true
 title: "اپاچی کوردوا "
 date: 2015-08-27
 categories: development
-image: /assets/article_images/cordova/cordova-logo.png
+image: assets/article_images/cordova/cordova-logo.png
 
 ---
 
@@ -65,5 +65,5 @@ cordova build android
 sudo apt-get install lib32stdc++6
 sudo apt-get install lib32z1
 {% endhighlight %}
-به دلیل کند بودن امولاتور اندروید من استفاده از genymotion رو به شدت توصیه میکنم 
+به دلیل کند بودن امولاتور اندروید من استفاده از genymotion رو به شدت توصیه میکنم
 من عادت به نوشتن همچین متن های بلند نصب و توسعه ندارم . اگه سوالی داشتید میتونید از تویتر یا گیتهابم یا ایمیلم که توی قایل کانفیگ بلاگ هست اقدام کنید

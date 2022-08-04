@@ -1,0 +1,29 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: درباره
+    entries:
+      - title: >
+          بهروزم جایی که یاد گرفتم بهبود یه تلاش دائمی است
+      - title: آدرس گیتهاب سایت
+        url: https://github.com/behroozam/behroozam.com
+      - title: من کیم ؟
+        url: about
+
+  - title: مقاله ها به زبان فارسی
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: آرشیو بلاگ...
+      show_more_url: archive.html
+
+  - title: مقاله ها به زبان انگلیسی
+    eng_post_list:
+      limit: 5
+      show_more: true
+      show_more_text: تمامی مقالات در مدیوم
+      show_more_url: https://behroozam.medium.com/
+
+  - title: rss
+    url: feed.xml

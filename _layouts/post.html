@@ -1,128 +1,18 @@
 ---
-comments: true
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-<script id="dsq-count-scr" src="//behroozam.disqus.com/count.js" async></script>
-  {% include head.html %}
-  <body itemscope itemtype="http://schema.org/Article">
-    {% include header.html %}
-    <main class="content" role="main">
-      <article class="post">
-        {% if page.image %}
-        <div class="article-image">
-          <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image }}{% endif %})">
-            Article Image
-          </div>
-          <div class="post-meta">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
-              on
-              <span class="date">{{ page.date | jdate: "%A %d %b %Y"}}</span>
-              <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
-            </div>
-            <div style="text-align:center">
-              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
-            </div>
-          </div>
-        </div>
-        {% else %}
-        <div class="noarticleimage">
-          <div class="post-meta">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
-              on
-              <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | jdate: "%A %d %b %Y" | habify}}</time>
-              <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        {% endif %}
-        <section dir="rtl" class="post-content">
-          <div class="post-reading">
-            <span class="post-reading-time"></span> read
-          </div>
-          <a name="topofpage"></a>
-          {{content}}
-        </section>
-        <footer class="post-footer">
-          <section class="share">
-            {% for social in site.social %}
-              {% if social.share_url != null %}
-                <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
-                  onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-                <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
-                </a>
-              {% endif %}
-              {% if page.comments %}
-         <div id="disqus_thread"></div>
-<script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://behroozam.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
-              {% endif %}
-            {% endfor %}
-          </section>
-        </footer>
-        <div class="bottom-teaser cf">
-          <div class="isLeft">
-            <h5 class="index-headline featured"><span>Written by</span></h5>
-            <section class="author">
-              <div class="author-image" style="background-image: url({{site.author_image}})">Blog Logo</div>
-              <h4>{{ site.author }}</h4>
-              <p class="bio">{{author.bio}}</p>
-              <hr>
-              <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
-            </section>
-          </div>
-          {{/post}}
-          <div class="isRight">
-            <h5 class="index-headline featured"><span>Supported by</span></h5>
-            <footer class="site-footer">
-              <section dir="rtl" class="poweredby">قدرت گرفته به وسیله<a dir="rtl" href="http://jekyllrb.com"> Jekyll</a></section>
-              <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
-              <div class="inner">
-                <section class="copyright">All content Under GNU FDL <a href="{{@blog.url}}/">{{site.author}}</a>  {{ site.time | date: '%Y' }}<br>free knowlege for all </section>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </article>
-    </main>
-    <div class="bottom-closer">
-      <div class="background-closer-image" {%if site.cover %} style="background-image: url({{ site.cover }})"{% endif %}>
-        Image
-      </div>
-      <div class="inner">
-        <h1 class="blog-title">{{ site.title }}</h1>
-        <h2 class="blog-description">{{ site.description }}</h2>
-        <a href="/" class="btn">بازگشت به صفحه اول</a>
-      </div>
-    </div>
-    {% include javascripts.html %}
+{%-include back_link.html-%}
 
-  </body>
-</html>
+<article>
+  {% if page.image %}{% include post-featured-image.html %}{% endif %}
+  <p class="post-meta">
+    <time datetime="{{ page.date | date: site.theme_config.date_format }}">{{ page.date | jdate: site.theme_config.jdate_format }}</time>
+  </p>
+
+  <h1>{{ page.title }}</h1>
+
+  {{ content }}
+
+  {% if site.comments %}{% include disqus.html %}{% endif %}
+</article>
