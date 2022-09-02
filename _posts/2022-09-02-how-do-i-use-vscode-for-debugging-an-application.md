@@ -191,4 +191,6 @@ func main() {
 ### پلاگین های پیشنهادی
 
 برای اینکه متوجه بشم چه commit ای تو چه PR ای به پروژه اضافه شده مثل تصویر زیر از پلاگین [Gillens](https://gitlens.amod.io/) استفاده میکنم که به همه نصبش رو پیشنهاد میکنم
+![](assets/article_images/vscode/gitlens.gif "gitlens")
+
 
