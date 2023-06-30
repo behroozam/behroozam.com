@@ -107,3 +107,34 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+.toc__list:before {
+  content: "فهرست مطالب";
+  font-weight: bold;
+  font-size: 16px;
+ }
+ 
+ .toc__list {
+  border: 2px solid #eee;
+  border-radius: 4px;
+  line-height: 1.8rem;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+ }
+ 
+ .toc__sublist li {
+  padding-left: 1.25rem;
+ }
+ 
+ .toc-h2:first-child {
+  margin-top: 1rem;
+ }  
+ 
+ #toc a {
+  color: #BE185D;
+  text-decoration: underline;
+ }
+ 
+ #toc a:hover {
+  color: #9D174D;
+ }
