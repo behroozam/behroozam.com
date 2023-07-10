@@ -5,6 +5,7 @@ title: "من چجوری از vscode برای خطایابی نرم‌افزار 
 date: 2022-09-02
 categories: development
 image: assets/article_images/vscode/vscode.svg
+toc: true
 ---
 
 
