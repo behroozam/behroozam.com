@@ -1,0 +1,99 @@
+---
+layout: post
+comments: true
+title: "در ستایش مجموعه ها و کاربردشون در زندگی واقعی"
+date: 2023-07-21
+categories: development
+image: assets/article_images/scammers/sellingdreams.jpg
+toc: true
+---
+
+محدودیت حافظه در پردازش اطلاعات 
+
+یکی از کارهایی که که تو زیرساخت به تناوب تکرار میشه گزارش گیری و مقایسه منابع هستش مخصوصا زمانی که replication داریم و یا میخوایم از دیتامون بکاپ داشته باشیم 
+
+ساده ترین نوع مقایسه این مجموعه ها اینه که تو unix از `awk` برای گزارش های خودمون استفاده کنیم که ابزار خوب و ساده و سریعیه و میتونه میلیون ها رکورد روبه سرعت مقایسه کنه اما استفاده از `awk` ضعف هایی هم داره مخصوصا زمانی که حجم داده یا منطق کد پیچیده تر میشه 
+* awk برای مقایسه field ها character های اون ها رو باهم مقایسه میکنه و از hash map و الگوریتم های membership checking استفاده نمیکنه 
+* برای استفاده موثر از awk باید از ابزار های دیگه unix مثل `uniq` و `sort` برای مرتب کردن دیتا استفاده کرد که خوانایی کد رو پایین میاره و نیازمند تکراره 
+
+راه حل جایگزین دیگه استفاده از پایتون ( یا هر زبان برنامه نویسی دیگه ای ) هستش 
+اما پایتون هم با وجود قدرت و انعطاف پذیری که داره محدودیت هایی برای ما داره همون طوری که میدونید پایتون یه زبان سطح بالا هستش که object ها رو تو memory ذخیره میکنه و اگه ما خودمون به صورت منطقی این memory managment رو انجام ندیم احتمال اینکه برنامه ما برای رکورد های حجیم توسط OOM سیستم عامل kill بشه بالا است. و این کار یعنی memory managment هم ساده نیست و نیازه که منطق کد تغییر کنه 
+
+راه حل سوم و پیشنهادی برای دیتای حجیم استفاده از database engine ها برای اینکار هستش به چند دلیل 
+
+* این نرم افزارهای عموما DBMS برای کار با دیتا حجیم ساخته شدن و بحث memory managment موقع طراحی نرم افزار اعمال شده 
+* زبان Query که استفاده میشه معمولا sql هستش و این زبان قدرتمند این قابلیت رو به ما میده که از operator های این زبان برای مجموعه ها استفاده کنیم. 
+
+
+برای درک بهتر این مسئله میریم سراغ یه مثال و بعدش راه حل های مختلفی که این سه ابزار یعنی awk و python و sqlite3 جلوی ما میزارن 
+
+### گزارش گیری از اشتراک دو مجموعه 
+
+موردی که من باهاش مواجه شدم بحث گزارش گیری از دو storage account مختلف روی azurecoud بود سوای اینکه چطور میشه از object هایی که روی cloud هست گزارش گرفت که میشه جمع آوری اولیه دیتا بحث اصلی مقایسه این دوتا دیتاست هستش که درادامه سعی میکنم ابتدا دیتایی مشابه(sample data) رو ایجاد کنم و بعدش روش های مختلفی که میشه این دوتا رو باهم مقایسه کرد رو برسی کنیم 
+
+برای اینکه sample data رو بسازیم به سه شرط احتیاج داریم 
+* دیتا یکتا در مبدا (source) 
+* دیتا یکتا در مقصد(destination)
+* دیتا مشترک بین source و destination 
+
+اینجوری ما یه مجموعه(set) خواهیم داشت که باهم یه سری اعضا رو به اشتراک گذاشته ان. 
+
+برای ساختن دیتا sample روی bash 
+
+```
+#creating source objects 
+
+for i in {0..10000000}
+do
+  echo "object$i" >> source.txt
+done
+
+# creating destination objects 
+
+ for i in {5000000..15000000}
+do
+  echo "object$i" >> dest.txt
+done
+
+```
+با کامند بالا حالا ما دوتا فایل `source.txt` و `dest.txt`داریم که 5 میلیون آبجکت مشترک دارند 
+
+#### گزارش گیری به وسیله awk  
+
+برای اینکه اشتراک بین دوتا مجموعه رو به دست بیاریم باید column های این دوتا فایل رو باهم مقایسه کنیم 
+
+```
+awk 'FNR==NR{found[$1]++; next} $1 in found' source.txt dest.txt
+```
+
+#### گزارش گیری به وسیله python 
+
+```
+import sys
+import csv
+
+sourceblobs = frozenset(line.strip() for line in open("source.txt").readlines())
+destinationblobs = frozenset(line.strip() for line in open("dest.txt").readlines())
+# get the size of sets 
+print("size of the source blob", sys.getsizeof(sourceblobs))
+print("size of the destination blob", sys.getsizeof(destinationblobs))
+
+#sharedobject = frozenset( sourceblobs & destinationblobs )
+intersection = sourceblobs & destinationblobs
+
+with open('report.csv', 'w') as f:
+    write = csv.writer(f)
+    write.writerow(['Filename'])
+    for item in intersection:
+        write.writerow([item])
+
+
+```
+
+#### گزارش گیری به وسیله sqlite3 
+
+```
+sqlite3 set.db
+create table destlog(log text);
+import 
+```
