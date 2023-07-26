@@ -79,6 +79,29 @@ awk 'FNR==NR{found[$1]++; next} $1 in found' source.txt dest.txt
 
 #### گزارش گیری به وسیله python
 
+تو قسمت قبل به وسیله awk دیدیم که دیتا با حجم و پیچیدگی پایین میتونه به راحتی توسط awk پردازش بشه ولی اگه حجم دیتا از یه حدی بیشتر بود چی؟ 
+
+خب برای ساختن دیتاست بزرگتر bash نمیتونه ابزار خوبی باشه چون while به اندازه کافی سرعت مناسبی رو نداره پس دست به دامن python میشیم برای ساختن دیتاست خودمون. 
+> برای ساختن دیتاست شبیه به دنیای واقعی مثل آدرس و اسم و بقیه رکورد های معمول بهتره که از ابزارهایی که برای این کار موجوده مثل [faker](https://faker.readthedocs.io/en/master/) استفاده کرد 
+
+```
+def create_huge_log(outputfile_location,start_range,end_range):
+    with open(outputfile_location, 'a') as outfile:
+        for item in range(start_range,end_range):
+            outfile.write("object" + str(item) + '\n')
+
+create_huge_log("./source_huge",1,100000000)
+create_huge_log("./dest_huge",50000000,150000000)
+
+```
+
+با اجرا کردن همون کامند awk اگه میزان رم سیستم شما مثل من محدود باشه سیستم عامل به دلیل مصرف بیش از حد رم کامند awk شما رو kill میکنه 
+
+```
+awk 'FNR==NR{found[$1]++; next} $1 in found' source_huge dest_huge > tmp
+```
+پس باید به سراغ یه راه حل جایگزین رفت یعنی استفاده از python برای پردازش دیتا خودمون 
+
 ```
 import sys
 import csv
@@ -98,9 +121,18 @@ with open('report.csv', 'w') as f:
     for item in intersection:
         write.writerow([item])
 
-
 ```
 
+```
+import dask.dataframe as dd
+
+source_data_frame = dd.read_csv(r"./source_huge")
+dest_data_frame = dd.read_csv(r"./dest_huge")
+
+merged = dd.merge(source_data_frame, dest_data_frame, on=["log"], how='inner')
+
+merged.to_csv('./report.csv', single_file = True)
+```
 #### گزارش گیری به وسیله sqlite3
 
 ```
