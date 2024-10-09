@@ -1,0 +1,20 @@
+---
+layout: none
+permalink: /api/posts/
+---
+[
+  {%- for post in site.posts %}
+    {
+      "id":         {{- post.id | jsonify -}},
+      "url":        {{- post.url | jsonify }},
+      "image":      {{- post.image | jsonify -}},
+      "title":      {{- post.title | jsonify -}},
+      "author":     {{- site.author | jsonify -}},
+      "date":       {{- post.date | jsonify -}},
+      "tags":       {{- post.tags | jsonify -}},
+      "categories": {{- post.categories | jsonify -}},
+      "content":    {{- post.content | jsonify -}}
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor -%}
+]
