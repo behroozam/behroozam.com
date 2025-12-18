@@ -2,17 +2,21 @@
 layout: default
 ---
 
-{%-include back_link.html-%}
+<header class="post-nav post-nav--top">{%- include back_link.html -%}</header>
 
 <article>
   {% if page.image %}{% include post-featured-image.html %}{% endif %}
   <p class="post-meta">
-    <time datetime="{{ page.date | date: site.theme_config.date_format }}">{{ page.date | jdate: site.theme_config.jdate_format }}</time>
+    <time datetime="{{ page.date | date: site.theme_config.date_format }}"
+      >{{ page.date | jdate: site.theme_config.jdate_format }}</time
+    >
   </p>
 
   <h1>{{ page.title }}</h1>
-  {% toc %}
-  {{ content }}
-
-  {% if site.comments %}{% include disqus.html %}{% endif %}
+  {% toc %} {{ content }} {% if site.comments %}{% include disqus.html %}{%
+  endif %}
 </article>
+
+<footer class="post-nav post-nav--bottom">
+  {%- include back_link.html -%}
+</footer>

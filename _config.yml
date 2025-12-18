@@ -24,7 +24,7 @@ kramdown:
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
+  back_home_text: "برگرد به اونجایی که بهش میگیم خانه" # customize text for homepage link in post layout
   date_format: "%F %R" # customize how date is formatted
   jdate_format: "%A %d %b %Y" # jalali date format
   show_description: false # show blog description in home page

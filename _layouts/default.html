@@ -4,6 +4,10 @@
   <body a="{{ site.theme_config.appearance | default: "auto" }}">
     <main class="page-content" aria-label="Content">
       <div class="w">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color mode">
+          <span class="theme-toggle__label theme-toggle__label--day">🌗  شب بشه</span>
+          <span class="theme-toggle__label theme-toggle__label--night">☀️ روز بشه</span>
+        </button>
         {{ content }}
       </div>
     </main>
@@ -11,6 +15,51 @@
     {%-if site.google_analytics and jekyll.environment == "production"-%}
       {%-include google_analytics.html-%}
     {%-endif-%}
+
+    <script>
+      (function () {
+        var storageKey = "theme-preference";
+        var body = document.body;
+
+        function setPreference(value) {
+          try {
+            window.localStorage.setItem(storageKey, value);
+          } catch (e) {}
+          body.setAttribute("a", value);
+        }
+
+        function getInitial() {
+          try {
+            var stored = window.localStorage.getItem(storageKey);
+            if (stored === "light" || stored === "dark" || stored === "auto") {
+              return stored;
+            }
+          } catch (e) {}
+          return body.getAttribute("a") || "auto";
+        }
+
+        var current = getInitial();
+        setPreference(current);
+
+        function applyButtonState(btn, value) {
+          if (!btn) return;
+          btn.setAttribute("data-theme", value);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var btn = document.getElementById("theme-toggle");
+          if (!btn) return;
+
+          applyButtonState(btn, body.getAttribute("a"));
+
+          btn.addEventListener("click", function () {
+            var now = body.getAttribute("a") === "dark" ? "light" : "dark";
+            setPreference(now);
+            applyButtonState(btn, now);
+          });
+        });
+      })();
+    </script>
 
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
