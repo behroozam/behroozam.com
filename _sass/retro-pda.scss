@@ -1,0 +1,475 @@
+// -------------- 90s RETRO FUTURISTIC THEME -------------- //
+// Black & white, soft tech lines, PDA-inspired
+
+// Disable automatic dark inversion – we want a fixed monochrome look
+@mixin dark-appearance {
+}
+
+body[a="dark"],
+body[a="auto"] {
+  @include dark-appearance;
+}
+
+// bg color is also needed in html in order to
+// block body's background propagation
+// see: https://stackoverflow.com/a/61265706
+html,
+body {
+  background: #fdfdfd;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: #000;
+  font-family: Vazirmatn, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+  text-rendering: geometricPrecision;
+}
+
+body[a="dark"] {
+  background: #101010;
+  color: #f5f5f5;
+}
+
+// Outer frame – like a PDA screen bezel
+.page-content {
+  border: 2px solid #111;
+  border-radius: 4px;
+  margin: 2rem auto;
+  max-width: 840px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+body[a="dark"] .page-content {
+  background: #050505;
+  border-color: #e5e5e5;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.post-meta {
+  text-align: right;
+}
+
+.feat-img img {
+  width: 300px;
+  height: 300px;
+  float: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+  direction: rtl;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+h1 {
+  direction: rtl;
+}
+
+p {
+  margin: 1rem 0;
+  direction: rtl;
+}
+
+ul {
+  direction: rtl;
+}
+
+ol {
+  direction: rtl;
+}
+
+li {
+  margin: 0.4rem 0;
+  direction: rtl;
+}
+
+*:target {
+  background: yellow;
+}
+
+.w {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+header {
+  border: 1px solid #111;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fff,
+    #fff 3px,
+    #f3f3f3 3px,
+    #f3f3f3 6px
+  );
+}
+
+body[a="dark"] header {
+  border-color: #e5e5e5;
+  background: repeating-linear-gradient(
+    -45deg,
+    #111,
+    #111 3px,
+    #1b1b1b 3px,
+    #1b1b1b 6px
+  );
+}
+
+header h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+// Menu strip – simple PDA menu bar
+nav,
+.menu,
+.menu__inner {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.menu__inner > li {
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+
+.menu__inner > li a {
+  border: 1px solid #222;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: #fdfdfd;
+}
+
+.menu__inner > li a:hover {
+  background: #111;
+  color: #fdfdfd;
+}
+
+body[a="dark"] .menu__inner > li a {
+  border-color: #e5e5e5;
+  background: #111;
+  color: #f5f5f5;
+}
+
+body[a="dark"] .menu__inner > li a:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+article {
+  border: 1px solid #222;
+  padding: 1.5rem 1.5rem 2rem;
+  background: #fff;
+}
+
+body[a="dark"] article {
+  border-color: #e5e5e5;
+  background: #0b0b0b;
+}
+
+.post-nav {
+  margin: 0 0 1rem 0;
+  text-align: right;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.post-nav--top {
+  margin-bottom: 1rem;
+}
+
+.post-nav--bottom {
+  margin-top: 1.5rem;
+}
+
+.post-nav a {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #222;
+  background: #fafafa;
+  border-radius: 999px;
+}
+
+.post-nav a:hover {
+  background: #111;
+  color: #fafafa;
+}
+
+.back-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.9rem 0.25rem;
+  border-radius: 999px;
+  border: 1px solid #222;
+  background: #fafafa;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.back-link:hover {
+  background: #111;
+  color: #fafafa;
+  border-color: #111;
+}
+
+body[a="dark"] .back-link {
+  border-color: #e5e5e5;
+  background: #111;
+  color: #f5f5f5;
+}
+
+body[a="dark"] .back-link:hover {
+  background: #f5f5f5;
+  color: #111;
+  border-color: #f5f5f5;
+}
+
+hr {
+  text-align: center;
+  border: 0;
+  margin: 1.5rem 0;
+
+  &:before {
+    content: "====================";
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.07);
+  color: #000;
+}
+
+body[a="dark"] a {
+  color: #f5f5f5;
+  border-bottom-color: rgba(229, 229, 229, 0.7);
+}
+
+body[a="dark"] a:hover {
+  background: rgba(245, 245, 245, 0.12);
+  color: #ffffff;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: thin solid black;
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+code {
+  color: #111;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  padding: 0.05rem 0.25rem;
+  font-size: 0.9em;
+}
+
+body[a="dark"] code {
+  color: #f5f5f5;
+  background: #151515;
+  border-color: #555;
+}
+
+div.highlighter-rouge code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  padding: 1rem 1.25rem;
+  background: #0a0a0a;
+  color: #f1f1f1;
+  border: 1px solid #222;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+}
+
+body[a="dark"] div.highlighter-rouge code {
+  background: #f5f5f5;
+  color: #050505;
+  border-color: #d4d4d4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+blockquote {
+  font-style: normal;
+  border: 1px solid #e5e5e5;
+  padding: 1rem;
+  background: #fafafa;
+
+  p {
+    margin: 0;
+  }
+}
+
+body[a="dark"] blockquote {
+  border-color: #444;
+  background: #101010;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 160ms ease-out, box-shadow 160ms ease-out,
+    border-color 160ms ease-out;
+}
+
+img:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  border-color: #cfcfcf;
+}
+
+body[a="dark"] img {
+  border-color: #3a3a3a;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75);
+}
+
+body[a="dark"] img:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.9);
+  border-color: #5a5a5a;
+}
+
+.theme-toggle {
+  float: left;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #222;
+  background: #fdfdfd;
+  font-size: 0.7rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-toggle__label {
+  display: none;
+}
+
+.theme-toggle[data-theme="light"] .theme-toggle__label--day,
+.theme-toggle[data-theme="auto"] .theme-toggle__label--day {
+  display: inline;
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle__label--night {
+  display: inline;
+}
+
+.theme-toggle:hover {
+  background: #111;
+  color: #fdfdfd;
+}
+
+body[a="dark"] .theme-toggle {
+  border-color: #e5e5e5;
+  background: #111;
+  color: #f5f5f5;
+}
+
+body[a="dark"] .theme-toggle:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.toc__list:before {
+  content: "فهرست مطالب";
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.toc__list {
+  border: 1px solid #222;
+  border-radius: 6px;
+  line-height: 1.7rem;
+  padding: 1rem 1.25rem 1.1rem;
+  font-weight: 500;
+  background: #fafafa;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+
+body[a="dark"] .toc__list {
+  border-color: #444;
+  background: #101010;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.toc__sublist li {
+  padding-left: 1.25rem;
+}
+
+.toc-h2:first-child {
+  margin-top: 0.25rem;
+}
+
+#toc a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+}
+
+#toc a:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #000;
+}
+
+body[a="dark"] #toc a {
+  color: #f5f5f5;
+  border-bottom-color: rgba(229, 229, 229, 0.6);
+}
+
+body[a="dark"] #toc a:hover {
+  background: rgba(245, 245, 245, 0.14);
+  color: #ffffff;
+}
