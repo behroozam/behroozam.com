@@ -1,6 +1,25 @@
 // -------------- 90s RETRO FUTURISTIC THEME -------------- //
 // Black & white, soft tech lines, PDA-inspired
 
+// Local Vazirmatn font (place files in assets/fonts/)
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/Vazirmatn-Regular.woff2") format("woff2"),
+    url("../fonts/Vazirmatn-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/Vazirmatn-Bold.woff2") format("woff2"),
+    url("../fonts/Vazirmatn-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 // Disable automatic dark inversion – we want a fixed monochrome look
 @mixin dark-appearance {
 }
