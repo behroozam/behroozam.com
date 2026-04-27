@@ -44,7 +44,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-display-medium-posts
   - jekyll-toc
+  - jekyll-mermaid
 
+mermaid:
+  src: 'assets/js/mermaid.min.js'
 toc:
  min_level: 1
  max_level: 5
