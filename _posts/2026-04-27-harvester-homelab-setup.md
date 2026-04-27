@@ -1,15 +1,12 @@
 ---
 layout: post
 comments: true
-title: راه‌اندازی زیرساخت خانگی با Harvester، RKE2 و Rancher — از Netboot تا اولین کلاستر Kubernetes"
+title: "ساختن کلاستر کوبرنتیز با رنچر روی هاروستر و اندکی گیک بازی"
 date: 2026-04-27
 categories: development
 image: assets/article_images/harvester-homelab-setup/harvester-homelab-setup.png
 toc: true
 ---
-# راه‌اندازی زیرساخت خانگی با Harvester، RKE2 و Rancher — از Netboot تا اولین کلاستر Kubernetes
-
-
 
 ## مقدمه: اکوسیستم Rancher
 
@@ -19,7 +16,7 @@ toc: true
 graph TD
     %% تعریف ساختار هرمی با استفاده از زیرمجموعه‌ها
 
-    subgraph Top [Top Layer]
+    subgraph Top [PaaS]
         RKE2["<b>RKE2</b><br/>(کلاستر کوبرنتیز امن و سبک)"]
     end
 
@@ -61,12 +58,8 @@ graph TD
 
 ## چرا Harvester؟ (و یه هشدار مهم)
 
-## چرا از Proxmox به Harvester رفتم؟
-
 توی [پست قبلی](/proxmox-pxe-boot) توضیح دادم که چطور با Netboot و dnsmasq روی لپ‌تاپم
 Proxmox نصب کردم. اما در میانه‌ی راه تصمیم گرفتم مسیرم رو عوض کنم و به سمت Harvester برم.
-
-## چرا Harvester؟
 
 ### فروپاشی اکوسیستم VMware
 
