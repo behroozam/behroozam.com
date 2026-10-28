@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<header class="post-nav post-nav--top">{%- include back_link.html -%}</header>
+
+<section class="recommendations-container">
+  <header class="recommendations-header">
+    <h1 class="recommendations-title">{{ page.title | default: "پیشنهادهای من" }}</h1>
+    {% if page.description %}
+      <p class="recommendations-description">{{ page.description }}</p>
+    {% else %}
+      <p class="recommendations-description">مجموعه‌ای از کتاب‌ها، فیلم‌ها، سریال‌ها و نظریه‌هایی که درباره‌شون فکر می‌کنم و پیشنهاد می‌کنم.</p>
+    {% endif %}
+  </header>
+
+  <!-- Category Filter Pills -->
+  <div class="rec-filters" role="group" aria-label="فیلتر دسته‌بندی">
+    <button class="rec-filter-btn active" data-filter="all" type="button">همه</button>
+    <button class="rec-filter-btn" data-filter="book" type="button">📚 کتاب</button>
+    <button class="rec-filter-btn" data-filter="movie-show" type="button">🎬 فیلم و سریال</button>
+    <button class="rec-filter-btn" data-filter="music" type="button">🎵 موسیقی</button>
+    <button class="rec-filter-btn" data-filter="game" type="button">🎮 بازی</button>
+    <button class="rec-filter-btn" data-filter="theory" type="button">💡 نظریه</button>
+  </div>
+
+
+  <!-- Recommendation Cards Grid -->
+  <div class="rec-grid" id="rec-grid">
+    {% for rec in site.data.recommendations %}
+      {% include recommendation_card.html item=rec %}
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.rec-filter-btn');
+    var cards = document.querySelectorAll('.rec-card');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+
+        buttons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        cards.forEach(function (card) {
+          var category = card.getAttribute('data-category');
+          if (filter === 'all') {
+            card.style.display = '';
+          } else if (filter === 'movie-show' && (category === 'movie' || category === 'show')) {
+            card.style.display = '';
+          } else if (category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

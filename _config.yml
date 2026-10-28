@@ -35,7 +35,9 @@ sass:
 comments: true
 
 collections:
-  - medium_posts
+  networking:
+    output: true
+  medium_posts:
 
 plugins:
   - jekyll-feed
@@ -45,6 +47,9 @@ plugins:
   - jekyll-display-medium-posts
   - jekyll-toc
   - jekyll-mermaid
+
+jekyll-display-medium-posts:
+  username: behroozam
 
 mermaid:
   src: 'assets/js/mermaid.min.js'

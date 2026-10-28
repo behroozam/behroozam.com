@@ -1,0 +1,70 @@
+{% assign item = include.item %}
+<article class="rec-card" data-category="{{ item.category | downcase }}">
+  <div class="rec-card__inner">
+    {% if item.image and item.image != "" %}
+      <div class="rec-card__media">
+        <a href="{{ item.canonical_url | default: item.url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ item.image }}" alt="{{ item.title | escape }}" loading="lazy" class="rec-card__image" />
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="rec-card__content">
+      <div class="rec-card__header">
+        <span class="rec-badge rec-badge--{{ item.category | downcase }}">
+          {% case item.category | downcase %}
+            {% when 'book' %}📚 کتاب
+            {% when 'movie' %}🎬 فیلم
+            {% when 'show' %}📺 سریال
+            {% when 'theory' %}💡 نظریه
+            {% when 'music' %}🎵 موسیقی
+            {% else %}{{ item.category | capitalize }}
+          {% endcase %}
+
+        </span>
+        {% if item.site_name %}
+          <span class="rec-card__source">{{ item.site_name }}</span>
+        {% endif %}
+      </div>
+
+      <h3 class="rec-card__title">
+        <a href="{{ item.canonical_url | default: item.url }}" target="_blank" rel="noopener noreferrer">
+          {{ item.title }}
+        </a>
+      </h3>
+
+      {% if item.authors and item.authors != "" %}
+        <p class="rec-card__authors">✍️ {{ item.authors }}</p>
+      {% endif %}
+
+      {% if item.description and item.description != "" %}
+        <p class="rec-card__excerpt">{{ item.description | strip_html | truncate: 180 }}</p>
+      {% endif %}
+
+
+      {% if item.comment and item.comment != "" %}
+        <div class="rec-card__comment">
+          <div class="rec-card__comment-label">💭 یادداشت من:</div>
+          <p>{{ item.comment }}</p>
+        </div>
+      {% endif %}
+
+      {% if item.rating %}
+        <div class="rec-card__rating">
+          <span class="rec-card__rating-label">امتیاز من از ۵:</span>
+          <span class="rec-card__rating-stars" dir="ltr" aria-label="{{ item.rating }} از ۵ ستاره">
+            {% for i in (1..5) %}
+              {% if i <= item.rating %}★{% else %}☆{% endif %}
+            {% endfor %}
+          </span>
+        </div>
+      {% endif %}
+
+      <div class="rec-card__footer">
+        <a href="{{ item.canonical_url | default: item.url }}" target="_blank" rel="noopener noreferrer" class="rec-card__link">
+          مشاهده در {{ item.site_name | default: "منبع" }} &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
