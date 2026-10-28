@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<!-- Apply the text direction based on the language -->
+ <header class="post-nav post-nav--top">{%- include networking_back_link.html -%}</header>
+
+<article class="chapter" dir="{{ page.dir }}">
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="margin-bottom: 1rem; font-size: 0.9em;">
+    {% for chapter in site.networking %}
+      {% if chapter.ref == page.ref and chapter.lang != page.lang %}
+        <a href="{{ chapter.url }}">
+          🌐 {% if page.lang == 'en' %}بخوانید به فارسی{% else %}Read in English{% endif %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+  <hr>
+
+  <!-- Next/Previous Navigation (Filtered by Language) -->
+  <div class="chapter-navigation">
+    {% assign lang_chapters = site.networking | where: "lang", page.lang | sort: 'order' %}
+    {% for chapter in lang_chapters %}
+      {% if chapter.url == page.url %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+
+        {% if forloop.first == false %}
+          <a href="{{ lang_chapters[prev_index].url }}"> {{ lang_chapters[prev_index].title }}</a>
+        {% endif %}
+
+        {% if forloop.last == false %}
+          <!-- Flip the float direction for RTL layout -->
+          <a href="{{ lang_chapters[next_index].url }}" style="{% if page.dir == 'rtl' %}float: left;{% else %}float: right;{% endif %}">
+            {{ lang_chapters[next_index].title }};
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</article>

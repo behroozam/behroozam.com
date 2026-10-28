@@ -1,0 +1,13 @@
+{% if site.data.recommendations and site.data.recommendations.size > 0 %}
+  <section class="featured-recommendations" style="margin-top: 2rem; direction: rtl;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h2 style="margin: 0; font-size: 1.4rem;">💡 آخرین پیشنهادها</h2>
+      <a href="{{ site.baseurl }}/recommendations/" style="font-size: 0.9rem; font-weight: bold;">مشاهده همه &larr;</a>
+    </div>
+    <div class="rec-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem;">
+      {% for rec in site.data.recommendations limit: 3 %}
+        {% include recommendation_card.html item=rec %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

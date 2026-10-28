@@ -11,6 +11,9 @@ entries:
       - title: من کیم ؟
         url: about
 
+  - title: 💡 پیشنهادهای من (که باهشون حال کردم)
+    url: recommendations/
+
   - title: مقاله ها به زبان فارسی
     post_list:
       limit: 5
